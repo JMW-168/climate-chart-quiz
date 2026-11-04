@@ -1,0 +1,349 @@
+/* 視覺方向：課本氣候圖的方格紙與墨色。
+   唯一的強調色是圖表本身的語彙：氣溫紅、降水藍；介面其餘保持墨色與紙色。 */
+
+:root {
+  --paper: #f3f6f8;
+  --sheet: #ffffff;
+  --grid: #dfe6ec;
+  --rule: #c4cfd8;
+  --ink: #1b2a38;
+  --ink-soft: #4b5d6d;
+  --ink-faint: #6f8191;
+  --navy: #1d3557;
+  --navy-press: #142640;
+  --temp: #c8372d;
+  --rain: #2e6fb7;
+  --rain-soft: #9cbde3;
+  --ok: #26734a;
+  --ok-bg: #e7f3ec;
+  --bad: #b3261e;
+  --bad-bg: #fbeceb;
+  --warn-bg: #fff6db;
+  --warn-ink: #6b4e00;
+  --focus: #f2a900;
+
+  --font: system-ui, -apple-system, 'Segoe UI', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --base: 16px;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --tap: 44px;
+}
+
+:root[data-font='large'] { --base: 18px; }
+:root[data-font='xlarge'] { --base: 20px; }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  font-size: var(--base);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  line-height: 1.65;
+  font-variant-numeric: tabular-nums;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { line-height: 1.3; margin: 0 0 0.5em; letter-spacing: 0.01em; }
+h1 { font-size: 1.6rem; font-weight: 700; }
+h2 { font-size: 1.25rem; font-weight: 700; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+p { margin: 0 0 0.9em; }
+a { color: var(--navy); text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ── 版面 ── */
+.shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px 96px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  color: #fff;
+}
+.topbar-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+}
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--tap);
+}
+.brand svg { flex: none; }
+.topbar nav { margin-left: auto; display: flex; gap: 2px; }
+.topbar nav a {
+  color: #dbe6f3;
+  text-decoration: none;
+  padding: 0 10px;
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-s);
+  font-size: 0.95rem;
+}
+.topbar nav a.router-link-active { color: #fff; background: rgba(255, 255, 255, 0.14); }
+
+.status-strip {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: var(--radius-s);
+  margin: 12px 0 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.status-strip.demo { background: var(--warn-bg); color: var(--warn-ink); }
+.status-strip.error { background: var(--bad-bg); color: var(--bad); }
+.status-strip.info { background: #e8eef5; color: var(--navy); }
+.status-strip .grow { flex: 1; }
+
+main { padding-top: 20px; }
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-m);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.sheet.flush { padding: 0; overflow: hidden; }
+
+.muted { color: var(--ink-soft); }
+.small { font-size: 0.88rem; }
+
+/* ── 按鈕 ── */
+.btn {
+  appearance: none;
+  border: 1.5px solid var(--navy);
+  background: var(--sheet);
+  color: var(--navy);
+  font: inherit;
+  font-weight: 600;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0 18px;
+  border-radius: var(--radius-s);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.btn:hover { background: #eef3f8; }
+.btn.primary { background: var(--navy); color: #fff; }
+.btn.primary:hover { background: var(--navy-press); }
+.btn.danger { border-color: var(--bad); color: var(--bad); }
+.btn.quiet { border-color: transparent; background: transparent; }
+.btn.quiet:hover { background: #e8eef5; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn.block { width: 100%; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+/* ── 表單 ── */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 22px;
+  min-width: 0;
+}
+legend { font-weight: 700; margin-bottom: 8px; padding: 0; }
+.choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--tap);
+  padding: 0 14px;
+  border: 1.5px solid var(--rule);
+  border-radius: 999px;
+  background: var(--sheet);
+  cursor: pointer;
+  user-select: none;
+}
+.chip input { position: absolute; opacity: 0; pointer-events: none; }
+.chip:has(input:checked) { border-color: var(--navy); background: #e8eef5; color: var(--navy); font-weight: 600; }
+.chip:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.chip .tick { width: 1em; text-align: center; }
+
+/* ── 題目選項 ── */
+.options { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--sheet);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+.option:hover:not(.locked) { border-color: var(--navy); }
+.option.selected { border-color: var(--navy); background: #e8eef5; box-shadow: inset 4px 0 0 var(--navy); }
+.option.locked { cursor: default; }
+.option.is-correct { border-color: var(--ok); background: var(--ok-bg); box-shadow: inset 4px 0 0 var(--ok); }
+.option.is-wrong { border-color: var(--bad); background: var(--bad-bg); box-shadow: inset 4px 0 0 var(--bad); }
+.option .mark {
+  flex: none;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rule);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: var(--sheet);
+}
+.option.selected .mark { border-color: var(--navy); background: var(--navy); color: #fff; }
+.option.is-correct .mark { border-color: var(--ok); background: var(--ok); color: #fff; }
+.option.is-wrong .mark { border-color: var(--bad); background: var(--bad); color: #fff; }
+.option .verdict { margin-left: auto; font-weight: 700; font-size: 0.9rem; }
+.option.is-correct .verdict { color: var(--ok); }
+.option.is-wrong .verdict { color: var(--bad); }
+
+/* ── 四圖題 ── */
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.chart-card {
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--sheet);
+  padding: 6px 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.chart-card.selected { border-color: var(--navy); box-shadow: 0 0 0 2px var(--navy); }
+.chart-card.is-correct { border-color: var(--ok); box-shadow: 0 0 0 2px var(--ok); background: var(--ok-bg); }
+.chart-card.is-wrong { border-color: var(--bad); box-shadow: 0 0 0 2px var(--bad); background: var(--bad-bg); }
+.chart-card-head { display: flex; align-items: center; justify-content: space-between; gap: 4px; }
+.chart-letter { font-weight: 800; font-size: 1.1rem; padding-left: 4px; }
+.chart-card .btn { padding: 0 10px; font-size: 0.9rem; }
+
+/* ── 解析 ── */
+.result-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-s);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.result-banner.ok { background: var(--ok-bg); color: var(--ok); }
+.result-banner.bad { background: var(--bad-bg); color: var(--bad); }
+.evidence { display: grid; gap: 10px; margin: 0 0 12px; }
+.evidence > div { border-left: 4px solid var(--rule); padding: 2px 0 2px 12px; }
+.evidence .t { border-color: var(--temp); }
+.evidence .p { border-color: var(--rain); }
+.evidence .c { border-color: var(--navy); }
+.evidence dt { font-weight: 700; font-size: 0.92rem; }
+.evidence dd { margin: 0; }
+
+.hint-list { margin: 10px 0 0; padding-left: 1.4em; }
+.hint-list li { margin-bottom: 6px; }
+
+/* ── 統計 ── */
+.stat-row { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 8px 0 0; }
+.stat-row div { display: flex; flex-direction: column; }
+.stat-row dt { font-size: 0.82rem; color: var(--ink-soft); }
+.stat-row dd { margin: 0; font-weight: 700; font-size: 1.05rem; }
+
+.progress-bar { height: 6px; background: var(--grid); border-radius: 3px; overflow: hidden; margin: 6px 0 14px; }
+.progress-bar span { display: block; height: 100%; background: var(--navy); }
+
+table.data { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+table.data th, table.data td { border-bottom: 1px solid var(--grid); padding: 6px 8px; text-align: right; }
+table.data th:first-child, table.data td:first-child { text-align: left; }
+table.data thead th { color: var(--ink-soft); font-weight: 600; }
+
+details > summary { cursor: pointer; min-height: var(--tap); display: flex; align-items: center; color: var(--navy); font-weight: 600; }
+
+dialog {
+  border: 0;
+  border-radius: var(--radius-m);
+  padding: 20px;
+  width: min(560px, calc(100vw - 24px));
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+  color: var(--ink);
+}
+dialog::backdrop { background: rgba(20, 30, 45, 0.55); }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: var(--radius-s);
+  max-width: calc(100vw - 32px);
+  z-index: 50;
+  font-size: 0.95rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 28px 12px;
+}
+
+@media (max-width: 420px) {
+  .sheet { padding: 16px; }
+  h1 { font-size: 1.4rem; }
+  .topbar nav a { padding: 0 7px; font-size: 0.88rem; }
+  .brand span { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+.option input, .chart-pick input { position: absolute; opacity: 0; pointer-events: none; }
+.option:has(input:focus-visible), .chart-pick:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.option { position: relative; }
+.chart-pick { position: relative; }

@@ -1,0 +1,1785 @@
+[
+  {
+    "id": "demo-tropical-rainforest-a",
+    "revision": 1,
+    "typeId": "tropical-rainforest",
+    "temperatureC": [
+      26.5,
+      26.8,
+      27.2,
+      27.5,
+      27.6,
+      27.3,
+      27,
+      27.1,
+      27.2,
+      27.1,
+      26.9,
+      26.6
+    ],
+    "precipitationMm": [
+      240,
+      190,
+      220,
+      260,
+      230,
+      180,
+      170,
+      190,
+      200,
+      230,
+      250,
+      270
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "equatorial",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-rainforest-a-explanation"
+  },
+  {
+    "id": "demo-tropical-rainforest-b",
+    "revision": 1,
+    "typeId": "tropical-rainforest",
+    "temperatureC": [
+      27,
+      27.4,
+      27.6,
+      27.8,
+      27.5,
+      27,
+      26.8,
+      26.9,
+      27,
+      27.2,
+      27.1,
+      26.9
+    ],
+    "precipitationMm": [
+      180,
+      150,
+      200,
+      280,
+      300,
+      210,
+      190,
+      170,
+      180,
+      230,
+      260,
+      220
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "equatorial",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-rainforest-b-explanation"
+  },
+  {
+    "id": "demo-tropical-rainforest-c",
+    "revision": 1,
+    "typeId": "tropical-rainforest",
+    "temperatureC": [
+      25.8,
+      26,
+      26.3,
+      26.5,
+      26.4,
+      26,
+      25.7,
+      25.9,
+      26.1,
+      26.3,
+      26.2,
+      25.9
+    ],
+    "precipitationMm": [
+      310,
+      280,
+      330,
+      290,
+      220,
+      160,
+      150,
+      170,
+      190,
+      240,
+      280,
+      330
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "equatorial",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-rainforest-c-explanation"
+  },
+  {
+    "id": "demo-tropical-monsoon-a",
+    "revision": 1,
+    "typeId": "tropical-monsoon",
+    "temperatureC": [
+      25,
+      26.5,
+      28.5,
+      30,
+      29.5,
+      27.5,
+      27,
+      27,
+      27.3,
+      27.5,
+      26.5,
+      25
+    ],
+    "precipitationMm": [
+      5,
+      5,
+      15,
+      60,
+      300,
+      520,
+      580,
+      560,
+      380,
+      200,
+      40,
+      8
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-monsoon-a-explanation"
+  },
+  {
+    "id": "demo-tropical-monsoon-b",
+    "revision": 1,
+    "typeId": "tropical-monsoon",
+    "temperatureC": [
+      24,
+      25.5,
+      28,
+      30.5,
+      30,
+      28,
+      27.5,
+      27.4,
+      27.6,
+      27,
+      25.8,
+      24.2
+    ],
+    "precipitationMm": [
+      8,
+      12,
+      25,
+      80,
+      260,
+      480,
+      520,
+      500,
+      340,
+      160,
+      30,
+      6
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-monsoon-b-explanation"
+  },
+  {
+    "id": "demo-tropical-monsoon-c",
+    "revision": 1,
+    "typeId": "tropical-monsoon",
+    "temperatureC": [
+      28.5,
+      28.3,
+      28.2,
+      27.8,
+      26.5,
+      25,
+      24.8,
+      25.6,
+      27.5,
+      29,
+      29.5,
+      29
+    ],
+    "precipitationMm": [
+      420,
+      370,
+      310,
+      100,
+      20,
+      2,
+      1,
+      3,
+      15,
+      70,
+      140,
+      250
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-monsoon-c-explanation"
+  },
+  {
+    "id": "demo-tropical-savanna-a",
+    "revision": 1,
+    "typeId": "tropical-savanna",
+    "temperatureC": [
+      24,
+      25,
+      27,
+      29,
+      30,
+      29,
+      27,
+      27,
+      27,
+      27,
+      26,
+      24
+    ],
+    "precipitationMm": [
+      2,
+      3,
+      10,
+      35,
+      90,
+      160,
+      220,
+      240,
+      170,
+      60,
+      10,
+      3
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-savanna-a-explanation"
+  },
+  {
+    "id": "demo-tropical-savanna-b",
+    "revision": 1,
+    "typeId": "tropical-savanna",
+    "temperatureC": [
+      26,
+      27,
+      28,
+      29,
+      28,
+      26,
+      25,
+      25,
+      26,
+      27,
+      27,
+      26
+    ],
+    "precipitationMm": [
+      5,
+      10,
+      30,
+      70,
+      130,
+      170,
+      200,
+      210,
+      160,
+      80,
+      20,
+      5
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-savanna-b-explanation"
+  },
+  {
+    "id": "demo-tropical-savanna-c",
+    "revision": 1,
+    "typeId": "tropical-savanna",
+    "temperatureC": [
+      27,
+      27,
+      26.5,
+      26,
+      24.5,
+      23,
+      22.5,
+      24,
+      26,
+      27.5,
+      28,
+      27.5
+    ],
+    "precipitationMm": [
+      220,
+      200,
+      170,
+      60,
+      10,
+      2,
+      1,
+      3,
+      15,
+      60,
+      130,
+      200
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tropical-savanna-c-explanation"
+  },
+  {
+    "id": "demo-desert-a",
+    "revision": 1,
+    "typeId": "desert",
+    "temperatureC": [
+      14,
+      16,
+      20,
+      25,
+      29,
+      32,
+      33,
+      33,
+      30,
+      25,
+      19,
+      15
+    ],
+    "precipitationMm": [
+      3,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      4
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-desert-a-explanation"
+  },
+  {
+    "id": "demo-desert-b",
+    "revision": 1,
+    "typeId": "desert",
+    "temperatureC": [
+      20,
+      22,
+      25,
+      29,
+      32,
+      34,
+      34,
+      34,
+      32,
+      29,
+      25,
+      21
+    ],
+    "precipitationMm": [
+      5,
+      4,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      6
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-desert-b-explanation"
+  },
+  {
+    "id": "demo-desert-c",
+    "revision": 1,
+    "typeId": "desert",
+    "temperatureC": [
+      27,
+      26,
+      24,
+      20,
+      16,
+      13,
+      12,
+      14,
+      17,
+      21,
+      24,
+      26
+    ],
+    "precipitationMm": [
+      8,
+      10,
+      6,
+      4,
+      3,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4,
+      6
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-desert-c-explanation"
+  },
+  {
+    "id": "demo-steppe-a",
+    "revision": 1,
+    "typeId": "steppe",
+    "temperatureC": [
+      -18,
+      -14,
+      -5,
+      4,
+      12,
+      17,
+      19,
+      17,
+      11,
+      2,
+      -8,
+      -16
+    ],
+    "precipitationMm": [
+      3,
+      3,
+      5,
+      12,
+      22,
+      48,
+      75,
+      65,
+      28,
+      10,
+      5,
+      4
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-steppe-a-explanation"
+  },
+  {
+    "id": "demo-steppe-b",
+    "revision": 1,
+    "typeId": "steppe",
+    "temperatureC": [
+      24,
+      27,
+      31,
+      34,
+      35,
+      33,
+      30,
+      28,
+      29,
+      30,
+      28,
+      25
+    ],
+    "precipitationMm": [
+      0,
+      0,
+      1,
+      3,
+      15,
+      40,
+      90,
+      120,
+      55,
+      10,
+      1,
+      0
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-steppe-b-explanation"
+  },
+  {
+    "id": "demo-steppe-c",
+    "revision": 1,
+    "typeId": "steppe",
+    "temperatureC": [
+      24,
+      24,
+      22,
+      18,
+      14,
+      11,
+      10,
+      12,
+      15,
+      18,
+      21,
+      23
+    ],
+    "precipitationMm": [
+      40,
+      45,
+      40,
+      30,
+      25,
+      20,
+      18,
+      20,
+      22,
+      30,
+      35,
+      40
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-steppe-c-explanation"
+  },
+  {
+    "id": "demo-subtropical-monsoon-a",
+    "revision": 1,
+    "typeId": "subtropical-monsoon",
+    "temperatureC": [
+      16,
+      16.5,
+      18.5,
+      22,
+      25,
+      27.5,
+      29.5,
+      29,
+      27.5,
+      24.5,
+      21.5,
+      17.5
+    ],
+    "precipitationMm": [
+      85,
+      170,
+      180,
+      180,
+      235,
+      320,
+      240,
+      320,
+      360,
+      150,
+      85,
+      80
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-subtropical-monsoon-a-explanation"
+  },
+  {
+    "id": "demo-subtropical-monsoon-b",
+    "revision": 1,
+    "typeId": "subtropical-monsoon",
+    "temperatureC": [
+      8,
+      10,
+      14,
+      19,
+      24,
+      27,
+      30,
+      29.5,
+      26,
+      21,
+      15,
+      10
+    ],
+    "precipitationMm": [
+      70,
+      85,
+      130,
+      140,
+      170,
+      240,
+      150,
+      160,
+      120,
+      70,
+      55,
+      40
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-subtropical-monsoon-b-explanation"
+  },
+  {
+    "id": "demo-subtropical-monsoon-c",
+    "revision": 1,
+    "typeId": "subtropical-monsoon",
+    "temperatureC": [
+      13,
+      14,
+      17,
+      21,
+      25,
+      27.5,
+      29,
+      28.5,
+      27,
+      23.5,
+      19,
+      15
+    ],
+    "precipitationMm": [
+      40,
+      60,
+      90,
+      170,
+      280,
+      350,
+      250,
+      330,
+      200,
+      60,
+      40,
+      30
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-subtropical-monsoon-c-explanation"
+  },
+  {
+    "id": "demo-humid-subtropical-a",
+    "revision": 1,
+    "typeId": "humid-subtropical",
+    "temperatureC": [
+      7,
+      9,
+      13,
+      18,
+      22,
+      26,
+      28,
+      27.5,
+      24.5,
+      19,
+      13,
+      8.5
+    ],
+    "precipitationMm": [
+      80,
+      85,
+      100,
+      95,
+      110,
+      140,
+      160,
+      150,
+      120,
+      80,
+      75,
+      80
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-humid-subtropical-a-explanation"
+  },
+  {
+    "id": "demo-humid-subtropical-b",
+    "revision": 1,
+    "typeId": "humid-subtropical",
+    "temperatureC": [
+      27,
+      26.5,
+      25,
+      21.5,
+      18,
+      15,
+      14.5,
+      16,
+      18.5,
+      21.5,
+      24,
+      26
+    ],
+    "precipitationMm": [
+      180,
+      170,
+      150,
+      100,
+      75,
+      65,
+      60,
+      55,
+      50,
+      90,
+      115,
+      150
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-humid-subtropical-b-explanation"
+  },
+  {
+    "id": "demo-humid-subtropical-c",
+    "revision": 1,
+    "typeId": "humid-subtropical",
+    "temperatureC": [
+      26,
+      25.5,
+      24,
+      21,
+      17.5,
+      14.5,
+      13.5,
+      15,
+      17.5,
+      20.5,
+      23,
+      25
+    ],
+    "precipitationMm": [
+      140,
+      135,
+      120,
+      85,
+      70,
+      55,
+      50,
+      50,
+      55,
+      85,
+      105,
+      130
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-humid-subtropical-c-explanation"
+  },
+  {
+    "id": "demo-temperate-monsoon-a",
+    "revision": 1,
+    "typeId": "temperate-monsoon",
+    "temperatureC": [
+      -4,
+      -1.5,
+      5,
+      13.5,
+      20,
+      24.5,
+      26.5,
+      25.5,
+      20.5,
+      13,
+      4.5,
+      -2
+    ],
+    "precipitationMm": [
+      3,
+      5,
+      10,
+      25,
+      35,
+      80,
+      180,
+      160,
+      50,
+      25,
+      10,
+      3
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-temperate-monsoon-a-explanation"
+  },
+  {
+    "id": "demo-temperate-monsoon-b",
+    "revision": 1,
+    "typeId": "temperate-monsoon",
+    "temperatureC": [
+      -12,
+      -8,
+      0,
+      9,
+      16,
+      21,
+      24,
+      22,
+      16,
+      8,
+      -2,
+      -10
+    ],
+    "precipitationMm": [
+      5,
+      6,
+      15,
+      30,
+      55,
+      95,
+      160,
+      140,
+      65,
+      30,
+      15,
+      8
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-temperate-monsoon-b-explanation"
+  },
+  {
+    "id": "demo-temperate-monsoon-c",
+    "revision": 1,
+    "typeId": "temperate-monsoon",
+    "temperatureC": [
+      -2.5,
+      0,
+      5,
+      12,
+      17.5,
+      22,
+      25.5,
+      26.5,
+      22,
+      15.5,
+      8,
+      1
+    ],
+    "precipitationMm": [
+      20,
+      25,
+      45,
+      75,
+      95,
+      135,
+      370,
+      270,
+      140,
+      50,
+      35,
+      20
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-temperate-monsoon-c-explanation"
+  },
+  {
+    "id": "demo-mediterranean-a",
+    "revision": 1,
+    "typeId": "mediterranean",
+    "temperatureC": [
+      10,
+      11,
+      13,
+      15.5,
+      19,
+      23,
+      26,
+      26,
+      23.5,
+      19.5,
+      15,
+      11.5
+    ],
+    "precipitationMm": [
+      90,
+      85,
+      60,
+      40,
+      20,
+      8,
+      2,
+      5,
+      25,
+      70,
+      100,
+      110
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-mediterranean-a-explanation"
+  },
+  {
+    "id": "demo-mediterranean-b",
+    "revision": 1,
+    "typeId": "mediterranean",
+    "temperatureC": [
+      11,
+      12,
+      13.5,
+      15,
+      17,
+      19,
+      21,
+      21.5,
+      20.5,
+      18,
+      14,
+      11.5
+    ],
+    "precipitationMm": [
+      105,
+      95,
+      80,
+      40,
+      15,
+      3,
+      0,
+      1,
+      7,
+      30,
+      70,
+      100
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-mediterranean-b-explanation"
+  },
+  {
+    "id": "demo-mediterranean-c",
+    "revision": 1,
+    "typeId": "mediterranean",
+    "temperatureC": [
+      22,
+      22.5,
+      21,
+      18,
+      15,
+      13,
+      12,
+      13,
+      14.5,
+      17,
+      19,
+      21
+    ],
+    "precipitationMm": [
+      12,
+      15,
+      18,
+      45,
+      90,
+      110,
+      95,
+      80,
+      50,
+      35,
+      20,
+      15
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-mediterranean-c-explanation"
+  },
+  {
+    "id": "demo-marine-west-coast-a",
+    "revision": 1,
+    "typeId": "marine-west-coast",
+    "temperatureC": [
+      5,
+      5.5,
+      7.5,
+      9.5,
+      13,
+      16,
+      18,
+      17.5,
+      15,
+      11.5,
+      8,
+      5.5
+    ],
+    "precipitationMm": [
+      80,
+      60,
+      65,
+      55,
+      60,
+      55,
+      50,
+      60,
+      65,
+      80,
+      85,
+      85
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-marine-west-coast-a-explanation"
+  },
+  {
+    "id": "demo-marine-west-coast-b",
+    "revision": 1,
+    "typeId": "marine-west-coast",
+    "temperatureC": [
+      3,
+      4,
+      6.5,
+      9.5,
+      13,
+      16,
+      17.5,
+      17,
+      14.5,
+      10.5,
+      6.5,
+      3.5
+    ],
+    "precipitationMm": [
+      65,
+      50,
+      60,
+      55,
+      60,
+      65,
+      75,
+      70,
+      65,
+      75,
+      80,
+      75
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-marine-west-coast-b-explanation"
+  },
+  {
+    "id": "demo-marine-west-coast-c",
+    "revision": 1,
+    "typeId": "marine-west-coast",
+    "temperatureC": [
+      16,
+      16,
+      14.5,
+      12,
+      9.5,
+      7,
+      6.5,
+      7.5,
+      9,
+      11,
+      13,
+      15
+    ],
+    "precipitationMm": [
+      70,
+      65,
+      80,
+      95,
+      110,
+      115,
+      120,
+      110,
+      95,
+      90,
+      80,
+      80
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-marine-west-coast-c-explanation"
+  },
+  {
+    "id": "demo-continental-a",
+    "revision": 1,
+    "typeId": "continental",
+    "temperatureC": [
+      -10,
+      -9,
+      -4,
+      5,
+      13,
+      17,
+      19,
+      17,
+      11,
+      5,
+      -2,
+      -7
+    ],
+    "precipitationMm": [
+      35,
+      30,
+      30,
+      35,
+      50,
+      70,
+      85,
+      75,
+      55,
+      50,
+      45,
+      40
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-continental-a-explanation"
+  },
+  {
+    "id": "demo-continental-b",
+    "revision": 1,
+    "typeId": "continental",
+    "temperatureC": [
+      -16,
+      -14,
+      -6,
+      4,
+      12,
+      18,
+      20,
+      18,
+      11,
+      3,
+      -7,
+      -14
+    ],
+    "precipitationMm": [
+      30,
+      25,
+      28,
+      35,
+      50,
+      68,
+      80,
+      70,
+      50,
+      42,
+      36,
+      32
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-continental-b-explanation"
+  },
+  {
+    "id": "demo-continental-c",
+    "revision": 1,
+    "typeId": "continental",
+    "temperatureC": [
+      -6,
+      -4,
+      1,
+      9,
+      15,
+      19,
+      21,
+      20,
+      15,
+      9,
+      2,
+      -3
+    ],
+    "precipitationMm": [
+      40,
+      35,
+      35,
+      40,
+      55,
+      65,
+      70,
+      65,
+      50,
+      45,
+      45,
+      45
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-continental-c-explanation"
+  },
+  {
+    "id": "demo-tundra-a",
+    "revision": 1,
+    "typeId": "tundra",
+    "temperatureC": [
+      -28,
+      -28,
+      -25,
+      -17,
+      -6,
+      2,
+      6,
+      5,
+      0,
+      -9,
+      -19,
+      -25
+    ],
+    "precipitationMm": [
+      8,
+      7,
+      8,
+      8,
+      10,
+      15,
+      25,
+      28,
+      18,
+      15,
+      10,
+      8
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tundra-a-explanation"
+  },
+  {
+    "id": "demo-tundra-b",
+    "revision": 1,
+    "typeId": "tundra",
+    "temperatureC": [
+      -20,
+      -21,
+      -18,
+      -11,
+      -3,
+      3,
+      7,
+      6.5,
+      2,
+      -5,
+      -12,
+      -17
+    ],
+    "precipitationMm": [
+      15,
+      13,
+      14,
+      13,
+      14,
+      22,
+      35,
+      40,
+      30,
+      25,
+      18,
+      16
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tundra-b-explanation"
+  },
+  {
+    "id": "demo-tundra-c",
+    "revision": 1,
+    "typeId": "tundra",
+    "temperatureC": [
+      -15,
+      -16,
+      -14,
+      -9,
+      -2,
+      3,
+      6,
+      5.5,
+      2,
+      -4,
+      -9,
+      -13
+    ],
+    "precipitationMm": [
+      30,
+      28,
+      25,
+      22,
+      20,
+      25,
+      35,
+      40,
+      40,
+      40,
+      35,
+      32
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-tundra-c-explanation"
+  },
+  {
+    "id": "demo-ice-cap-a",
+    "revision": 1,
+    "typeId": "ice-cap",
+    "temperatureC": [
+      -35,
+      -37,
+      -36,
+      -30,
+      -20,
+      -12,
+      -9,
+      -11,
+      -19,
+      -28,
+      -33,
+      -34
+    ],
+    "precipitationMm": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      7,
+      8,
+      8,
+      6,
+      5
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-ice-cap-a-explanation"
+  },
+  {
+    "id": "demo-ice-cap-b",
+    "revision": 1,
+    "typeId": "ice-cap",
+    "temperatureC": [
+      -1,
+      -5,
+      -10,
+      -14,
+      -16,
+      -17,
+      -18,
+      -19,
+      -18,
+      -14,
+      -7,
+      -2
+    ],
+    "precipitationMm": [
+      10,
+      12,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      12,
+      10,
+      8
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-ice-cap-b-explanation"
+  },
+  {
+    "id": "demo-ice-cap-c",
+    "revision": 1,
+    "typeId": "ice-cap",
+    "temperatureC": [
+      -28,
+      -34,
+      -38,
+      -39,
+      -39,
+      -39,
+      -39,
+      -39,
+      -38,
+      -35,
+      -30,
+      -27
+    ],
+    "precipitationMm": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "teaching-synthetic",
+    "source": {
+      "title": "開發示例，非真實測站",
+      "license": "本專案自建教學數據"
+    },
+    "review": null,
+    "explanationId": "demo-ice-cap-c-explanation"
+  }
+]

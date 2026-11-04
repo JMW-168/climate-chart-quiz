@@ -1,0 +1,274 @@
+{
+  "frameworks": [
+    {
+      "id": "demo-tw-jh-v1",
+      "label": "示範分類框架（待三版教材核對）",
+      "description": "依規格 §3 候選清單建立的開發用分類，名稱與層級尚未對照課綱原文及出版社教材。"
+    }
+  ],
+  "groups": [
+    {
+      "id": "tropical",
+      "label": "熱帶"
+    },
+    {
+      "id": "dry",
+      "label": "乾燥"
+    },
+    {
+      "id": "warm-temperate",
+      "label": "季風與暖溫帶"
+    },
+    {
+      "id": "temperate",
+      "label": "其他溫帶"
+    },
+    {
+      "id": "cold",
+      "label": "寒冷地區"
+    },
+    {
+      "id": "highland",
+      "label": "高地"
+    }
+  ],
+  "types": [
+    {
+      "id": "tropical-rainforest",
+      "label": "熱帶雨林氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "tropical",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "tropical-monsoon",
+        "tropical-savanna",
+        "subtropical-monsoon"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "全年高溫（各月約 25°C 以上）、年溫差很小，而且每個月都多雨、沒有乾季",
+      "curriculumRefs": []
+    },
+    {
+      "id": "tropical-monsoon",
+      "label": "熱帶季風氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "tropical",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "tropical-savanna",
+        "tropical-rainforest",
+        "subtropical-monsoon"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "全年高溫，雨季降水非常集中且量很大（單月可達數百毫米），另有明顯乾季，年降水量多",
+      "curriculumRefs": []
+    },
+    {
+      "id": "tropical-savanna",
+      "label": "熱帶莽原氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "tropical",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "tropical-monsoon",
+        "tropical-rainforest",
+        "steppe"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "全年高溫，有明顯乾季與雨季，但雨季降水量不如熱帶季風多，年降水量約 1000 mm 上下",
+      "curriculumRefs": []
+    },
+    {
+      "id": "desert",
+      "label": "沙漠氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "dry",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "steppe",
+        "tropical-savanna",
+        "mediterranean"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "全年降水極少（年降水量多在 250 mm 以下），幾乎每個月都接近 0 mm，且夏季氣溫高",
+      "curriculumRefs": []
+    },
+    {
+      "id": "steppe",
+      "label": "草原氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "dry",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "desert",
+        "tropical-savanna",
+        "continental"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "降水偏少（年降水量約 250～500 mm），比沙漠多一些但仍屬乾燥，且夏季溫暖到炎熱（最熱月在 15°C 以上）",
+      "curriculumRefs": []
+    },
+    {
+      "id": "subtropical-monsoon",
+      "label": "副熱帶季風氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "warm-temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "temperate-monsoon",
+        "tropical-monsoon",
+        "mediterranean"
+      ],
+      "overlapTypeIds": [
+        "humid-subtropical"
+      ],
+      "keyFeature": "夏季高溫多雨、冬季溫和（最冷月仍在 0°C 以上），全年都有降水而以夏季較多",
+      "curriculumRefs": []
+    },
+    {
+      "id": "humid-subtropical",
+      "label": "夏雨型暖溫帶氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "warm-temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "mediterranean",
+        "marine-west-coast",
+        "temperate-monsoon"
+      ],
+      "overlapTypeIds": [
+        "subtropical-monsoon"
+      ],
+      "keyFeature": "夏季炎熱、冬季溫和（最冷月在 0°C 以上），全年有雨且夏季雨量較多",
+      "curriculumRefs": []
+    },
+    {
+      "id": "temperate-monsoon",
+      "label": "溫帶季風氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "warm-temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "continental",
+        "subtropical-monsoon",
+        "humid-subtropical"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "夏季高溫多雨、冬季寒冷（最冷月低於 0°C）且乾燥，降水集中在夏季",
+      "curriculumRefs": []
+    },
+    {
+      "id": "mediterranean",
+      "label": "地中海型氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "humid-subtropical",
+        "marine-west-coast",
+        "steppe"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "夏季乾燥少雨、冬季溫和多雨，雨季出現在冬半年",
+      "curriculumRefs": []
+    },
+    {
+      "id": "marine-west-coast",
+      "label": "溫帶海洋性氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "continental",
+        "mediterranean",
+        "humid-subtropical"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "冬季溫和、夏季涼爽（最熱月多在 22°C 以下），年溫差小，全年都有雨且分布平均",
+      "curriculumRefs": []
+    },
+    {
+      "id": "continental",
+      "label": "溫帶大陸性氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "temperate-monsoon",
+        "marine-west-coast",
+        "tundra"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "冬季寒冷（最冷月遠低於 0°C）、夏季溫暖、年溫差大，年降水量約 500～700 mm，各月都有降水、夏季稍多",
+      "curriculumRefs": []
+    },
+    {
+      "id": "tundra",
+      "label": "苔原氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "cold",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "ice-cap",
+        "continental"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "全年低溫，最熱月只有 0～10°C，其餘多數月份在 0°C 以下",
+      "curriculumRefs": []
+    },
+    {
+      "id": "ice-cap",
+      "label": "冰原氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "cold",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "tundra",
+        "continental"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "每個月的月均溫都在 0°C 以下，終年嚴寒",
+      "curriculumRefs": []
+    },
+    {
+      "id": "highland",
+      "label": "高地氣候",
+      "aliases": [],
+      "frameworkId": "demo-tw-jh-v1",
+      "groupId": "highland",
+      "status": "draft",
+      "graphIdentifiable": false,
+      "notIdentifiableReason": "高地氣候隨海拔與所在緯度變化，單張氣候圖常與其他類型相似，須搭配地形與位置判斷；v1 列為教學比較，不單獨命題。",
+      "confusableTypeIds": [],
+      "overlapTypeIds": [],
+      "keyFeature": "氣溫隨海拔升高而降低，圖形依所在緯度而不同",
+      "curriculumRefs": []
+    }
+  ]
+}

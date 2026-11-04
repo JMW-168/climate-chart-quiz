@@ -1,0 +1,118 @@
+{
+  "status": "draft",
+  "note": "示範矩陣：尚未對照課綱原文與現行三版教材的冊別、頁碼；正式發布前須補齊（規格 §3、§17）。",
+  "entries": [
+    {
+      "typeId": "tropical-rainforest",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "tropical-monsoon",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "tropical-savanna",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "desert",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "steppe",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "subtropical-monsoon",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "humid-subtropical",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "temperate-monsoon",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "mediterranean",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "marine-west-coast",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "continental",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "tundra",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "ice-cap",
+      "references": [],
+      "coverage": "pending",
+      "reason": "示範資料可出題；教材出處、名稱用語與分類層級待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
+      "typeId": "highland",
+      "references": [],
+      "coverage": "teaching-only",
+      "reason": "高地氣候隨海拔與所在緯度變化，單張氣候圖常與其他類型相似，須搭配地形與位置判斷；v1 列為教學比較，不單獨命題。",
+      "reviewer": null,
+      "reviewedAt": null
+    }
+  ]
+}
