@@ -55,6 +55,17 @@ try {
     await page.locator('.result-banner').waitFor();
   }
 
+  console.log('讀圖總複習');
+  await page.goto(`${BASE}learn`);
+  await page.locator('.review-card').first().waitFor();
+  const cards = await page.locator('.review-card').count();
+  check(cards === 14, `總複習列出全部 14 個類型（${cards}）`);
+  check((await page.locator('.review-card svg').count()) === 13, '13 個可命題類型都有代表圖');
+  check((await page.locator('.review-card[data-type="highland"]').innerText()).includes('不單獨出題'), '高地氣候標示不出題原因');
+  await page.getByRole('radio', { name: '寒冷地區' }).check({ force: true });
+  check((await page.locator('.review-card').count()) === 2, '分組篩選：寒冷地區 2 類');
+  await page.screenshot({ path: `${SHOTS}/review-390.png`, fullPage: true });
+
   console.log('完整作答流程');
   await page.goto(`${BASE}practice/setup`);
   await page.getByText('5 題', { exact: true }).click();
