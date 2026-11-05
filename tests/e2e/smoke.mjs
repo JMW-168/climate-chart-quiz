@@ -39,7 +39,7 @@ try {
 
   console.log('首頁與離線就緒');
   await page.goto(BASE);
-  await page.getByText('示範題庫').first().waitFor();
+  await page.getByText('試用題庫').first().waitFor();
   await page.getByText('已可離線練習').waitFor({ timeout: 15000 });
   check(true, '首次載入後顯示「已可離線練習」');
   await page.screenshot({ path: `${SHOTS}/home-390.png`, fullPage: true });
@@ -59,12 +59,17 @@ try {
   await page.goto(`${BASE}learn`);
   await page.locator('.review-card').first().waitFor();
   const cards = await page.locator('.review-card').count();
-  check(cards === 14, `總複習列出全部 14 個類型（${cards}）`);
-  check((await page.locator('.review-card svg').count()) === 13, '13 個可命題類型都有代表圖');
-  check((await page.locator('.review-card[data-type="highland"]').innerText()).includes('不單獨出題'), '高地氣候標示不出題原因');
-  await page.getByRole('radio', { name: '寒冷地區' }).check({ force: true });
-  check((await page.locator('.review-card').count()) === 2, '分組篩選：寒冷地區 2 類');
+  check(cards === 12, `總複習列出全部 12 個類型（${cards}）`);
+  check((await page.locator('.review-card svg').count()) === 12, '12 個類型都有代表圖');
+  await page.getByRole('radio', { name: '寒帶' }).check({ force: true });
+  check((await page.locator('.review-card').count()) === 2, '分組篩選：寒帶 2 類');
   await page.screenshot({ path: `${SHOTS}/review-390.png`, fullPage: true });
+
+  console.log('資料來源頁');
+  await page.goto(`${BASE}sources`);
+  const srcText = await page.locator('main').innerText();
+  check(srcText.includes('非營利') && srcText.includes('0253808') && srcText.includes('翰林'), '資料來源頁含非營利聲明、NCEI 與翰林出處');
+  await page.screenshot({ path: `${SHOTS}/sources-390.png`, fullPage: true });
 
   console.log('完整作答流程');
   await page.goto(`${BASE}practice/setup`);
@@ -144,7 +149,7 @@ try {
   console.log('320px 版面');
   const small = await browser.newContext({ viewport: { width: 320, height: 640 } });
   const sp = await small.newPage();
-  for (const path of ['', 'learn', 'practice/setup', 'mistakes', 'settings', 'data']) {
+  for (const path of ['', 'learn', 'practice/setup', 'mistakes', 'settings', 'data', 'sources']) {
     await sp.goto(BASE + path);
     await sp.locator('main').waitFor();
     await sp.waitForTimeout(400);
@@ -165,7 +170,7 @@ try {
   const desk = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const dp = await desk.newPage();
   await dp.goto(BASE);
-  await dp.getByText('示範題庫').first().waitFor();
+  await dp.getByText('試用題庫').first().waitFor();
   await dp.screenshot({ path: `${SHOTS}/home-1280.png`, fullPage: true });
 
   check(errors.length === 0, `沒有 console 錯誤${errors.length ? `：${errors.join(' | ')}` : ''}`);

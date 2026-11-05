@@ -121,7 +121,8 @@ async function confirmClear() {
         {{ app.contentLoading ? '下載中…' : '重新下載題庫' }}
       </button>
       <button v-if="app.needRefresh" class="btn primary" type="button" @click="applyUpdate()">更新網站</button>
-      <RouterLink class="btn quiet" to="/data">資料來源與教材對照</RouterLink>
+      <RouterLink class="btn quiet" to="/sources">資料來源與授權</RouterLink>
+      <RouterLink class="btn quiet" to="/data">題庫資料說明</RouterLink>
     </div>
     <p v-if="app.contentError" class="status-strip error">{{ app.contentError }}</p>
     <p class="small muted" style="margin-top: 10px">題庫更新只影響之後開始的練習，進行中的回合會沿用原本的題目。</p>

@@ -4,15 +4,16 @@ import ClimateChart from '../components/ClimateChart.vue';
 import ClimateReview from '../components/ClimateReview.vue';
 import { DEFAULT_SCALE, fmt0, fmt1, summarize } from '../domain/stats';
 
-const t = [24, 25, 27, 29, 30, 29, 27, 27, 27, 27, 26, 24];
-const p = [2, 3, 10, 35, 90, 160, 220, 240, 170, 60, 10, 3];
+// 奈及利亞阿布加（WMO 1991–2020 平均值）
+const t = [26.9, 29.3, 30.7, 30, 28.1, 26.6, 25.7, 25.2, 25.7, 26.5, 26.9, 26.3];
+const p = [0.8, 5.9, 22.4, 72.8, 156.7, 194.4, 249.8, 308.3, 229.4, 169.5, 9.7, 1.3];
 const s = summarize(t, p);
 const show = ref<'none' | 'range' | 'rain'>('none');
 const highlights = computed(() =>
   show.value === 'range'
     ? { temperature: [s.maxTempMonth, s.minTempMonth], precipitation: [] }
     : show.value === 'rain'
-      ? { temperature: [], precipitation: [6, 7, 8, 9] }
+      ? { temperature: [], precipitation: [5, 6, 7, 8, 9, 10] }
       : null,
 );
 </script>
@@ -23,6 +24,7 @@ const highlights = computed(() =>
 
   <section class="sheet">
     <ClimateChart :temperature-c="t" :precipitation-mm="p" :scale="DEFAULT_SCALE" label="讀圖示範" :highlights="highlights" />
+    <p class="small muted" style="margin: 6px 0 0">示範資料：奈及利亞阿布加，WMO 1991–2020 氣候平均值。</p>
     <div class="btn-row" style="margin-top: 12px" role="group" aria-label="在圖上標記">
       <button class="btn" type="button" :aria-pressed="show === 'range'" @click="show = show === 'range' ? 'none' : 'range'">標出最高與最低溫月</button>
       <button class="btn" type="button" :aria-pressed="show === 'rain'" @click="show = show === 'rain' ? 'none' : 'rain'">標出雨季</button>
@@ -47,14 +49,14 @@ const highlights = computed(() =>
         <p>
           找出最熱月和最冷月，相減就是<strong>年溫差</strong>。這張圖最熱 {{ fmt1(t[s.maxTempMonth - 1]) }}°C（{{ s.maxTempMonth }} 月）、
           最冷 {{ fmt1(t[s.minTempMonth - 1]) }}°C（{{ s.minTempMonth }} 月），年溫差 {{ fmt1(s.range) }}°C。
-          全年都在 20°C 以上，代表終年高溫。
+          全年都在 25°C 以上，代表終年高溫。
         </p>
       </li>
       <li>
         <h3>再看雨量</h3>
         <p>
-          看長條高的月份集中在哪裡。這張圖 6～9 月雨量多（最多 {{ fmt0(p[s.maxPrecipMonth - 1]) }} mm），
-          12～2 月幾乎沒有雨：一年中有明顯的<strong>雨季與乾季</strong>。全年合計約 {{ fmt0(s.totalPrecip) }} mm。
+          看長條高的月份集中在哪裡。這張圖 5～10 月雨量多（最多 {{ fmt0(p[s.maxPrecipMonth - 1]) }} mm），
+          11～2 月幾乎沒有雨：一年中有明顯的<strong>雨季與乾季</strong>。全年合計約 {{ fmt0(s.totalPrecip) }} mm。
         </p>
       </li>
       <li>

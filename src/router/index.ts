@@ -12,6 +12,7 @@ export const router = createRouter({
     { path: '/results/:sessionId', name: 'results', component: () => import('../pages/Results.vue'), meta: { title: '練習結果' } },
     { path: '/mistakes', name: 'mistakes', component: () => import('../pages/Mistakes.vue'), meta: { title: '錯題複習' } },
     { path: '/settings', name: 'settings', component: () => import('../pages/Settings.vue'), meta: { title: '設定' } },
+    { path: '/sources', name: 'sources', component: () => import('../pages/Sources.vue'), meta: { title: '資料來源與授權' } },
     { path: '/data', name: 'data', component: () => import('../pages/DataInfo.vue'), meta: { title: '資料說明' } },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('../pages/NotFound.vue'), meta: { title: '找不到頁面' } },
   ],
