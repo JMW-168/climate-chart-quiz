@@ -1,5 +1,6 @@
 // 內容驗證（規格 §3、§14 C01–C03）。
 
+import { koppen, matchesKoppen } from './koppen';
 import type { ContentMode, ContentPackage, ReviewStatus } from './types';
 
 export interface ValidationIssue {
@@ -52,6 +53,9 @@ export function validateContentPackage(pkg: ContentPackage): ValidationResult {
     if (!groupIds.has(t.groupId)) err('type-group', t.id, `分組 ${t.groupId} 不存在`);
     if (!t.keyFeature.trim()) err('type-key-feature', t.id, '缺少判讀重點 keyFeature');
     if (!t.graphIdentifiable && !t.notIdentifiableReason) err('type-not-identifiable-reason', t.id, '不可命題的類型必須寫明原因');
+    if (t.graphIdentifiable && (!Array.isArray(t.koppenCodes) || t.koppenCodes.length === 0)) {
+      err('type-koppen', t.id, '可命題類型必須列出可接受的柯本代碼 koppenCodes');
+    }
     for (const name of [t.label, ...t.aliases]) {
       const owner = labelOwner.get(name);
       if (owner && owner !== t.id) err('alias-conflict', t.id, `名稱「${name}」同時屬於 ${owner}，相關名稱不可當同義詞`);
@@ -106,6 +110,17 @@ export function validateContentPackage(pkg: ContentPackage): ValidationResult {
     if (!type) {
       err('dataset-type', d.id, `引用不存在的類型 ${d.typeId}`);
       continue;
+    }
+    // 柯本交叉檢查（#1）：不一致須有書面例外原因
+    if (d.status !== 'retired' && type.graphIdentifiable && isFiniteNumberArray(d.temperatureC, MONTHS) && isFiniteNumberArray(d.precipitationMm, MONTHS)) {
+      const code = koppen(d.temperatureC, d.precipitationMm, d.hemisphere);
+      if (!matchesKoppen(code, type.koppenCodes ?? [])) {
+        if (d.koppenException?.trim()) {
+          warn('koppen-exception', d.id, `柯本 ${code} 與 ${type.id}（${type.koppenCodes.join('/')}）不一致，已註記例外：${d.koppenException}`);
+        } else {
+          err('koppen-mismatch', d.id, `柯本分類為 ${code}，與所標類型 ${type.id}（可接受 ${type.koppenCodes.join('/')}）不一致`);
+        }
+      }
     }
     const exp = explById.get(d.explanationId);
     if (!exp) err('dataset-explanation', d.id, `引用不存在的解析 ${d.explanationId}`);

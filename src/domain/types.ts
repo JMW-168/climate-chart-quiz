@@ -32,6 +32,8 @@ export interface ClimateType {
   overlapTypeIds: string[];
   /** 判讀重點：用於「為何不符」的解析 */
   keyFeature: string;
+  /** 可接受的柯本代碼（前綴比對，如 "Cs" 涵蓋 Csa/Csb），作為資料交叉檢查 */
+  koppenCodes: string[];
   curriculumRefs: string[];
 }
 
@@ -74,6 +76,8 @@ export interface ClimateDataset {
   source: DatasetSource;
   review: DatasetReview | null;
   explanationId: string;
+  /** 柯本代碼與所標類型不一致時，必須寫明保留理由 */
+  koppenException?: string;
   regionIds?: string[];
 }
 

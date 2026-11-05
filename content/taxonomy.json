@@ -48,6 +48,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "全年高溫（各月約 25°C 以上）、年溫差很小，而且每個月都多雨、沒有乾季",
+      "koppenCodes": [
+        "Af"
+      ],
       "curriculumRefs": []
     },
     {
@@ -65,6 +68,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "全年高溫，雨季降水非常集中且量很大（單月可達數百毫米），另有明顯乾季，年降水量多",
+      "koppenCodes": [
+        "Am"
+      ],
       "curriculumRefs": []
     },
     {
@@ -82,6 +88,10 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "全年高溫，有明顯乾季與雨季，但雨季降水量不如熱帶季風多，年降水量約 1000 mm 上下",
+      "koppenCodes": [
+        "Aw",
+        "As"
+      ],
       "curriculumRefs": []
     },
     {
@@ -99,6 +109,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "全年降水極少（年降水量多在 250 mm 以下），幾乎每個月都接近 0 mm，且夏季氣溫高",
+      "koppenCodes": [
+        "BW"
+      ],
       "curriculumRefs": []
     },
     {
@@ -116,6 +129,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "降水偏少（年降水量約 250～500 mm），比沙漠多一些但仍屬乾燥，且夏季溫暖到炎熱（最熱月在 15°C 以上）",
+      "koppenCodes": [
+        "BS"
+      ],
       "curriculumRefs": []
     },
     {
@@ -135,6 +151,10 @@
         "humid-subtropical"
       ],
       "keyFeature": "夏季高溫多雨、冬季溫和（最冷月仍在 0°C 以上），全年都有降水而以夏季較多",
+      "koppenCodes": [
+        "Cfa",
+        "Cwa"
+      ],
       "curriculumRefs": []
     },
     {
@@ -154,6 +174,10 @@
         "subtropical-monsoon"
       ],
       "keyFeature": "夏季炎熱、冬季溫和（最冷月在 0°C 以上），全年有雨且夏季雨量較多",
+      "koppenCodes": [
+        "Cfa",
+        "Cwa"
+      ],
       "curriculumRefs": []
     },
     {
@@ -171,6 +195,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "夏季高溫多雨、冬季寒冷（最冷月低於 0°C）且乾燥，降水集中在夏季",
+      "koppenCodes": [
+        "Dw"
+      ],
       "curriculumRefs": []
     },
     {
@@ -188,6 +215,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "夏季乾燥少雨、冬季溫和多雨，雨季出現在冬半年",
+      "koppenCodes": [
+        "Cs"
+      ],
       "curriculumRefs": []
     },
     {
@@ -205,6 +235,10 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "冬季溫和、夏季涼爽（最熱月多在 22°C 以下），年溫差小，全年都有雨且分布平均",
+      "koppenCodes": [
+        "Cfb",
+        "Cfc"
+      ],
       "curriculumRefs": []
     },
     {
@@ -222,6 +256,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "冬季寒冷（最冷月遠低於 0°C）、夏季溫暖、年溫差大，年降水量約 500～700 mm，各月都有降水、夏季稍多",
+      "koppenCodes": [
+        "Df"
+      ],
       "curriculumRefs": []
     },
     {
@@ -238,6 +275,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "全年低溫，最熱月只有 0～10°C，其餘多數月份在 0°C 以下",
+      "koppenCodes": [
+        "ET"
+      ],
       "curriculumRefs": []
     },
     {
@@ -254,6 +294,9 @@
       ],
       "overlapTypeIds": [],
       "keyFeature": "每個月的月均溫都在 0°C 以下，終年嚴寒",
+      "koppenCodes": [
+        "EF"
+      ],
       "curriculumRefs": []
     },
     {
@@ -268,6 +311,7 @@
       "confusableTypeIds": [],
       "overlapTypeIds": [],
       "keyFeature": "氣溫隨海拔升高而降低，圖形依所在緯度而不同",
+      "koppenCodes": [],
       "curriculumRefs": []
     }
   ]
