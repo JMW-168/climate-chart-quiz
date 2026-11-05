@@ -1,35 +1,35 @@
 [
   {
-    "id": "demo-tropical-rainforest-a",
+    "id": "wmo-tropical-rainforest-changi-airport",
     "revision": 1,
     "typeId": "tropical-rainforest",
     "temperatureC": [
-      26.5,
       26.8,
-      27.2,
-      27.5,
-      27.6,
       27.3,
-      27,
-      27.1,
+      27.8,
+      28.2,
+      28.6,
+      28.5,
+      28.2,
+      28.1,
+      28,
+      27.9,
       27.2,
-      27.1,
-      26.9,
-      26.6
+      26.8
     ],
     "precipitationMm": [
-      240,
-      190,
-      220,
-      260,
-      230,
-      180,
-      170,
-      190,
-      200,
-      230,
-      250,
-      270
+      221.6,
+      105,
+      151.1,
+      163.8,
+      163.8,
+      137.1,
+      144.8,
+      148.9,
+      124.6,
+      166.4,
+      254.1,
+      332.1
     ],
     "difficulty": [
       "beginner",
@@ -37,182 +37,95 @@
     ],
     "hemisphere": "equatorial",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Singapore / Changi Airport（0-20000-0-48698；緯度 1.368、經度 103.982、海拔 14 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-tropical-rainforest-a-explanation"
+    "explanationId": "wmo-tropical-rainforest-changi-airport-explanation"
   },
   {
-    "id": "demo-tropical-rainforest-b",
+    "id": "wmo-tropical-rainforest-belem",
     "revision": 1,
     "typeId": "tropical-rainforest",
     "temperatureC": [
-      27,
-      27.4,
-      27.6,
-      27.8,
-      27.5,
-      27,
-      26.8,
-      26.9,
-      27,
-      27.2,
-      27.1,
-      26.9
-    ],
-    "precipitationMm": [
-      180,
-      150,
-      200,
-      280,
-      300,
-      210,
-      190,
-      170,
-      180,
-      230,
-      260,
-      220
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "equatorial",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-tropical-rainforest-b-explanation"
-  },
-  {
-    "id": "demo-tropical-rainforest-c",
-    "revision": 1,
-    "typeId": "tropical-rainforest",
-    "temperatureC": [
-      25.8,
-      26,
       26.3,
-      26.5,
-      26.4,
-      26,
-      25.7,
-      25.9,
       26.1,
       26.3,
-      26.2,
-      25.9
+      26.5,
+      26.8,
+      26.9,
+      26.8,
+      27.1,
+      27.3,
+      27.3,
+      27.4,
+      27
     ],
     "precipitationMm": [
-      310,
-      280,
-      330,
-      290,
-      220,
-      160,
-      150,
-      170,
-      190,
-      240,
-      280,
-      330
+      393.8,
+      437.8,
+      506.3,
+      465.5,
+      323.6,
+      205.8,
+      156,
+      128.7,
+      120.1,
+      135.8,
+      151.4,
+      283.5
     ],
     "difficulty": [
+      "standard",
       "advanced"
     ],
     "hemisphere": "equatorial",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Brazil / Belém（0-20000-0-82191；緯度 -1.436、經度 -48.437、海拔 7.1 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-tropical-rainforest-c-explanation"
+    "explanationId": "wmo-tropical-rainforest-belem-explanation"
   },
   {
-    "id": "demo-tropical-monsoon-a",
+    "id": "wmo-tropical-rainforest-colombo",
     "revision": 1,
-    "typeId": "tropical-monsoon",
+    "typeId": "tropical-rainforest",
     "temperatureC": [
-      25,
-      26.5,
-      28.5,
-      30,
-      29.5,
-      27.5,
-      27,
-      27,
-      27.3,
-      27.5,
-      26.5,
-      25
-    ],
-    "precipitationMm": [
-      5,
-      5,
-      15,
-      60,
-      300,
-      520,
-      580,
-      560,
-      380,
-      200,
-      40,
-      8
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-tropical-monsoon-a-explanation"
-  },
-  {
-    "id": "demo-tropical-monsoon-b",
-    "revision": 1,
-    "typeId": "tropical-monsoon",
-    "temperatureC": [
-      24,
-      25.5,
-      28,
-      30.5,
-      30,
-      28,
-      27.5,
-      27.4,
+      27.2,
       27.6,
-      27,
-      25.8,
-      24.2
+      28.4,
+      28.7,
+      28.9,
+      28.4,
+      28.1,
+      28.1,
+      27.9,
+      27.5,
+      27.3,
+      27.2
     ],
     "precipitationMm": [
-      8,
-      12,
-      25,
-      80,
-      260,
-      480,
-      520,
-      500,
-      340,
-      160,
-      30,
-      6
+      79.6,
+      77.4,
+      102.7,
+      248.9,
+      313.6,
+      196.7,
+      122.6,
+      115.5,
+      264.2,
+      359.3,
+      345.8,
+      170.7
     ],
     "difficulty": [
       "standard",
@@ -220,90 +133,334 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Sri Lanka / Colombo（0-20000-0-43466；緯度 6.9、經度 79.867、海拔 7 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-tropical-monsoon-b-explanation"
+    "explanationId": "wmo-tropical-rainforest-colombo-explanation"
   },
   {
-    "id": "demo-tropical-monsoon-c",
+    "id": "wmo-tropical-monsoon-phuket",
     "revision": 1,
     "typeId": "tropical-monsoon",
+    "temperatureC": [
+      28.3,
+      29,
+      29.4,
+      29.6,
+      29.1,
+      28.7,
+      28.4,
+      28.3,
+      27.8,
+      27.6,
+      28,
+      27.9
+    ],
+    "precipitationMm": [
+      49.9,
+      24,
+      80.7,
+      135.1,
+      236.9,
+      249.4,
+      240.2,
+      308.7,
+      350.4,
+      336,
+      178.2,
+      82
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Thailand / Phuket（0-20000-0-48564；緯度 7.883、經度 98.4、海拔 1.8 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-monsoon-phuket-explanation"
+  },
+  {
+    "id": "wmo-tropical-monsoon-kurunegala",
+    "revision": 1,
+    "typeId": "tropical-monsoon",
+    "temperatureC": [
+      26.2,
+      27.3,
+      28.9,
+      28.6,
+      28.5,
+      27.8,
+      27.8,
+      27.8,
+      27.8,
+      27.3,
+      26.8,
+      26.1
+    ],
+    "precipitationMm": [
+      63.9,
+      56.7,
+      136.1,
+      285.2,
+      204.2,
+      128.3,
+      86.4,
+      83.8,
+      147.5,
+      351.6,
+      289.6,
+      160.2
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Sri Lanka / Kurunegala（0-20000-0-43441；緯度 7.467、經度 80.367、海拔 116 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-monsoon-kurunegala-explanation"
+  },
+  {
+    "id": "wmo-tropical-monsoon-macapa",
+    "revision": 1,
+    "typeId": "tropical-monsoon",
+    "temperatureC": [
+      26.6,
+      26.2,
+      26.4,
+      26.6,
+      27,
+      27.1,
+      27.2,
+      27.9,
+      28.5,
+      28.8,
+      28.7,
+      27.8
+    ],
+    "precipitationMm": [
+      268.1,
+      369.3,
+      400.1,
+      376.4,
+      308.4,
+      252.4,
+      203.9,
+      96.3,
+      25.4,
+      22.7,
+      58.1,
+      144.6
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "equatorial",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Brazil / Macapá（0-20000-0-82098；緯度 -0.045、經度 -51.11、海拔 12.8 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-monsoon-macapa-explanation"
+  },
+  {
+    "id": "wmo-tropical-savanna-bangkok-metropolis",
+    "revision": 1,
+    "typeId": "tropical-savanna",
+    "temperatureC": [
+      27.4,
+      28.6,
+      29.7,
+      30.7,
+      30.3,
+      29.7,
+      29.2,
+      29,
+      28.6,
+      28.4,
+      28.4,
+      27.3
+    ],
+    "precipitationMm": [
+      23.6,
+      21.4,
+      51,
+      93.3,
+      216.8,
+      198.5,
+      189.7,
+      227.1,
+      335.9,
+      288.7,
+      44.6,
+      11.6
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Thailand / Bangkok Metropolis（0-20000-0-48455；緯度 13.726、經度 100.56、海拔 3 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-savanna-bangkok-metropolis-explanation"
+  },
+  {
+    "id": "wmo-tropical-savanna-abuja",
+    "revision": 1,
+    "typeId": "tropical-savanna",
+    "temperatureC": [
+      26.9,
+      29.3,
+      30.7,
+      30,
+      28.1,
+      26.6,
+      25.7,
+      25.2,
+      25.7,
+      26.5,
+      26.9,
+      26.3
+    ],
+    "precipitationMm": [
+      0.8,
+      5.9,
+      22.4,
+      72.8,
+      156.7,
+      194.4,
+      249.8,
+      308.3,
+      229.4,
+      169.5,
+      9.7,
+      1.3
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Nigeria / Abuja（0-2000-0-65125；緯度 9、經度 7.2、海拔 342 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-savanna-abuja-explanation"
+  },
+  {
+    "id": "wmo-tropical-savanna-darwin-airport",
+    "revision": 1,
+    "typeId": "tropical-savanna",
     "temperatureC": [
       28.5,
       28.3,
-      28.2,
-      27.8,
-      26.5,
-      25,
-      24.8,
+      28.5,
+      28.6,
+      27.3,
       25.6,
-      27.5,
-      29,
-      29.5,
-      29
+      25.2,
+      25.9,
+      28,
+      29.3,
+      29.6,
+      29.3
     ],
     "precipitationMm": [
-      520,
-      480,
-      420,
-      180,
-      60,
-      25,
-      20,
-      30,
-      60,
-      120,
-      220,
-      380
+      470.7,
+      412.4,
+      313.7,
+      105.1,
+      20.7,
+      2.2,
+      0.9,
+      0.8,
+      14.3,
+      68.9,
+      143.5,
+      279.3
     ],
     "difficulty": [
       "advanced"
     ],
     "hemisphere": "south",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Australia / Darwin Airport（0-36-9-94120；緯度 -12.424、經度 130.893、海拔 30 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-tropical-monsoon-c-explanation"
+    "explanationId": "wmo-tropical-savanna-darwin-airport-explanation"
   },
   {
-    "id": "demo-tropical-savanna-a",
+    "id": "wmo-tropical-desert-adrar",
     "revision": 1,
-    "typeId": "tropical-savanna",
+    "typeId": "tropical-desert",
     "temperatureC": [
-      24,
-      25,
-      27,
-      29,
-      30,
-      29,
-      27,
-      27,
-      27,
-      27,
-      26,
-      24
+      13.1,
+      15.9,
+      20.3,
+      25.1,
+      29.8,
+      34.5,
+      37.6,
+      36.7,
+      33.1,
+      26.6,
+      19,
+      14.2
     ],
     "precipitationMm": [
-      2,
-      3,
-      10,
-      35,
-      90,
-      160,
-      220,
-      240,
-      170,
-      60,
-      10,
-      3
+      2.1,
+      1.5,
+      1.1,
+      2.3,
+      1,
+      0.3,
+      0.1,
+      1.2,
+      2.9,
+      2.1,
+      1.4,
+      0.7
     ],
     "difficulty": [
       "beginner",
@@ -311,136 +468,287 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Algeria / Adrar（0-20000-0-60620；緯度 27.837、經度 -0.194、海拔 279.2 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-tropical-savanna-a-explanation"
+    "explanationId": "wmo-tropical-desert-adrar-explanation"
   },
   {
-    "id": "demo-tropical-savanna-b",
+    "id": "wmo-tropical-desert-abu-dhabi-intl-airport",
     "revision": 1,
-    "typeId": "tropical-savanna",
+    "typeId": "tropical-desert",
     "temperatureC": [
-      26,
-      27,
-      28,
-      29,
-      28,
-      26,
-      25,
-      25,
-      26,
-      27,
-      27,
-      26
+      19.1,
+      20.6,
+      23.4,
+      27.7,
+      31.8,
+      33.7,
+      35.5,
+      35.9,
+      33.3,
+      29.7,
+      25.2,
+      21.1
     ],
     "precipitationMm": [
-      5,
-      10,
-      30,
+      12.5,
+      8.1,
+      12.9,
+      5.2,
+      0.3,
+      0,
+      0.7,
+      0.1,
+      0,
+      0.2,
+      2.4,
+      7.8
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：United Arab Emirates / Abu Dhabi Intl Airport（0-20000-0-41217；緯度 24.433、經度 54.65、海拔 27 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-desert-abu-dhabi-intl-airport-explanation"
+  },
+  {
+    "id": "wmo-tropical-desert-agadez",
+    "revision": 1,
+    "typeId": "tropical-desert",
+    "temperatureC": [
+      20.7,
+      23.9,
+      28.4,
+      32.8,
+      35,
+      35,
+      32.6,
+      31,
+      32.6,
+      31.2,
+      26.1,
+      21.8
+    ],
+    "precipitationMm": [
+      0,
+      0,
+      0.2,
+      0.2,
+      6.5,
+      9.4,
+      51.8,
+      75.4,
+      20.2,
+      1,
+      0,
+      0
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Niger / Agadez（0-20000-0-61024；緯度 16.967、經度 7.983、海拔 501 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-tropical-desert-agadez-explanation"
+  },
+  {
+    "id": "wmo-temperate-desert-kashi-kashgar",
+    "revision": 1,
+    "typeId": "temperate-desert",
+    "temperatureC": [
+      -5.2,
+      0.4,
+      9.2,
+      16.4,
+      20.4,
+      24.2,
+      25.9,
+      24.5,
+      20,
+      13.1,
+      4.8,
+      -2.8
+    ],
+    "precipitationMm": [
+      3.3,
+      6.2,
+      5.7,
+      6.4,
+      14,
+      9.4,
+      10.8,
+      11.4,
+      7.8,
+      4.7,
+      2.8,
+      2.7
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：China / Kashi (Kashgar)（0-20000-0-51709；緯度 39.48、經度 75.75、海拔 1386.7 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-temperate-desert-kashi-kashgar-explanation"
+  },
+  {
+    "id": "wmo-temperate-desert-turpan",
+    "revision": 1,
+    "typeId": "temperate-desert",
+    "temperatureC": [
+      -6.7,
+      1.3,
+      11.6,
+      20.7,
+      26.6,
+      31.6,
+      33.1,
+      31.2,
+      24.6,
+      14.5,
+      4.4,
+      -4.4
+    ],
+    "precipitationMm": [
+      0.9,
+      0.5,
+      0.7,
+      0.9,
+      1,
+      2.6,
+      2,
+      2,
+      1.4,
+      1.2,
+      0.6,
+      0.9
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：China / Turpan（0-20000-0-51573；緯度 42.95、經度 89.23、海拔 39.3 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-temperate-desert-turpan-explanation"
+  },
+  {
+    "id": "wmo-temperate-desert-dalanzadgad",
+    "revision": 1,
+    "typeId": "temperate-desert",
+    "temperatureC": [
+      -13.9,
+      -9.2,
+      -1.1,
+      8,
+      14.7,
+      20.4,
+      23,
+      21,
+      14.8,
+      5.8,
+      -3.9,
+      -11.7
+    ],
+    "precipitationMm": [
+      1.6,
+      2.6,
+      3.9,
+      4.1,
+      11.4,
+      21.7,
+      33,
+      28.7,
+      14.5,
+      5.3,
+      3.1,
+      2.8
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Mongolia / Dalanzadgad（0-20000-0-44373；緯度 43.577、經度 104.418、海拔 1462 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-temperate-desert-dalanzadgad-explanation"
+  },
+  {
+    "id": "wmo-marine-west-coast-yeovilton",
+    "revision": 1,
+    "typeId": "marine-west-coast",
+    "temperatureC": [
+      5.3,
+      5.4,
+      7.1,
+      9.2,
+      12.2,
+      15.1,
+      17.1,
+      16.9,
+      14.6,
+      11.4,
+      8,
+      5.6
+    ],
+    "precipitationMm": [
       70,
-      130,
-      170,
-      200,
-      210,
-      160,
-      80,
-      20,
-      5
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-tropical-savanna-b-explanation"
-  },
-  {
-    "id": "demo-tropical-savanna-c",
-    "revision": 1,
-    "typeId": "tropical-savanna",
-    "temperatureC": [
-      27,
-      27,
-      26.5,
-      26,
-      24.5,
-      23,
-      22.5,
-      24,
-      26,
-      27.5,
-      28,
-      27.5
-    ],
-    "precipitationMm": [
-      220,
-      200,
-      170,
-      60,
-      10,
-      2,
-      1,
-      3,
-      15,
-      60,
-      130,
-      200
-    ],
-    "difficulty": [
-      "advanced"
-    ],
-    "hemisphere": "south",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-tropical-savanna-c-explanation"
-  },
-  {
-    "id": "demo-desert-a",
-    "revision": 1,
-    "typeId": "desert",
-    "temperatureC": [
-      14,
-      16,
-      20,
-      25,
-      29,
-      32,
-      33,
-      33,
-      30,
-      25,
-      19,
-      15
-    ],
-    "precipitationMm": [
-      3,
-      2,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      4
+      50.9,
+      48.5,
+      51.5,
+      47.2,
+      57.1,
+      50.2,
+      60.7,
+      53.2,
+      80.9,
+      81.9,
+      77.4
     ],
     "difficulty": [
       "beginner",
@@ -448,45 +756,47 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：United Kingdom / Yeovilton（無 WIGOS ID；緯度 51.006、經度 -2.643、海拔 20 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-desert-a-explanation"
+    "explanationId": "wmo-marine-west-coast-yeovilton-explanation"
   },
   {
-    "id": "demo-desert-b",
+    "id": "wmo-marine-west-coast-oostende-airport",
     "revision": 1,
-    "typeId": "desert",
+    "typeId": "marine-west-coast",
     "temperatureC": [
-      20,
-      22,
-      25,
-      29,
-      32,
-      34,
-      34,
-      34,
-      32,
-      29,
-      25,
-      21
+      4.1,
+      4.3,
+      6.4,
+      9,
+      12.4,
+      15.3,
+      17.3,
+      17.4,
+      14.9,
+      11.4,
+      7.6,
+      4.7
     ],
     "precipitationMm": [
-      5,
-      4,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      3,
-      6
+      61.5,
+      55.6,
+      46.3,
+      40.6,
+      54,
+      62.6,
+      68.1,
+      81.7,
+      73.4,
+      80.1,
+      88.6,
+      85.6
     ],
     "difficulty": [
       "standard",
@@ -494,90 +804,94 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Belgium / Oostende Airport（0-20000-0-06407；緯度 51.2、經度 2.887、海拔 3 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-desert-b-explanation"
+    "explanationId": "wmo-marine-west-coast-oostende-airport-explanation"
   },
   {
-    "id": "demo-desert-c",
+    "id": "wmo-marine-west-coast-hokitika-aero-aws",
     "revision": 1,
-    "typeId": "desert",
+    "typeId": "marine-west-coast",
     "temperatureC": [
-      27,
-      26,
-      24,
-      20,
+      15.7,
       16,
-      13,
-      12,
-      14,
-      17,
-      21,
-      24,
-      26
+      14.6,
+      12.5,
+      10.5,
+      8.3,
+      7.5,
+      8.3,
+      9.8,
+      11.1,
+      12.5,
+      14.5
     ],
     "precipitationMm": [
-      8,
-      10,
-      6,
-      4,
-      3,
-      2,
-      2,
-      2,
-      2,
-      3,
-      4,
-      6
+      207.9,
+      187.4,
+      202.5,
+      220.8,
+      235.6,
+      259,
+      208.2,
+      235.1,
+      208.1,
+      288.2,
+      202.5,
+      275.8
     ],
     "difficulty": [
       "advanced"
     ],
     "hemisphere": "south",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：New Zealand / Hokitika Aero AWS（0-20000-0-93615；緯度 -42.713、經度 170.984、海拔 47 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-desert-c-explanation"
+    "explanationId": "wmo-marine-west-coast-hokitika-aero-aws-explanation"
   },
   {
-    "id": "demo-steppe-a",
+    "id": "wmo-continental-kyiv",
     "revision": 1,
-    "typeId": "steppe",
+    "typeId": "continental",
     "temperatureC": [
-      -18,
-      -14,
-      -5,
-      4,
-      12,
-      17,
-      19,
-      17,
-      11,
-      2,
-      -8,
-      -16
+      -3.2,
+      -2.3,
+      2.5,
+      10,
+      15.8,
+      19.5,
+      21.3,
+      20.4,
+      14.9,
+      8.6,
+      2.6,
+      -1.8
     ],
     "precipitationMm": [
-      3,
-      3,
-      5,
-      12,
-      22,
-      48,
-      75,
+      37,
+      39,
+      40,
+      42,
       65,
-      28,
-      10,
-      5,
-      4
+      74,
+      68,
+      56,
+      58,
+      46,
+      46,
+      47
     ],
     "difficulty": [
       "beginner",
@@ -585,45 +899,47 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Ukraine / Kyiv（0-20000-0-33345；緯度 50.392、經度 30.536、海拔 167 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-steppe-a-explanation"
+    "explanationId": "wmo-continental-kyiv-explanation"
   },
   {
-    "id": "demo-steppe-b",
+    "id": "wmo-continental-daugavpils",
     "revision": 1,
-    "typeId": "steppe",
+    "typeId": "continental",
     "temperatureC": [
-      14,
-      16,
-      20,
-      24,
-      27,
-      29,
-      29,
-      28,
-      26,
-      23,
-      18,
-      15
+      -4.1,
+      -4.1,
+      0,
+      6.7,
+      12.2,
+      15.8,
+      18.1,
+      16.8,
+      11.9,
+      6.3,
+      1.5,
+      -2.2
     ],
     "precipitationMm": [
-      2,
-      3,
-      5,
-      10,
-      25,
-      60,
-      120,
-      120,
-      55,
-      15,
-      3,
-      2
+      40.3,
+      38.7,
+      35.5,
+      34.6,
+      61.6,
+      74.2,
+      72.9,
+      71.7,
+      56.1,
+      58.6,
+      48.4,
+      42.8
     ],
     "difficulty": [
       "standard",
@@ -631,90 +947,95 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Latvia / Daugavpils（0-20000-0-26544；緯度 55.87、經度 26.618、海拔 98 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-steppe-b-explanation"
+    "explanationId": "wmo-continental-daugavpils-explanation"
   },
   {
-    "id": "demo-steppe-c",
+    "id": "wmo-continental-minneapolis-st-paul-ap",
     "revision": 1,
-    "typeId": "steppe",
+    "typeId": "continental",
     "temperatureC": [
-      24,
-      24,
-      22,
-      18,
-      14,
-      11,
-      10,
-      12,
-      15,
-      18,
+      -8.8,
+      -6.3,
+      0.7,
+      8.4,
+      15.3,
       21,
-      23
+      23.5,
+      22.1,
+      17.5,
+      9.7,
+      1.6,
+      -5.6
     ],
     "precipitationMm": [
-      40,
-      45,
-      40,
-      30,
-      25,
-      20,
-      18,
-      20,
-      22,
-      30,
-      35,
-      40
+      22.5,
+      22.2,
+      42.7,
+      73.8,
+      99.2,
+      116.3,
+      103,
+      110.1,
+      76.7,
+      65.4,
+      40.8,
+      29.8
     ],
     "difficulty": [
+      "standard",
       "advanced"
     ],
-    "hemisphere": "south",
+    "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：United States / Minneapolis–St Paul AP（0-20000-0-72658；緯度 44.883、經度 -93.229、海拔 266 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-steppe-c-explanation"
+    "explanationId": "wmo-continental-minneapolis-st-paul-ap-explanation"
   },
   {
-    "id": "demo-subtropical-monsoon-a",
+    "id": "wmo-mediterranean-cadiz-obs",
     "revision": 1,
-    "typeId": "subtropical-monsoon",
+    "typeId": "mediterranean",
     "temperatureC": [
-      16,
+      12.9,
+      13.7,
+      15.6,
+      17.2,
+      19.8,
+      22.7,
+      24.7,
+      25.3,
+      23.3,
+      20.6,
       16.5,
-      18.5,
-      22,
-      25,
-      27.5,
-      29.5,
-      29,
-      27.5,
-      24.5,
-      21.5,
-      17.5
+      14
     ],
     "precipitationMm": [
-      85,
-      170,
-      180,
-      180,
-      235,
-      320,
-      240,
-      320,
-      360,
-      150,
-      85,
-      80
+      63.5,
+      51.6,
+      56.4,
+      42.9,
+      30.7,
+      6.6,
+      0.2,
+      1.8,
+      27.9,
+      73.6,
+      87.6,
+      79.5
     ],
     "difficulty": [
       "beginner",
@@ -722,45 +1043,47 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Spain / Cádiz Obs（0-20000-0-08452；緯度 36.5、經度 -6.258、海拔 2 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-subtropical-monsoon-a-explanation"
+    "explanationId": "wmo-mediterranean-cadiz-obs-explanation"
   },
   {
-    "id": "demo-subtropical-monsoon-b",
+    "id": "wmo-mediterranean-oakland-metro-intl-ap",
     "revision": 1,
-    "typeId": "subtropical-monsoon",
+    "typeId": "mediterranean",
     "temperatureC": [
-      8,
-      10,
-      14,
-      19,
-      24,
-      27,
-      30,
-      29.5,
-      26,
-      21,
-      15,
+      9.9,
+      11.4,
+      12.8,
+      14.1,
+      15.5,
+      17.1,
+      17.7,
+      18.1,
+      18.2,
+      16.3,
+      12.7,
       10
     ],
     "precipitationMm": [
-      70,
-      85,
-      130,
-      140,
-      170,
-      240,
-      150,
-      160,
-      120,
-      70,
-      55,
-      40
+      86.7,
+      89,
+      68.9,
+      34.4,
+      16.1,
+      4.7,
+      0.1,
+      1,
+      2.7,
+      22.5,
+      51.4,
+      97.6
     ],
     "difficulty": [
       "standard",
@@ -768,45 +1091,142 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：United States / Oakland Metro Intl AP（0-20000-0-72493；緯度 37.721、經度 -122.221、海拔 2 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-subtropical-monsoon-b-explanation"
+    "explanationId": "wmo-mediterranean-oakland-metro-intl-ap-explanation"
   },
   {
-    "id": "demo-subtropical-monsoon-c",
+    "id": "wmo-mediterranean-adelaide-west-terrace",
     "revision": 1,
-    "typeId": "subtropical-monsoon",
+    "typeId": "mediterranean",
     "temperatureC": [
-      13,
-      14,
-      17,
-      21,
-      25,
-      27.5,
-      29,
-      28.5,
-      27,
-      23.5,
-      19,
-      15
+      23.4,
+      23.1,
+      20.4,
+      18.4,
+      14.5,
+      12.6,
+      12,
+      12.3,
+      14.3,
+      17.4,
+      19.1,
+      20.9
     ],
     "precipitationMm": [
-      40,
-      60,
-      90,
-      170,
-      280,
-      350,
-      250,
-      330,
-      200,
-      60,
-      40,
-      30
+      21.3,
+      19.3,
+      24.8,
+      37.2,
+      58.5,
+      75.5,
+      69.8,
+      65.2,
+      59,
+      39.9,
+      30,
+      28
+    ],
+    "difficulty": [
+      "advanced"
+    ],
+    "hemisphere": "south",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Australia / Adelaide West Terrace（0-36-9-94648；緯度 -34.926、經度 138.583、海拔 29 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-mediterranean-adelaide-west-terrace-explanation"
+  },
+  {
+    "id": "wmo-temperate-monsoon-shenyang",
+    "revision": 1,
+    "typeId": "temperate-monsoon",
+    "temperatureC": [
+      -11.4,
+      -6.3,
+      1.7,
+      10.8,
+      17.8,
+      22.3,
+      24.9,
+      23.8,
+      17.9,
+      9.8,
+      0.3,
+      -8.4
+    ],
+    "precipitationMm": [
+      6,
+      9.7,
+      16.7,
+      35.2,
+      63.6,
+      92.5,
+      167,
+      167.1,
+      50.8,
+      44.1,
+      22.8,
+      12
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：China / Shenyang（0-20000-0-54342；緯度 41.73、經度 123.52、海拔 49 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-temperate-monsoon-shenyang-explanation"
+  },
+  {
+    "id": "wmo-temperate-monsoon-changchun",
+    "revision": 1,
+    "typeId": "temperate-monsoon",
+    "temperatureC": [
+      -14.3,
+      -9.3,
+      -1,
+      8.8,
+      16.2,
+      21.3,
+      23.7,
+      22.3,
+      16.5,
+      7.9,
+      -2.8,
+      -11.8
+    ],
+    "precipitationMm": [
+      4.4,
+      6.1,
+      13.4,
+      22,
+      62.6,
+      102.1,
+      147.5,
+      131.6,
+      53.9,
+      24.6,
+      16.9,
+      8.2
     ],
     "difficulty": [
       "standard",
@@ -814,227 +1234,144 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：China / Changchun（0-20000-0-54161；緯度 43.9、經度 125.22、海拔 238 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-subtropical-monsoon-c-explanation"
+    "explanationId": "wmo-temperate-monsoon-changchun-explanation"
   },
   {
-    "id": "demo-humid-subtropical-a",
-    "revision": 1,
-    "typeId": "humid-subtropical",
-    "temperatureC": [
-      7,
-      9,
-      13,
-      18,
-      22,
-      26,
-      28,
-      27.5,
-      24.5,
-      19,
-      13,
-      8.5
-    ],
-    "precipitationMm": [
-      80,
-      85,
-      100,
-      95,
-      110,
-      140,
-      160,
-      150,
-      120,
-      80,
-      75,
-      80
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-humid-subtropical-a-explanation"
-  },
-  {
-    "id": "demo-humid-subtropical-b",
-    "revision": 1,
-    "typeId": "humid-subtropical",
-    "temperatureC": [
-      27,
-      26.5,
-      25,
-      21.5,
-      18,
-      15,
-      14.5,
-      16,
-      18.5,
-      21.5,
-      24,
-      26
-    ],
-    "precipitationMm": [
-      180,
-      170,
-      150,
-      100,
-      75,
-      65,
-      60,
-      55,
-      50,
-      90,
-      115,
-      150
-    ],
-    "difficulty": [
-      "advanced"
-    ],
-    "hemisphere": "south",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-humid-subtropical-b-explanation"
-  },
-  {
-    "id": "demo-humid-subtropical-c",
-    "revision": 1,
-    "typeId": "humid-subtropical",
-    "temperatureC": [
-      26,
-      25.5,
-      24,
-      21,
-      17.5,
-      14.5,
-      13.5,
-      15,
-      17.5,
-      20.5,
-      23,
-      25
-    ],
-    "precipitationMm": [
-      140,
-      135,
-      120,
-      85,
-      70,
-      55,
-      50,
-      50,
-      55,
-      85,
-      105,
-      130
-    ],
-    "difficulty": [
-      "advanced"
-    ],
-    "hemisphere": "south",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-humid-subtropical-c-explanation"
-  },
-  {
-    "id": "demo-temperate-monsoon-a",
+    "id": "wmo-temperate-monsoon-harbin",
     "revision": 1,
     "typeId": "temperate-monsoon",
     "temperatureC": [
-      -4,
-      -1.5,
-      5,
-      13.5,
-      20,
-      24.5,
-      26.5,
-      25.5,
-      20.5,
-      13,
-      4.5,
-      -2
-    ],
-    "precipitationMm": [
-      3,
-      5,
-      10,
-      25,
-      35,
-      80,
-      180,
-      160,
-      50,
-      25,
-      10,
-      3
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-temperate-monsoon-a-explanation"
-  },
-  {
-    "id": "demo-temperate-monsoon-b",
-    "revision": 1,
-    "typeId": "temperate-monsoon",
-    "temperatureC": [
-      -12,
-      -8,
-      0,
-      9,
-      16,
-      21,
-      24,
-      22,
-      16,
+      -17.3,
+      -11.9,
+      -2.4,
       8,
-      -2,
+      15.7,
+      21.3,
+      23.7,
+      21.9,
+      15.7,
+      6.8,
+      -4.6,
+      -14.6
+    ],
+    "precipitationMm": [
+      3.8,
+      4.5,
+      11.5,
+      19.3,
+      51.4,
+      100.4,
+      137,
+      112.7,
+      52.3,
+      24.5,
+      14.4,
+      7.6
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：China / Harbin（0-20000-0-50953；緯度 45.93、經度 126.57、海拔 117.7 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-temperate-monsoon-harbin-explanation"
+  },
+  {
+    "id": "wmo-subarctic-fairbanks-intl-ap",
+    "revision": 1,
+    "typeId": "subarctic",
+    "temperatureC": [
+      -22.4,
+      -17.7,
+      -11.8,
+      0.9,
+      10.2,
+      16.1,
+      17.2,
+      13.9,
+      7.6,
+      -3.2,
+      -15.5,
+      -20.2
+    ],
+    "precipitationMm": [
+      15.4,
+      13.2,
+      10.1,
+      8.7,
+      13.8,
+      37.5,
+      57.5,
+      53.4,
+      34.3,
+      19.3,
+      18.8,
+      14.4
+    ],
+    "difficulty": [
+      "beginner",
+      "standard"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：United States / Fairbanks Intl AP（0-20000-0-70261；緯度 64.804、經度 -147.876、海拔 132 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-subarctic-fairbanks-intl-ap-explanation",
+    "koppenException": "柯本以 10°C 以上月份數（4 個）判為 Dfb；但冬季嚴寒（最冷月 −22.4°C）、夏季短而涼（最熱月 17.2°C），依本題庫判讀條件歸為副極地氣候"
+  },
+  {
+    "id": "wmo-subarctic-pajala",
+    "revision": 1,
+    "typeId": "subarctic",
+    "temperatureC": [
+      -12.6,
+      -12,
+      -6.4,
+      -0.1,
+      6.2,
+      11.9,
+      14.7,
+      12.2,
+      6.9,
+      -0.2,
+      -6.5,
       -10
     ],
     "precipitationMm": [
-      5,
-      6,
-      15,
-      30,
-      55,
-      95,
-      160,
-      140,
-      65,
-      30,
-      15,
-      8
+      31.8,
+      24.3,
+      23.8,
+      24.5,
+      36.3,
+      55.5,
+      72.6,
+      59,
+      46.2,
+      39.6,
+      42.5,
+      35.1
     ],
     "difficulty": [
       "standard",
@@ -1042,549 +1379,47 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Sweden / Pajala（0-20000-0-02095；緯度 67.204、經度 23.39、海拔 164 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-temperate-monsoon-b-explanation"
+    "explanationId": "wmo-subarctic-pajala-explanation"
   },
   {
-    "id": "demo-temperate-monsoon-c",
+    "id": "wmo-subarctic-arxan",
     "revision": 1,
-    "typeId": "temperate-monsoon",
+    "typeId": "subarctic",
     "temperatureC": [
-      -2.5,
-      0,
-      5,
-      12,
-      17.5,
-      22,
-      25.5,
-      26.5,
-      22,
-      15.5,
-      8,
-      1
-    ],
-    "precipitationMm": [
-      20,
-      25,
-      45,
-      75,
-      95,
-      135,
-      370,
-      270,
-      140,
-      50,
-      35,
-      20
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-temperate-monsoon-c-explanation"
-  },
-  {
-    "id": "demo-mediterranean-a",
-    "revision": 1,
-    "typeId": "mediterranean",
-    "temperatureC": [
-      10,
-      11,
-      13,
-      15.5,
-      19,
-      23,
-      26,
-      26,
-      23.5,
-      19.5,
-      15,
-      11.5
-    ],
-    "precipitationMm": [
-      90,
-      85,
-      60,
-      40,
-      20,
-      8,
-      2,
-      5,
-      25,
-      70,
-      100,
-      110
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-mediterranean-a-explanation"
-  },
-  {
-    "id": "demo-mediterranean-b",
-    "revision": 1,
-    "typeId": "mediterranean",
-    "temperatureC": [
-      11,
-      12,
-      13.5,
-      15,
-      17,
-      19,
-      21,
-      21.5,
-      20.5,
-      18,
-      14,
-      11.5
-    ],
-    "precipitationMm": [
-      105,
-      95,
-      80,
-      40,
-      15,
-      3,
-      0,
-      1,
-      7,
-      30,
-      70,
-      100
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-mediterranean-b-explanation"
-  },
-  {
-    "id": "demo-mediterranean-c",
-    "revision": 1,
-    "typeId": "mediterranean",
-    "temperatureC": [
-      22,
-      22.5,
-      21,
-      18,
-      15,
-      13,
-      12,
-      13,
-      14.5,
-      17,
-      19,
-      21
-    ],
-    "precipitationMm": [
-      12,
-      15,
-      18,
-      45,
-      90,
-      110,
-      95,
-      80,
-      50,
-      35,
-      20,
-      15
-    ],
-    "difficulty": [
-      "advanced"
-    ],
-    "hemisphere": "south",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-mediterranean-c-explanation"
-  },
-  {
-    "id": "demo-marine-west-coast-a",
-    "revision": 1,
-    "typeId": "marine-west-coast",
-    "temperatureC": [
-      5,
-      5.5,
-      7.5,
-      9.5,
-      13,
-      16,
-      18,
-      17.5,
-      15,
-      11.5,
-      8,
-      5.5
-    ],
-    "precipitationMm": [
-      80,
-      60,
-      65,
-      55,
-      60,
-      55,
-      50,
-      60,
-      65,
-      80,
-      85,
-      85
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-marine-west-coast-a-explanation"
-  },
-  {
-    "id": "demo-marine-west-coast-b",
-    "revision": 1,
-    "typeId": "marine-west-coast",
-    "temperatureC": [
-      3,
-      4,
-      6.5,
-      9.5,
-      13,
-      16,
-      17.5,
-      17,
-      14.5,
-      10.5,
-      6.5,
-      3.5
-    ],
-    "precipitationMm": [
-      65,
-      50,
-      60,
-      55,
-      60,
-      65,
-      75,
-      70,
-      65,
-      75,
-      80,
-      75
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-marine-west-coast-b-explanation"
-  },
-  {
-    "id": "demo-marine-west-coast-c",
-    "revision": 1,
-    "typeId": "marine-west-coast",
-    "temperatureC": [
-      16,
-      16,
-      14.5,
-      12,
-      9.5,
-      7,
-      6.5,
-      7.5,
-      9,
-      11,
-      13,
-      15
-    ],
-    "precipitationMm": [
-      70,
-      65,
-      80,
-      95,
-      110,
-      115,
-      120,
-      110,
-      95,
-      90,
-      80,
-      80
-    ],
-    "difficulty": [
-      "advanced"
-    ],
-    "hemisphere": "south",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-marine-west-coast-c-explanation"
-  },
-  {
-    "id": "demo-continental-a",
-    "revision": 1,
-    "typeId": "continental",
-    "temperatureC": [
-      -10,
-      -9,
-      -4,
-      5,
-      13,
-      17,
-      19,
-      17,
-      11,
-      5,
-      -2,
-      -7
-    ],
-    "precipitationMm": [
-      35,
-      30,
-      30,
-      35,
-      50,
-      70,
-      85,
-      75,
-      55,
-      50,
-      45,
-      40
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-continental-a-explanation"
-  },
-  {
-    "id": "demo-continental-b",
-    "revision": 1,
-    "typeId": "continental",
-    "temperatureC": [
-      -16,
-      -14,
-      -6,
-      4,
-      12,
-      18,
-      20,
-      18,
-      11,
-      3,
-      -7,
-      -14
-    ],
-    "precipitationMm": [
-      30,
-      25,
-      28,
-      35,
-      50,
-      68,
-      80,
-      70,
-      50,
-      42,
-      36,
-      32
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-continental-b-explanation"
-  },
-  {
-    "id": "demo-continental-c",
-    "revision": 1,
-    "typeId": "continental",
-    "temperatureC": [
-      -6,
-      -4,
-      1,
-      9,
-      15,
-      19,
-      21,
-      20,
-      15,
-      9,
-      2,
-      -3
-    ],
-    "precipitationMm": [
-      40,
-      35,
-      35,
-      40,
-      55,
-      65,
-      70,
-      65,
-      50,
-      45,
-      45,
-      45
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-continental-c-explanation"
-  },
-  {
-    "id": "demo-tundra-a",
-    "revision": 1,
-    "typeId": "tundra",
-    "temperatureC": [
-      -28,
-      -28,
-      -25,
-      -17,
-      -6,
-      2,
-      6,
-      5,
-      0,
-      -9,
-      -19,
-      -25
-    ],
-    "precipitationMm": [
-      8,
-      7,
-      8,
-      8,
-      10,
-      15,
-      25,
-      28,
-      18,
-      15,
-      10,
-      8
-    ],
-    "difficulty": [
-      "beginner",
-      "standard"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-tundra-a-explanation"
-  },
-  {
-    "id": "demo-tundra-b",
-    "revision": 1,
-    "typeId": "tundra",
-    "temperatureC": [
-      -20,
-      -21,
-      -18,
+      -24.4,
+      -20.3,
       -11,
-      -3,
-      3,
-      7,
-      6.5,
-      2,
-      -5,
-      -12,
-      -17
+      1,
+      9.3,
+      14.7,
+      17.8,
+      15.6,
+      8.8,
+      -0.4,
+      -12.3,
+      -21.6
     ],
     "precipitationMm": [
-      15,
-      13,
-      14,
-      13,
-      14,
-      22,
-      35,
-      40,
-      30,
-      25,
-      18,
-      16
+      5.4,
+      5.1,
+      9.9,
+      21.8,
+      40.6,
+      78.4,
+      118.9,
+      94.1,
+      47.2,
+      26.3,
+      11.9,
+      8.8
     ],
     "difficulty": [
       "standard",
@@ -1592,91 +1427,47 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：China / Arxan（0-20000-0-50727；緯度 47.17、經度 119.93、海拔 997 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-tundra-b-explanation"
+    "explanationId": "wmo-subarctic-arxan-explanation"
   },
   {
-    "id": "demo-tundra-c",
+    "id": "wmo-polar-utqiagvik-barrow",
     "revision": 1,
-    "typeId": "tundra",
+    "typeId": "polar",
     "temperatureC": [
-      -15,
-      -16,
-      -14,
-      -9,
-      -2,
-      3,
-      6,
-      5.5,
-      2,
-      -4,
-      -9,
-      -13
+      -24.2,
+      -24.4,
+      -23.6,
+      -15.5,
+      -5.2,
+      2.2,
+      5.4,
+      4.3,
+      0.9,
+      -6,
+      -14.6,
+      -21.3
     ],
     "precipitationMm": [
-      30,
-      28,
-      25,
-      22,
-      20,
-      25,
-      35,
-      40,
-      40,
-      40,
-      35,
-      32
-    ],
-    "difficulty": [
-      "standard",
-      "advanced"
-    ],
-    "hemisphere": "north",
-    "status": "draft",
-    "origin": "teaching-synthetic",
-    "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
-    },
-    "review": null,
-    "explanationId": "demo-tundra-c-explanation"
-  },
-  {
-    "id": "demo-ice-cap-a",
-    "revision": 1,
-    "typeId": "ice-cap",
-    "temperatureC": [
-      -35,
-      -37,
-      -36,
-      -30,
-      -20,
-      -12,
-      -9,
-      -11,
-      -19,
-      -28,
-      -33,
-      -34
-    ],
-    "precipitationMm": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      6,
-      7,
-      8,
-      8,
-      6,
-      5
+      3.7,
+      5.4,
+      4.5,
+      4.5,
+      7.2,
+      10.9,
+      24.8,
+      27.6,
+      19.7,
+      13.8,
+      9.3,
+      5.7
     ],
     "difficulty": [
       "beginner",
@@ -1684,102 +1475,255 @@
     ],
     "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：United States / Utqiagvik (Barrow)（0-20000-0-70026；緯度 71.283、經度 -156.781、海拔 9 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-ice-cap-a-explanation"
+    "explanationId": "wmo-polar-utqiagvik-barrow-explanation"
   },
   {
-    "id": "demo-ice-cap-b",
+    "id": "wmo-polar-resolute",
     "revision": 1,
-    "typeId": "ice-cap",
+    "typeId": "polar",
     "temperatureC": [
-      -1,
-      -5,
+      -31.4,
+      -32.1,
+      -29.4,
+      -21.2,
       -10,
-      -14,
-      -16,
-      -17,
-      -18,
-      -19,
-      -18,
-      -14,
-      -7,
-      -2
+      0.5,
+      4.8,
+      2.4,
+      -3.7,
+      -12.2,
+      -21.5,
+      -27.3
     ],
     "precipitationMm": [
-      10,
-      12,
+      4.9,
+      4.4,
+      7.4,
+      8.2,
+      8.5,
+      15.7,
+      29.3,
+      32.7,
+      19,
       15,
-      15,
-      15,
-      15,
-      15,
-      15,
-      15,
-      12,
-      10,
+      12.1,
+      6.7
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Canada / Resolute（0-20000-0-71018；緯度 74.706、經度 -94.968、海拔 45 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-polar-resolute-explanation"
+  },
+  {
+    "id": "wmo-polar-danmarkshavn",
+    "revision": 1,
+    "typeId": "polar",
+    "temperatureC": [
+      -21.4,
+      -22.2,
+      -22.2,
+      -15.9,
+      -6.4,
+      1.5,
+      4.4,
+      3.2,
+      -2.8,
+      -11.9,
+      -17.2,
+      -20.6
+    ],
+    "precipitationMm": [
+      30.9,
+      21,
+      21,
+      13.2,
+      7.7,
+      4.1,
+      13.6,
+      20.9,
+      19.7,
+      17.7,
+      19.1,
+      20.8
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Greenland / Danmarkshavn（0-20000-0-04320；緯度 76.769、經度 -18.668、海拔 11 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-polar-danmarkshavn-explanation"
+  },
+  {
+    "id": "wmo-highland-toluca",
+    "revision": 1,
+    "typeId": "highland",
+    "temperatureC": [
+      9,
+      10.8,
+      12.6,
+      14.4,
+      14.9,
+      14.7,
+      13.9,
+      14.1,
+      13.9,
+      12.9,
+      10.9,
+      9.3
+    ],
+    "precipitationMm": [
+      10.9,
+      14.6,
+      19.9,
+      33.8,
+      87.2,
+      172.8,
+      198.5,
+      185.9,
+      163.5,
+      65,
+      20.6,
       8
     ],
     "difficulty": [
-      "advanced"
+      "beginner",
+      "standard"
     ],
-    "hemisphere": "south",
+    "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Mexico / Toluca（0-20000-0-76675；緯度 19.291、經度 -99.714、海拔 2726 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-ice-cap-b-explanation"
+    "explanationId": "wmo-highland-toluca-explanation"
   },
   {
-    "id": "demo-ice-cap-c",
+    "id": "wmo-highland-nuwara-eliya",
     "revision": 1,
-    "typeId": "ice-cap",
+    "typeId": "highland",
     "temperatureC": [
-      -28,
-      -34,
-      -38,
-      -39,
-      -39,
-      -39,
-      -39,
-      -39,
-      -38,
-      -35,
-      -30,
-      -27
+      15.1,
+      15.6,
+      16.6,
+      17.2,
+      17.4,
+      16.5,
+      16.1,
+      16.2,
+      16.3,
+      16,
+      16.1,
+      15.5
     ],
     "precipitationMm": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
+      115.6,
+      72.7,
+      72.2,
+      133.5,
+      171.7,
+      168.3,
+      155,
+      132.4,
+      161.2,
+      246.6,
+      226.4,
+      182.9
     ],
     "difficulty": [
+      "standard",
       "advanced"
     ],
-    "hemisphere": "south",
+    "hemisphere": "north",
     "status": "draft",
-    "origin": "teaching-synthetic",
+    "origin": "observed-normal",
     "source": {
-      "title": "開發示例，非真實測站",
-      "license": "本專案自建教學數據"
+      "title": "WMO Climatological Standard Normals 1991–2020：Sri Lanka / Nuwara Eliya（0-20000-0-43473；緯度 6.967、經度 80.767、海拔 1894 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
-    "explanationId": "demo-ice-cap-c-explanation"
+    "explanationId": "wmo-highland-nuwara-eliya-explanation"
+  },
+  {
+    "id": "wmo-highland-tacubaya-mexico-city",
+    "revision": 1,
+    "typeId": "highland",
+    "temperatureC": [
+      15.1,
+      16.9,
+      18.7,
+      19.9,
+      19.9,
+      18.9,
+      17.8,
+      18,
+      17.3,
+      17,
+      16.3,
+      15.6
+    ],
+    "precipitationMm": [
+      4.8,
+      5.2,
+      9.6,
+      16.9,
+      45.9,
+      108.9,
+      133.2,
+      132.1,
+      124.4,
+      57.2,
+      14.7,
+      2.3
+    ],
+    "difficulty": [
+      "standard",
+      "advanced"
+    ],
+    "hemisphere": "north",
+    "status": "draft",
+    "origin": "observed-normal",
+    "source": {
+      "title": "WMO Climatological Standard Normals 1991–2020：Mexico / Tacubaya (Mexico City)（0-20000-0-76680；緯度 19.404、經度 -99.197、海拔 2309 m）",
+      "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+      "period": "1991–2020",
+      "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
+    },
+    "review": null,
+    "explanationId": "wmo-highland-tacubaya-mexico-city-explanation",
+    "koppenException": "柯本公式因 4 月雨量偏少（16.9 mm）判為 Csb；實際雨季在 6～9 月夏季，全年涼爽且年溫差 4.8°C，屬低緯高地氣候"
   }
 ]

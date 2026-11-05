@@ -1,11 +1,11 @@
 {
   "name": "climate-chart-quiz",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "content:author": "tsx scripts/author-demo-content.ts",
+    "content:author": "tsx scripts/author-content.ts",
     "content:validate": "tsx scripts/validate-content.ts",
     "content:build": "tsx scripts/build-content.ts",
     "icons": "tsx scripts/make-icons.ts",

@@ -83,9 +83,7 @@ describe('Q02 答案與干擾', () => {
     const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: [], difficulty: 'standard', count: 20 }, 4);
     const counts = new Map<string, number>();
     for (const q of r.questions) counts.set(q.targetTypeId, (counts.get(q.targetTypeId) ?? 0) + 1);
-    // humid-subtropical、ice-cap 在 standard 只有 1 組資料，屬資料不足而重新分配
-    const vals = [...counts.entries()].filter(([id]) => !['humid-subtropical', 'ice-cap'].includes(id)).map(([, n]) => n);
-    expect(counts.get('ice-cap')).toBe(1);
+    const vals = [...counts.values()];
     expect(Math.max(...vals) - Math.min(...vals)).toBeLessThanOrEqual(1);
   });
 });
@@ -93,15 +91,15 @@ describe('Q02 答案與干擾', () => {
 describe('Q03 題目不足', () => {
   it('回報實際題數，不重複湊題、不無限迴圈', () => {
     const pkg = demoPackage();
-    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['ice-cap'], difficulty: 'beginner', count: 20 }, 7);
+    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['polar'], difficulty: 'beginner', count: 20 }, 7);
     expect(r.available).toBe(1);
     expect(r.questions).toHaveLength(1);
     expect(r.notices.join('')).toContain('只能組出 1 題');
   });
   it('排除已練過的資料（同類新圖）', () => {
     const pkg = demoPackage();
-    const first = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['tundra'], difficulty: 'standard', count: 1 }, 7).questions[0];
-    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['tundra'], difficulty: 'standard', count: 5, excludeDatasetIds: [first.targetDatasetId] }, 7);
+    const first = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['polar'], difficulty: 'standard', count: 1 }, 7).questions[0];
+    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['polar'], difficulty: 'standard', count: 5, excludeDatasetIds: [first.targetDatasetId] }, 7);
     expect(r.questions.every((q) => q.targetDatasetId !== first.targetDatasetId)).toBe(true);
   });
 });
