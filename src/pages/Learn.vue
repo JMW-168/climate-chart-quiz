@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import ClimateChart from '../components/ClimateChart.vue';
-import ClimateReview from '../components/ClimateReview.vue';
 import { DEFAULT_SCALE, fmt0, fmt1, summarize } from '../domain/stats';
 
 // 奈及利亞阿布加（WMO 1991–2020 平均值）
@@ -20,7 +19,7 @@ const highlights = computed(() =>
 
 <template>
   <h1>怎麼讀氣候圖</h1>
-  <p class="small"><a href="#review">跳到總複習：所有氣候類型與特徵</a></p>
+  <p class="small"><RouterLink to="/review">總複習：所有氣候類型與特徵</RouterLink>｜<RouterLink to="/map">世界氣候分布圖</RouterLink></p>
 
   <section class="sheet">
     <ClimateChart :temperature-c="t" :precipitation-mm="p" :scale="DEFAULT_SCALE" label="讀圖示範" :highlights="highlights" />
@@ -72,8 +71,6 @@ const highlights = computed(() =>
     <h3>南半球的圖</h3>
     <p class="small">月份一律照 1～12 月排列。南半球的夏季在 12～2 月，所以最熱月會出現在圖的兩端；不要以為年中就一定是夏季。</p>
   </section>
-
-  <ClimateReview />
 
   <div class="btn-row">
     <RouterLink class="btn primary" to="/practice/setup">開始練習</RouterLink>

@@ -26,6 +26,8 @@ const inPractice = computed(() => route.name === 'practice');
       </RouterLink>
       <nav aria-label="主要頁面">
         <RouterLink to="/learn">讀圖</RouterLink>
+        <RouterLink to="/review">複習</RouterLink>
+        <RouterLink to="/map">地圖</RouterLink>
         <RouterLink to="/mistakes">錯題</RouterLink>
         <RouterLink to="/settings">設定</RouterLink>
       </nav>

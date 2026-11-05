@@ -6,6 +6,7 @@ import { computeScale } from '../domain/stats';
 import { isEligibleStatus } from '../domain/validation';
 import { useAppStore } from '../stores/app';
 
+const props = withDefaults(defineProps<{ standalone?: boolean }>(), { standalone: false });
 const app = useAppStore();
 const group = ref<string>('all');
 
@@ -37,8 +38,9 @@ const shown = computed(() => (group.value === 'all' ? items.value : items.value.
 </script>
 
 <template>
-  <section id="review" class="review" aria-labelledby="review-title">
-    <h2 id="review-title">總複習：所有氣候類型</h2>
+  <section id="review" class="review" :class="{ standalone: props.standalone }" aria-labelledby="review-title">
+    <h1 v-if="props.standalone" id="review-title">總複習：所有氣候類型</h1>
+    <h2 v-else id="review-title">總複習：所有氣候類型</h2>
     <p class="small muted">每種氣候附一張代表圖，以及判讀時要看的氣溫條件和降水條件。</p>
 
     <div class="choice-row filter" role="radiogroup" aria-label="依分組篩選">
@@ -53,7 +55,7 @@ const shown = computed(() => (group.value === 'all' ? items.value : items.value.
     <div class="review-grid">
       <article v-for="i in shown" :key="i.type.id" class="sheet review-card" :data-type="i.type.id">
         <header>
-          <h3>{{ i.type.label }}</h3>
+          <h3 :id="`review-${i.type.id}`">{{ i.type.label }}</h3>
           <span class="small muted">{{ i.groupLabel }}</span>
         </header>
 
@@ -88,6 +90,9 @@ const shown = computed(() => (group.value === 'all' ? items.value : items.value.
 
 <style scoped>
 .review { margin-top: 28px; scroll-margin-top: 64px; }
+.review.standalone { margin-top: 0; }
+.review h1 { margin-bottom: 0.3em; }
+.review-card h3 { scroll-margin-top: 72px; }
 .filter { margin: 10px 0 14px; }
 .review-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 720px) {
