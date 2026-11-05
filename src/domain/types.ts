@@ -3,7 +3,7 @@ import type { DistractorCheck, TypeCriteria } from './criteria';
 export type { DistractorCheck, TypeCriteria } from './criteria';
 
 export type ReviewStatus = 'draft' | 'reviewed' | 'published' | 'retired';
-export type QuestionKind = 'chart-to-type' | 'type-to-chart';
+export type QuestionKind = 'chart-to-type' | 'type-to-chart' | 'chart-to-location' | 'cause';
 export type Difficulty = 'beginner' | 'standard' | 'advanced';
 export type Hemisphere = 'north' | 'south' | 'equatorial';
 
@@ -48,10 +48,35 @@ export interface TypeGroup {
   label: string;
 }
 
+/** 成因因子（#16）：成因選擇題的選項 */
+export interface CauseFactor {
+  id: string;
+  /** 選項文字 */
+  label: string;
+  /** 通常造成的現象（解析用） */
+  effect: string;
+  /** 和此因子常同時成立、不可當作錯誤選項的因子 */
+  coOccurring: string[];
+}
+
 export interface Taxonomy {
   frameworks: ClassificationFramework[];
   groups: TypeGroup[];
   types: ClimateType[];
+  causeFactors?: CauseFactor[];
+}
+
+/** 測站氣候的主要成因（#15 延伸說明、#16 成因題） */
+export interface StationCause {
+  factorId: string;
+  /** 成因題題幹，例如「這裡為什麼全年多雨？」 */
+  stem: string;
+  /** 成因說明 */
+  text: string;
+  /** 小地圖要畫的風帶、氣壓帶、洋流 ID */
+  overlays: string[];
+  /** 此測站也成立、不可當作錯誤選項的因子 */
+  alsoTrue?: string[];
 }
 
 export interface DatasetSource {
@@ -97,6 +122,8 @@ export interface ClimateDataset {
   location?: StationLocation;
   /** 柯本代碼與所標類型不一致時，必須寫明保留理由 */
   koppenException?: string;
+  /** 主要成因（延伸內容，待依課本核對） */
+  cause?: StationCause;
   regionIds?: string[];
 }
 
@@ -177,6 +204,8 @@ export interface ExplanationSnapshot {
   optionReasons: Record<string, string>;
   /** optionId → 逐項判斷（#2；舊回合快照可能沒有） */
   optionChecks?: Record<string, DistractorCheck & { typeLabel: string }>;
+  /** 延伸說明：為什麼會這樣（#15；舊回合可能沒有） */
+  cause?: { text: string; overlays: string[] };
 }
 
 export interface ChartScale {
@@ -211,7 +240,20 @@ export interface TypeToChartQuestion extends QuestionBase {
   options: { id: string; letter: string; typeId: string; chart: ChartSnapshot }[];
 }
 
-export type QuestionSnapshot = ChartToTypeQuestion | TypeToChartQuestion;
+export interface ChartToLocationQuestion extends QuestionBase {
+  kind: 'chart-to-location';
+  chart: ChartSnapshot;
+  options: { id: string; letter: string; typeId: string; datasetId: string; location: StationLocation }[];
+}
+
+export interface CauseQuestion extends QuestionBase {
+  kind: 'cause';
+  chart: ChartSnapshot;
+  stem: string;
+  options: { id: string; factorId: string; label: string }[];
+}
+
+export type QuestionSnapshot = ChartToTypeQuestion | TypeToChartQuestion | ChartToLocationQuestion | CauseQuestion;
 
 // ───────────── 練習回合 ─────────────
 

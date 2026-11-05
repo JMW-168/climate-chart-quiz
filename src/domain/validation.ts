@@ -2,6 +2,7 @@
 
 import { koppen, matchesKoppen } from './koppen';
 import { evaluateType } from './criteria';
+import { CURRENTS, PRESSURE_BELTS, WIND_BELTS } from '../map/overlays';
 import type { ContentMode, ContentPackage, ReviewStatus } from './types';
 
 export interface ValidationIssue {
@@ -171,6 +172,28 @@ export function validateContentPackage(pkg: ContentPackage): ValidationResult {
       if (!d.review) err('C03-review', d.id, '正式資料缺審核紀錄');
       if (!d.source.period && d.origin === 'observed-normal') err('C03-period', d.id, '測站資料須註明統計期間');
     }
+  }
+
+  // ── 成因（#15、#16） ──
+  const factors = new Map((taxonomy.causeFactors ?? []).map((f) => [f.id, f]));
+  const overlayIds = new Set([...CURRENTS, ...PRESSURE_BELTS, ...WIND_BELTS].map((x) => x.id));
+  for (const f of factors.values()) {
+    for (const c of f.coOccurring) if (!factors.has(c)) err('cause-factor-ref', f.id, `coOccurring 引用不存在的因子 ${c}`);
+  }
+  for (const d of datasets) {
+    if (!d.cause) continue;
+    const c = d.cause;
+    const main = factors.get(c.factorId);
+    if (!main) {
+      err('cause-factor', d.id, `成因因子 ${c.factorId} 不存在`);
+      continue;
+    }
+    if (!c.stem.trim() || !c.text.trim()) err('cause-text', d.id, '成因題幹與說明不可空白');
+    for (const a of c.alsoTrue ?? []) if (!factors.has(a)) err('cause-factor', d.id, `alsoTrue 引用不存在的因子 ${a}`);
+    for (const o of c.overlays) if (!overlayIds.has(o)) err('cause-overlay', d.id, `圖層 ${o} 不存在`);
+    const excluded = new Set([c.factorId, ...(c.alsoTrue ?? []), ...main.coOccurring]);
+    const usable = [...factors.keys()].filter((id) => !excluded.has(id));
+    if (usable.length < 3) err('cause-distractors', d.id, '可用的錯誤成因少於 3 個');
   }
 
   // ── 教材對照 ──

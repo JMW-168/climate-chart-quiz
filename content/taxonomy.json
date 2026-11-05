@@ -24,6 +24,102 @@
       "label": "高地"
     }
   ],
+  "causeFactors": [
+    {
+      "id": "equatorial-low",
+      "label": "終年受赤道低壓帶影響",
+      "effect": "全年高溫多雨",
+      "coOccurring": [
+        "belt-shift"
+      ]
+    },
+    {
+      "id": "belt-shift",
+      "label": "氣壓帶隨季節南北移動",
+      "effect": "乾季與雨季分明",
+      "coOccurring": [
+        "equatorial-low",
+        "subtropical-high",
+        "monsoon",
+        "subtropical-high-westerlies"
+      ]
+    },
+    {
+      "id": "subtropical-high",
+      "label": "終年受副熱帶高壓帶籠罩",
+      "effect": "空氣下沉、乾燥少雨",
+      "coOccurring": [
+        "belt-shift",
+        "subtropical-high-westerlies",
+        "cool-current"
+      ]
+    },
+    {
+      "id": "subtropical-high-westerlies",
+      "label": "夏季受副熱帶高壓帶、冬季受盛行西風影響",
+      "effect": "夏乾冬雨",
+      "coOccurring": [
+        "subtropical-high",
+        "westerlies-ocean",
+        "belt-shift"
+      ]
+    },
+    {
+      "id": "westerlies-ocean",
+      "label": "終年吹來自海洋的盛行西風",
+      "effect": "冬暖夏涼、全年有雨",
+      "coOccurring": [
+        "subtropical-high-westerlies"
+      ]
+    },
+    {
+      "id": "monsoon",
+      "label": "季風影響（夏季風、冬季風交替）",
+      "effect": "夏雨冬乾",
+      "coOccurring": [
+        "belt-shift",
+        "trade-wind-windward"
+      ]
+    },
+    {
+      "id": "trade-wind-windward",
+      "label": "迎著來自海洋的信風",
+      "effect": "大陸東岸多雨",
+      "coOccurring": [
+        "monsoon"
+      ]
+    },
+    {
+      "id": "continentality",
+      "label": "深居內陸、距海遙遠",
+      "effect": "降水少、年溫差大",
+      "coOccurring": [
+        "high-latitude"
+      ]
+    },
+    {
+      "id": "cool-current",
+      "label": "沿岸有涼流經過",
+      "effect": "沿海乾燥少雨",
+      "coOccurring": [
+        "subtropical-high"
+      ]
+    },
+    {
+      "id": "high-latitude",
+      "label": "緯度高、太陽斜射",
+      "effect": "氣溫低、冬季嚴寒",
+      "coOccurring": [
+        "continentality"
+      ]
+    },
+    {
+      "id": "altitude",
+      "label": "海拔高、氣溫隨高度降低",
+      "effect": "低緯度卻全年涼爽",
+      "coOccurring": []
+    }
+  ],
   "types": [
     {
       "id": "tropical-rainforest",

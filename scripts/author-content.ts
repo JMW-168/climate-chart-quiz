@@ -12,7 +12,9 @@ import { dirname, join } from 'node:path';
 import { fmt0, fmt1, summarize } from '../src/domain/stats';
 import { evaluateType, type TypeCriteria } from '../src/domain/criteria';
 import type {
+  CauseFactor,
   ClimateDataset,
+  StationCause,
   ClimateType,
   CurriculumMapping,
   Difficulty,
@@ -294,6 +296,148 @@ const TYPES: TypeSpec[] = [
   },
 ];
 
+
+// ── 成因（#15、#16）：延伸內容，原規格 v1 不教成因，待依課本核對 ──
+const CAUSE_FACTORS: CauseFactor[] = [
+  { id: 'equatorial-low', label: '終年受赤道低壓帶影響', effect: '全年高溫多雨', coOccurring: ['belt-shift'] },
+  { id: 'belt-shift', label: '氣壓帶隨季節南北移動', effect: '乾季與雨季分明', coOccurring: ['equatorial-low', 'subtropical-high', 'monsoon', 'subtropical-high-westerlies'] },
+  { id: 'subtropical-high', label: '終年受副熱帶高壓帶籠罩', effect: '空氣下沉、乾燥少雨', coOccurring: ['belt-shift', 'subtropical-high-westerlies', 'cool-current'] },
+  { id: 'subtropical-high-westerlies', label: '夏季受副熱帶高壓帶、冬季受盛行西風影響', effect: '夏乾冬雨', coOccurring: ['subtropical-high', 'westerlies-ocean', 'belt-shift'] },
+  { id: 'westerlies-ocean', label: '終年吹來自海洋的盛行西風', effect: '冬暖夏涼、全年有雨', coOccurring: ['subtropical-high-westerlies'] },
+  { id: 'monsoon', label: '季風影響（夏季風、冬季風交替）', effect: '夏雨冬乾', coOccurring: ['belt-shift', 'trade-wind-windward'] },
+  { id: 'trade-wind-windward', label: '迎著來自海洋的信風', effect: '大陸東岸多雨', coOccurring: ['monsoon'] },
+  { id: 'continentality', label: '深居內陸、距海遙遠', effect: '降水少、年溫差大', coOccurring: ['high-latitude'] },
+  { id: 'cool-current', label: '沿岸有涼流經過', effect: '沿海乾燥少雨', coOccurring: ['subtropical-high'] },
+  { id: 'high-latitude', label: '緯度高、太陽斜射', effect: '氣溫低、冬季嚴寒', coOccurring: ['continentality'] },
+  { id: 'altitude', label: '海拔高、氣溫隨高度降低', effect: '低緯度卻全年涼爽', coOccurring: [] },
+];
+
+type CauseSpec = Omit<StationCause, 'text'> & { text: string | ((st: Station) => string) };
+const RAIN_ALL_YEAR: CauseSpec = {
+  factorId: 'equatorial-low', stem: '這裡為什麼全年多雨？', overlays: ['equatorial-low'],
+  text: '位於赤道附近，終年受赤道低壓帶影響，空氣受熱上升，多對流雨，所以全年多雨。',
+};
+const DESERT_INLAND: CauseSpec = {
+  factorId: 'continentality', stem: '這裡為什麼雨很少、年溫差又大？', overlays: [],
+  text: '深居亞洲大陸內部，距海遙遠，四周又有高山阻擋水氣，降水稀少；陸地冷得快也熱得快，所以年溫差很大。',
+};
+const WEST_EUROPE: CauseSpec = {
+  factorId: 'westerlies-ocean', stem: '這裡為什麼冬季溫和、全年有雨？', overlays: ['westerlies-n', 'north-atlantic-drift'],
+  text: '位於大陸西岸，終年吹來自大西洋的盛行西風，加上外海的北大西洋暖流，帶來溫和潮濕的空氣，所以冬季溫和、全年有雨。',
+};
+const EAST_ASIA_MONSOON: CauseSpec = {
+  factorId: 'monsoon', stem: '這裡為什麼夏雨冬乾？', overlays: [], alsoTrue: ['continentality'],
+  text: '夏季吹來自海洋的東南季風，溫暖多雨；冬季吹來自大陸內部的西北季風，寒冷乾燥，所以夏雨冬乾。',
+};
+const POLAR: CauseSpec = {
+  factorId: 'high-latitude', stem: '這裡為什麼全年低溫？', overlays: ['polar-easterlies-n'],
+  text: '位於北極圈內的高緯度地區，太陽斜射、冬季有永夜，就算是夏季氣溫也很低。',
+};
+const HIGHLAND: CauseSpec = {
+  factorId: 'altitude', stem: '這裡緯度很低，為什麼全年涼爽？', overlays: [],
+  text: (st) => `雖然位於低緯度，但海拔約 ${Math.round(st.elev / 10) * 10} 公尺，氣溫隨高度升高而降低，所以全年涼爽、各月溫差小。`,
+};
+
+const CAUSES: Record<string, CauseSpec> = {
+  'Singapore / Changi Airport': RAIN_ALL_YEAR,
+  'Brazil / Belém': RAIN_ALL_YEAR,
+  'Sri Lanka / Colombo': { ...RAIN_ALL_YEAR, alsoTrue: ['monsoon'] },
+  'Thailand / Phuket': {
+    factorId: 'monsoon', stem: '這裡為什麼有明顯的雨季？', overlays: [], alsoTrue: ['belt-shift'],
+    text: '夏季吹西南季風，從印度洋帶來大量水氣，形成雨季；冬季吹東北季風，比較乾燥。',
+  },
+  'Sri Lanka / Kurunegala': {
+    factorId: 'monsoon', stem: '這裡為什麼雨季時雨量很多？', overlays: [], alsoTrue: ['belt-shift'],
+    text: '斯里蘭卡受季風影響，西南季風與東北季風先後從海洋帶來水氣，雨季時雨量很多。',
+  },
+  'Thailand / Bangkok Metropolis': {
+    factorId: 'monsoon', stem: '這裡為什麼有乾季和雨季？', overlays: [], alsoTrue: ['belt-shift'],
+    text: '夏季西南季風帶來水氣形成雨季；冬季吹乾燥的東北季風，形成乾季。',
+  },
+  'Nigeria / Abuja': {
+    factorId: 'belt-shift', stem: '這裡為什麼有乾季和雨季？', overlays: ['equatorial-low', 'subtropical-high-n', 'ne-trades'], alsoTrue: ['monsoon'],
+    text: '夏季赤道低壓帶北移，帶來雨季；冬季受副熱帶高壓帶與來自沙漠的乾燥東北信風影響，形成乾季。',
+  },
+  'Australia / Darwin Airport': {
+    factorId: 'belt-shift', stem: '這裡為什麼有乾季和雨季？', overlays: ['equatorial-low', 'subtropical-high-s', 'se-trades'], alsoTrue: ['monsoon'],
+    text: '南半球夏季（12～3 月）赤道低壓帶南移，帶來雨季；冬季受副熱帶高壓帶與東南信風影響，乾燥少雨。',
+  },
+  'Algeria / Adrar': {
+    factorId: 'subtropical-high', stem: '這裡為什麼全年幾乎不下雨？', overlays: ['subtropical-high-n', 'ne-trades'], alsoTrue: ['continentality'],
+    text: '位於副熱帶高壓帶籠罩的地區，空氣下沉不易形成雲雨；又深居撒哈拉內陸，距海遙遠。',
+  },
+  'United Arab Emirates / Abu Dhabi Intl Airport': {
+    factorId: 'subtropical-high', stem: '這裡為什麼全年幾乎不下雨？', overlays: ['subtropical-high-n'],
+    text: '終年受副熱帶高壓帶籠罩，空氣下沉、不易降雨，所以全年乾燥炎熱。',
+  },
+  'Niger / Agadez': {
+    factorId: 'subtropical-high', stem: '這裡為什麼全年幾乎不下雨？', overlays: ['subtropical-high-n', 'ne-trades'], alsoTrue: ['continentality', 'belt-shift'],
+    text: '一年中大部分時間受副熱帶高壓帶籠罩，只有夏季赤道低壓帶北移時才有少量降雨；又位於撒哈拉內陸。',
+  },
+  'China / Kashi (Kashgar)': DESERT_INLAND,
+  'China / Turpan': DESERT_INLAND,
+  'Mongolia / Dalanzadgad': DESERT_INLAND,
+  'United Kingdom / Yeovilton': WEST_EUROPE,
+  'Belgium / Oostende Airport': WEST_EUROPE,
+  'New Zealand / Hokitika Aero AWS': {
+    factorId: 'westerlies-ocean', stem: '這裡為什麼冬季溫和、全年有雨？', overlays: ['westerlies-s'],
+    text: '位於紐西蘭西岸，終年迎著南半球的盛行西風，從海洋帶來水氣與溫和的空氣，所以全年多雨、冬暖夏涼。',
+  },
+  'Ukraine / Kyiv': {
+    factorId: 'continentality', stem: '這裡為什麼冬冷夏熱、年溫差大？', overlays: ['westerlies-n'],
+    text: '位於歐洲大陸東部，距大西洋遙遠，海洋的調節作用小，所以冬季寒冷、夏季溫暖，年溫差大。',
+  },
+  'Latvia / Daugavpils': {
+    factorId: 'continentality', stem: '這裡為什麼冬冷夏熱、年溫差大？', overlays: ['westerlies-n'],
+    text: '位於歐洲大陸內部，距大西洋較遠，海洋的調節作用小，所以冬季寒冷、夏季溫暖。',
+  },
+  'United States / Minneapolis–St Paul AP': {
+    factorId: 'continentality', stem: '這裡為什麼冬冷夏熱、年溫差大？', overlays: [],
+    text: '位於北美大陸中部，距海遙遠，海洋的調節作用小，所以冬季嚴寒、夏季炎熱，年溫差很大。',
+  },
+  'Spain / Cádiz Obs': {
+    factorId: 'subtropical-high-westerlies', stem: '這裡為什麼夏季乾燥、冬季下雨？', overlays: ['subtropical-high-n', 'westerlies-n'], alsoTrue: ['cool-current'],
+    text: '夏季副熱帶高壓帶北移籠罩，乾燥少雨；冬季高壓帶南移，盛行西風從大西洋帶來水氣而下雨。',
+  },
+  'United States / Oakland Metro Intl AP': {
+    factorId: 'subtropical-high-westerlies', stem: '這裡為什麼夏季乾燥、冬季下雨？', overlays: ['subtropical-high-n', 'westerlies-n', 'california'], alsoTrue: ['cool-current'],
+    text: '夏季受副熱帶高壓帶籠罩，加上外海加利福尼亞涼流，乾燥少雨；冬季盛行西風帶來太平洋的水氣而下雨。',
+  },
+  'Australia / Adelaide West Terrace': {
+    factorId: 'subtropical-high-westerlies', stem: '這裡為什麼夏季乾燥、冬季下雨？', overlays: ['subtropical-high-s', 'westerlies-s'],
+    text: '南半球夏季（12～2 月）受副熱帶高壓帶籠罩，乾燥少雨；冬季盛行西風北移，帶來水氣而下雨。',
+  },
+  'Australia / Brisbane Aero': {
+    factorId: 'trade-wind-windward', stem: '這裡為什麼夏季雨量較多？', overlays: ['se-trades', 'east-australian'],
+    text: '位於澳洲東岸，受來自太平洋的東南信風帶來水氣，夏季降雨較多；外海還有溫暖的東澳暖流。',
+  },
+  'Argentina / Buenos Aires Observatorio': {
+    factorId: 'trade-wind-windward', stem: '這裡為什麼全年有雨、夏季較多？', overlays: ['se-trades', 'brazil'],
+    text: '位於南美東南岸，受來自大西洋的東南信風帶來水氣，全年有雨、夏季較多；外海有巴西暖流。',
+  },
+  'South Africa / East London': {
+    factorId: 'trade-wind-windward', stem: '這裡為什麼夏季雨量較多？', overlays: ['se-trades', 'mozambique'],
+    text: '位於非洲東南岸，受來自印度洋的東南信風帶來水氣，夏季降雨較多；外海有莫三比克暖流。',
+  },
+  'China / Shenyang': EAST_ASIA_MONSOON,
+  'China / Changchun': EAST_ASIA_MONSOON,
+  'China / Harbin': EAST_ASIA_MONSOON,
+  'United States / Fairbanks Intl AP': {
+    factorId: 'high-latitude', stem: '這裡為什麼冬季這麼寒冷漫長？', overlays: ['polar-easterlies-n'], alsoTrue: ['continentality'],
+    text: '緯度高（約北緯 65 度），冬季太陽斜射、日照時間很短，加上位於大陸內部，所以冬季嚴寒漫長、夏季短暫。',
+  },
+  'Sweden / Pajala': {
+    factorId: 'high-latitude', stem: '這裡為什麼冬季這麼寒冷漫長？', overlays: ['polar-easterlies-n'], alsoTrue: ['continentality'],
+    text: '位於北極圈附近（約北緯 67 度），冬季太陽斜射、日照很短，所以冬季嚴寒漫長、夏季短暫涼爽。',
+  },
+  'United States / Utqiagvik (Barrow)': POLAR,
+  'Canada / Resolute': POLAR,
+  'Greenland / Danmarkshavn': POLAR,
+  'Mexico / Toluca': HIGHLAND,
+  'Sri Lanka / Nuwara Eliya': HIGHLAND,
+  'Mexico / Tacubaya (Mexico City)': HIGHLAND,
+};
+
 interface Station {
   typeId: string;
   station: string;
@@ -318,6 +462,11 @@ interface SourceFile {
 }
 
 const src = JSON.parse(readFileSync(join(root, 'content', 'sources', 'wmo-normals-1991-2020.json'), 'utf8')) as SourceFile;
+
+function causeOf(st: Station): StationCause {
+  const c = CAUSES[st.station];
+  return { ...c, text: typeof c.text === 'function' ? c.text(st) : c.text };
+}
 
 function hemisphereOf(lat: number): Hemisphere {
   if (Math.abs(lat) < 5) return 'equatorial';
@@ -354,6 +503,7 @@ const taxonomy: Taxonomy = {
     description: '名稱與分組參考翰林雲端學院「世界氣候」等公開頁面及八上「全球氣候概述與氣候變遷」公開教案；尚未對照課本頁碼。',
   }],
   groups,
+  causeFactors: CAUSE_FACTORS,
   types: TYPES.map((s): ClimateType => ({
     id: s.id,
     label: s.label,
@@ -417,6 +567,7 @@ for (const st of src.stations) {
       license: 'NOAA NCEI 公開發布（' + src.accession + '）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處',
     },
     review: null,
+    ...(CAUSES[st.station] ? { cause: causeOf(st) } : {}),
     location: { name: st.station, nameZh: st.nameZh, lat: st.lat, lon: st.lon, elev: st.elev, ...(st.wigosId ? { wigosId: st.wigosId } : {}) },
     explanationId: explId,
     ...(st.koppenException ? { koppenException: st.koppenException } : {}),

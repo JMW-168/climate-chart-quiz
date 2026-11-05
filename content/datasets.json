@@ -45,6 +45,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "equatorial-low",
+      "stem": "這裡為什麼全年多雨？",
+      "overlays": [
+        "equatorial-low"
+      ],
+      "text": "位於赤道附近，終年受赤道低壓帶影響，空氣受熱上升，多對流雨，所以全年多雨。"
+    },
     "location": {
       "name": "Singapore / Changi Airport",
       "nameZh": "新加坡（樟宜）",
@@ -101,6 +109,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "equatorial-low",
+      "stem": "這裡為什麼全年多雨？",
+      "overlays": [
+        "equatorial-low"
+      ],
+      "text": "位於赤道附近，終年受赤道低壓帶影響，空氣受熱上升，多對流雨，所以全年多雨。"
+    },
     "location": {
       "name": "Brazil / Belém",
       "nameZh": "巴西 貝倫",
@@ -157,6 +173,17 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "equatorial-low",
+      "stem": "這裡為什麼全年多雨？",
+      "overlays": [
+        "equatorial-low"
+      ],
+      "text": "位於赤道附近，終年受赤道低壓帶影響，空氣受熱上升，多對流雨，所以全年多雨。",
+      "alsoTrue": [
+        "monsoon"
+      ]
+    },
     "location": {
       "name": "Sri Lanka / Colombo",
       "nameZh": "斯里蘭卡 可倫坡",
@@ -213,6 +240,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "monsoon",
+      "stem": "這裡為什麼有明顯的雨季？",
+      "overlays": [],
+      "alsoTrue": [
+        "belt-shift"
+      ],
+      "text": "夏季吹西南季風，從印度洋帶來大量水氣，形成雨季；冬季吹東北季風，比較乾燥。"
+    },
     "location": {
       "name": "Thailand / Phuket",
       "nameZh": "泰國 普吉",
@@ -269,6 +305,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "monsoon",
+      "stem": "這裡為什麼雨季時雨量很多？",
+      "overlays": [],
+      "alsoTrue": [
+        "belt-shift"
+      ],
+      "text": "斯里蘭卡受季風影響，西南季風與東北季風先後從海洋帶來水氣，雨季時雨量很多。"
+    },
     "location": {
       "name": "Sri Lanka / Kurunegala",
       "nameZh": "斯里蘭卡 庫魯內格勒",
@@ -381,6 +426,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "monsoon",
+      "stem": "這裡為什麼有乾季和雨季？",
+      "overlays": [],
+      "alsoTrue": [
+        "belt-shift"
+      ],
+      "text": "夏季西南季風帶來水氣形成雨季；冬季吹乾燥的東北季風，形成乾季。"
+    },
     "location": {
       "name": "Thailand / Bangkok Metropolis",
       "nameZh": "泰國 曼谷",
@@ -437,6 +491,19 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "belt-shift",
+      "stem": "這裡為什麼有乾季和雨季？",
+      "overlays": [
+        "equatorial-low",
+        "subtropical-high-n",
+        "ne-trades"
+      ],
+      "alsoTrue": [
+        "monsoon"
+      ],
+      "text": "夏季赤道低壓帶北移，帶來雨季；冬季受副熱帶高壓帶與來自沙漠的乾燥東北信風影響，形成乾季。"
+    },
     "location": {
       "name": "Nigeria / Abuja",
       "nameZh": "奈及利亞 阿布加",
@@ -492,6 +559,19 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "belt-shift",
+      "stem": "這裡為什麼有乾季和雨季？",
+      "overlays": [
+        "equatorial-low",
+        "subtropical-high-s",
+        "se-trades"
+      ],
+      "alsoTrue": [
+        "monsoon"
+      ],
+      "text": "南半球夏季（12～3 月）赤道低壓帶南移，帶來雨季；冬季受副熱帶高壓帶與東南信風影響，乾燥少雨。"
+    },
     "location": {
       "name": "Australia / Darwin Airport",
       "nameZh": "澳洲 達爾文",
@@ -548,6 +628,18 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "subtropical-high",
+      "stem": "這裡為什麼全年幾乎不下雨？",
+      "overlays": [
+        "subtropical-high-n",
+        "ne-trades"
+      ],
+      "alsoTrue": [
+        "continentality"
+      ],
+      "text": "位於副熱帶高壓帶籠罩的地區，空氣下沉不易形成雲雨；又深居撒哈拉內陸，距海遙遠。"
+    },
     "location": {
       "name": "Algeria / Adrar",
       "nameZh": "阿爾及利亞 阿德拉爾",
@@ -604,6 +696,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "subtropical-high",
+      "stem": "這裡為什麼全年幾乎不下雨？",
+      "overlays": [
+        "subtropical-high-n"
+      ],
+      "text": "終年受副熱帶高壓帶籠罩，空氣下沉、不易降雨，所以全年乾燥炎熱。"
+    },
     "location": {
       "name": "United Arab Emirates / Abu Dhabi Intl Airport",
       "nameZh": "阿拉伯聯合大公國 阿布達比",
@@ -660,6 +760,19 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "subtropical-high",
+      "stem": "這裡為什麼全年幾乎不下雨？",
+      "overlays": [
+        "subtropical-high-n",
+        "ne-trades"
+      ],
+      "alsoTrue": [
+        "continentality",
+        "belt-shift"
+      ],
+      "text": "一年中大部分時間受副熱帶高壓帶籠罩，只有夏季赤道低壓帶北移時才有少量降雨；又位於撒哈拉內陸。"
+    },
     "location": {
       "name": "Niger / Agadez",
       "nameZh": "尼日 阿加德茲",
@@ -716,6 +829,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "continentality",
+      "stem": "這裡為什麼雨很少、年溫差又大？",
+      "overlays": [],
+      "text": "深居亞洲大陸內部，距海遙遠，四周又有高山阻擋水氣，降水稀少；陸地冷得快也熱得快，所以年溫差很大。"
+    },
     "location": {
       "name": "China / Kashi (Kashgar)",
       "nameZh": "中國 喀什",
@@ -772,6 +891,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "continentality",
+      "stem": "這裡為什麼雨很少、年溫差又大？",
+      "overlays": [],
+      "text": "深居亞洲大陸內部，距海遙遠，四周又有高山阻擋水氣，降水稀少；陸地冷得快也熱得快，所以年溫差很大。"
+    },
     "location": {
       "name": "China / Turpan",
       "nameZh": "中國 吐魯番",
@@ -828,6 +953,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "continentality",
+      "stem": "這裡為什麼雨很少、年溫差又大？",
+      "overlays": [],
+      "text": "深居亞洲大陸內部，距海遙遠，四周又有高山阻擋水氣，降水稀少；陸地冷得快也熱得快，所以年溫差很大。"
+    },
     "location": {
       "name": "Mongolia / Dalanzadgad",
       "nameZh": "蒙古 達蘭札德嘎德",
@@ -884,6 +1015,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "westerlies-ocean",
+      "stem": "這裡為什麼冬季溫和、全年有雨？",
+      "overlays": [
+        "westerlies-n",
+        "north-atlantic-drift"
+      ],
+      "text": "位於大陸西岸，終年吹來自大西洋的盛行西風，加上外海的北大西洋暖流，帶來溫和潮濕的空氣，所以冬季溫和、全年有雨。"
+    },
     "location": {
       "name": "United Kingdom / Yeovilton",
       "nameZh": "英國 約維爾頓（英格蘭西南部）",
@@ -939,6 +1079,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "westerlies-ocean",
+      "stem": "這裡為什麼冬季溫和、全年有雨？",
+      "overlays": [
+        "westerlies-n",
+        "north-atlantic-drift"
+      ],
+      "text": "位於大陸西岸，終年吹來自大西洋的盛行西風，加上外海的北大西洋暖流，帶來溫和潮濕的空氣，所以冬季溫和、全年有雨。"
+    },
     "location": {
       "name": "Belgium / Oostende Airport",
       "nameZh": "比利時 奧斯坦德",
@@ -994,6 +1143,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "westerlies-ocean",
+      "stem": "這裡為什麼冬季溫和、全年有雨？",
+      "overlays": [
+        "westerlies-s"
+      ],
+      "text": "位於紐西蘭西岸，終年迎著南半球的盛行西風，從海洋帶來水氣與溫和的空氣，所以全年多雨、冬暖夏涼。"
+    },
     "location": {
       "name": "New Zealand / Hokitika Aero AWS",
       "nameZh": "紐西蘭 霍基蒂卡",
@@ -1050,6 +1207,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "continentality",
+      "stem": "這裡為什麼冬冷夏熱、年溫差大？",
+      "overlays": [
+        "westerlies-n"
+      ],
+      "text": "位於歐洲大陸東部，距大西洋遙遠，海洋的調節作用小，所以冬季寒冷、夏季溫暖，年溫差大。"
+    },
     "location": {
       "name": "Ukraine / Kyiv",
       "nameZh": "烏克蘭 基輔",
@@ -1106,6 +1271,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "continentality",
+      "stem": "這裡為什麼冬冷夏熱、年溫差大？",
+      "overlays": [
+        "westerlies-n"
+      ],
+      "text": "位於歐洲大陸內部，距大西洋較遠，海洋的調節作用小，所以冬季寒冷、夏季溫暖。"
+    },
     "location": {
       "name": "Latvia / Daugavpils",
       "nameZh": "拉脫維亞 陶格夫匹爾斯",
@@ -1162,6 +1335,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "continentality",
+      "stem": "這裡為什麼冬冷夏熱、年溫差大？",
+      "overlays": [],
+      "text": "位於北美大陸中部，距海遙遠，海洋的調節作用小，所以冬季嚴寒、夏季炎熱，年溫差很大。"
+    },
     "location": {
       "name": "United States / Minneapolis–St Paul AP",
       "nameZh": "美國 明尼亞波利斯",
@@ -1218,6 +1397,18 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "subtropical-high-westerlies",
+      "stem": "這裡為什麼夏季乾燥、冬季下雨？",
+      "overlays": [
+        "subtropical-high-n",
+        "westerlies-n"
+      ],
+      "alsoTrue": [
+        "cool-current"
+      ],
+      "text": "夏季副熱帶高壓帶北移籠罩，乾燥少雨；冬季高壓帶南移，盛行西風從大西洋帶來水氣而下雨。"
+    },
     "location": {
       "name": "Spain / Cádiz Obs",
       "nameZh": "西班牙 加的斯",
@@ -1274,6 +1465,19 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "subtropical-high-westerlies",
+      "stem": "這裡為什麼夏季乾燥、冬季下雨？",
+      "overlays": [
+        "subtropical-high-n",
+        "westerlies-n",
+        "california"
+      ],
+      "alsoTrue": [
+        "cool-current"
+      ],
+      "text": "夏季受副熱帶高壓帶籠罩，加上外海加利福尼亞涼流，乾燥少雨；冬季盛行西風帶來太平洋的水氣而下雨。"
+    },
     "location": {
       "name": "United States / Oakland Metro Intl AP",
       "nameZh": "美國 奧克蘭（加州）",
@@ -1329,6 +1533,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "subtropical-high-westerlies",
+      "stem": "這裡為什麼夏季乾燥、冬季下雨？",
+      "overlays": [
+        "subtropical-high-s",
+        "westerlies-s"
+      ],
+      "text": "南半球夏季（12～2 月）受副熱帶高壓帶籠罩，乾燥少雨；冬季盛行西風北移，帶來水氣而下雨。"
+    },
     "location": {
       "name": "Australia / Adelaide West Terrace",
       "nameZh": "澳洲 阿得雷德",
@@ -1385,6 +1598,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "trade-wind-windward",
+      "stem": "這裡為什麼夏季雨量較多？",
+      "overlays": [
+        "se-trades",
+        "east-australian"
+      ],
+      "text": "位於澳洲東岸，受來自太平洋的東南信風帶來水氣，夏季降雨較多；外海還有溫暖的東澳暖流。"
+    },
     "location": {
       "name": "Australia / Brisbane Aero",
       "nameZh": "澳洲 布里斯本",
@@ -1441,6 +1663,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "trade-wind-windward",
+      "stem": "這裡為什麼全年有雨、夏季較多？",
+      "overlays": [
+        "se-trades",
+        "brazil"
+      ],
+      "text": "位於南美東南岸，受來自大西洋的東南信風帶來水氣，全年有雨、夏季較多；外海有巴西暖流。"
+    },
     "location": {
       "name": "Argentina / Buenos Aires Observatorio",
       "nameZh": "阿根廷 布宜諾斯艾利斯",
@@ -1496,6 +1727,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "trade-wind-windward",
+      "stem": "這裡為什麼夏季雨量較多？",
+      "overlays": [
+        "se-trades",
+        "mozambique"
+      ],
+      "text": "位於非洲東南岸，受來自印度洋的東南信風帶來水氣，夏季降雨較多；外海有莫三比克暖流。"
+    },
     "location": {
       "name": "South Africa / East London",
       "nameZh": "南非 東倫敦",
@@ -1552,6 +1792,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "monsoon",
+      "stem": "這裡為什麼夏雨冬乾？",
+      "overlays": [],
+      "alsoTrue": [
+        "continentality"
+      ],
+      "text": "夏季吹來自海洋的東南季風，溫暖多雨；冬季吹來自大陸內部的西北季風，寒冷乾燥，所以夏雨冬乾。"
+    },
     "location": {
       "name": "China / Shenyang",
       "nameZh": "中國 瀋陽",
@@ -1608,6 +1857,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "monsoon",
+      "stem": "這裡為什麼夏雨冬乾？",
+      "overlays": [],
+      "alsoTrue": [
+        "continentality"
+      ],
+      "text": "夏季吹來自海洋的東南季風，溫暖多雨；冬季吹來自大陸內部的西北季風，寒冷乾燥，所以夏雨冬乾。"
+    },
     "location": {
       "name": "China / Changchun",
       "nameZh": "中國 長春",
@@ -1664,6 +1922,15 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "monsoon",
+      "stem": "這裡為什麼夏雨冬乾？",
+      "overlays": [],
+      "alsoTrue": [
+        "continentality"
+      ],
+      "text": "夏季吹來自海洋的東南季風，溫暖多雨；冬季吹來自大陸內部的西北季風，寒冷乾燥，所以夏雨冬乾。"
+    },
     "location": {
       "name": "China / Harbin",
       "nameZh": "中國 哈爾濱",
@@ -1720,6 +1987,17 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "high-latitude",
+      "stem": "這裡為什麼冬季這麼寒冷漫長？",
+      "overlays": [
+        "polar-easterlies-n"
+      ],
+      "alsoTrue": [
+        "continentality"
+      ],
+      "text": "緯度高（約北緯 65 度），冬季太陽斜射、日照時間很短，加上位於大陸內部，所以冬季嚴寒漫長、夏季短暫。"
+    },
     "location": {
       "name": "United States / Fairbanks Intl AP",
       "nameZh": "美國 費爾班克斯（阿拉斯加）",
@@ -1777,6 +2055,17 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "high-latitude",
+      "stem": "這裡為什麼冬季這麼寒冷漫長？",
+      "overlays": [
+        "polar-easterlies-n"
+      ],
+      "alsoTrue": [
+        "continentality"
+      ],
+      "text": "位於北極圈附近（約北緯 67 度），冬季太陽斜射、日照很短，所以冬季嚴寒漫長、夏季短暫涼爽。"
+    },
     "location": {
       "name": "Sweden / Pajala",
       "nameZh": "瑞典 帕亞拉",
@@ -1889,6 +2178,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "high-latitude",
+      "stem": "這裡為什麼全年低溫？",
+      "overlays": [
+        "polar-easterlies-n"
+      ],
+      "text": "位於北極圈內的高緯度地區，太陽斜射、冬季有永夜，就算是夏季氣溫也很低。"
+    },
     "location": {
       "name": "United States / Utqiagvik (Barrow)",
       "nameZh": "美國 烏特恰維克（巴羅，阿拉斯加）",
@@ -1945,6 +2242,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "high-latitude",
+      "stem": "這裡為什麼全年低溫？",
+      "overlays": [
+        "polar-easterlies-n"
+      ],
+      "text": "位於北極圈內的高緯度地區，太陽斜射、冬季有永夜，就算是夏季氣溫也很低。"
+    },
     "location": {
       "name": "Canada / Resolute",
       "nameZh": "加拿大 雷索盧特",
@@ -2001,6 +2306,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "high-latitude",
+      "stem": "這裡為什麼全年低溫？",
+      "overlays": [
+        "polar-easterlies-n"
+      ],
+      "text": "位於北極圈內的高緯度地區，太陽斜射、冬季有永夜，就算是夏季氣溫也很低。"
+    },
     "location": {
       "name": "Greenland / Danmarkshavn",
       "nameZh": "格陵蘭 丹麥港",
@@ -2057,6 +2370,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "altitude",
+      "stem": "這裡緯度很低，為什麼全年涼爽？",
+      "overlays": [],
+      "text": "雖然位於低緯度，但海拔約 2730 公尺，氣溫隨高度升高而降低，所以全年涼爽、各月溫差小。"
+    },
     "location": {
       "name": "Mexico / Toluca",
       "nameZh": "墨西哥 托盧卡",
@@ -2113,6 +2432,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "altitude",
+      "stem": "這裡緯度很低，為什麼全年涼爽？",
+      "overlays": [],
+      "text": "雖然位於低緯度，但海拔約 1890 公尺，氣溫隨高度升高而降低，所以全年涼爽、各月溫差小。"
+    },
     "location": {
       "name": "Sri Lanka / Nuwara Eliya",
       "nameZh": "斯里蘭卡 努沃勒埃利耶",
@@ -2169,6 +2494,12 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "cause": {
+      "factorId": "altitude",
+      "stem": "這裡緯度很低，為什麼全年涼爽？",
+      "overlays": [],
+      "text": "雖然位於低緯度，但海拔約 2310 公尺，氣溫隨高度升高而降低，所以全年涼爽、各月溫差小。"
+    },
     "location": {
       "name": "Mexico / Tacubaya (Mexico City)",
       "nameZh": "墨西哥 墨西哥城（塔庫巴亞）",
