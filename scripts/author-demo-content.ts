@@ -9,6 +9,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { fmt0, fmt1, summarize } from '../src/domain/stats';
+import { evaluateType, type TypeCriteria } from '../src/domain/criteria';
 import type {
   ClimateDataset,
   ClimateType,
@@ -168,6 +169,154 @@ const TYPES: TypeSpec[] = [
   },
 ];
 
+
+// ── 結構化判讀條件（#2）：示範用門檻，待依康軒教材審核 ──
+const CRITERIA: Record<string, TypeCriteria> = {
+  'tropical-rainforest': {
+    temperature: { text: '全年高溫，最冷月 18°C 以上', rules: [{ kind: 'tMin', gte: 18 }] },
+    precipitation: { text: '每個月都多雨（每月 60 mm 以上，沒有乾季）', rules: [{ kind: 'pMonthMin', gte: 60 }] },
+  },
+  'tropical-monsoon': {
+    temperature: { text: '全年高溫，最冷月 18°C 以上', rules: [{ kind: 'tMin', gte: 18 }] },
+    precipitation: {
+      text: '有乾季（有月份少於 60 mm），但雨季雨量很大、年雨量 1500 mm 以上',
+      rules: [{ kind: 'dryMonths', below: 60, gte: 1 }, { kind: 'pTotal', gte: 1500 }],
+    },
+  },
+  'tropical-savanna': {
+    temperature: { text: '全年高溫，最冷月 18°C 以上', rules: [{ kind: 'tMin', gte: 18 }] },
+    precipitation: {
+      text: '乾季明顯（至少 3 個月少於 60 mm），雨季有一定雨量，年雨量約 500～1500 mm',
+      rules: [{ kind: 'dryMonths', below: 60, gte: 3 }, { kind: 'pTotal', gte: 500, lt: 1500 }],
+    },
+  },
+  desert: {
+    temperature: { text: '夏季炎熱，最熱月 20°C 以上', rules: [{ kind: 'tMax', gte: 20 }] },
+    precipitation: { text: '全年極乾，年雨量少於 250 mm', rules: [{ kind: 'pTotal', lt: 250 }] },
+  },
+  steppe: {
+    temperature: { text: '夏季溫暖，最熱月 15°C 以上', rules: [{ kind: 'tMax', gte: 15 }] },
+    precipitation: { text: '偏乾，年雨量約 250～500 mm', rules: [{ kind: 'pTotal', gte: 250, lt: 500 }] },
+  },
+  'subtropical-monsoon': {
+    temperature: {
+      text: '冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）',
+      rules: [{ kind: 'tMin', gte: 0, lt: 18 }, { kind: 'tMax', gte: 22 }],
+    },
+    precipitation: {
+      text: '雨量多（年雨量 1000 mm 以上），夏半年雨量較多（占 55% 以上）',
+      rules: [{ kind: 'pTotal', gte: 1000 }, { kind: 'summerShare', gte: 0.55 }],
+    },
+  },
+  'humid-subtropical': {
+    temperature: {
+      text: '冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）',
+      rules: [{ kind: 'tMin', gte: 0, lt: 18 }, { kind: 'tMax', gte: 22 }],
+    },
+    precipitation: {
+      text: '全年有雨（年雨量 800 mm 以上），夏半年雨量較多（占 55% 以上）',
+      rules: [{ kind: 'pTotal', gte: 800 }, { kind: 'summerShare', gte: 0.55 }],
+    },
+  },
+  'temperate-monsoon': {
+    temperature: {
+      text: '冬季寒冷（最冷月低於 0°C）、夏季炎熱（最熱月 22°C 以上）',
+      rules: [{ kind: 'tMin', lt: 0 }, { kind: 'tMax', gte: 22 }],
+    },
+    precipitation: { text: '雨量集中在夏季（夏半年占 75% 以上），冬季乾燥', rules: [{ kind: 'summerShare', gte: 0.75 }] },
+  },
+  mediterranean: {
+    temperature: { text: '冬季溫和，最冷月 0°C 以上', rules: [{ kind: 'tMin', gte: 0 }] },
+    precipitation: {
+      text: '冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上',
+      rules: [{ kind: 'winterShare', gte: 0.6 }, { kind: 'summerDriest', lt: 30 }, { kind: 'pTotal', gte: 300 }],
+    },
+  },
+  'marine-west-coast': {
+    temperature: {
+      text: '冬暖夏涼：最冷月 0°C 以上、最熱月低於 22°C',
+      rules: [{ kind: 'tMin', gte: 0 }, { kind: 'tMax', lt: 22 }],
+    },
+    precipitation: {
+      text: '全年有雨且平均：每月 30 mm 以上，最多雨月不到最少雨月的 3 倍',
+      rules: [{ kind: 'pMonthMin', gte: 30 }, { kind: 'maxMinRatio', lt: 3 }],
+    },
+  },
+  continental: {
+    temperature: {
+      text: '冬季寒冷（最冷月低於 0°C）、夏季溫暖（最熱月 10°C 以上）',
+      rules: [{ kind: 'tMin', lt: 0 }, { kind: 'tMax', gte: 10 }],
+    },
+    precipitation: {
+      text: '每月都有降水（10 mm 以上），雨量不會集中在夏季（夏半年少於 75%）',
+      rules: [{ kind: 'pMonthMin', gte: 10 }, { kind: 'summerShare', lt: 0.75 }],
+    },
+  },
+  tundra: {
+    temperature: { text: '全年低溫，最熱月只有 0～10°C', rules: [{ kind: 'tMax', gte: 0, lt: 10 }] },
+    precipitation: { text: '降水量少，不是主要判斷依據', rules: [{ kind: 'any' }] },
+  },
+  'ice-cap': {
+    temperature: { text: '每個月都低於 0°C（最熱月低於 0°C）', rules: [{ kind: 'tMax', lt: 0 }] },
+    precipitation: { text: '降水量極少，不是主要判斷依據', rules: [{ kind: 'any' }] },
+  },
+};
+
+// 和容易混淆類型的分辨方法（#3 總複習用）
+const COMPARE: Record<string, Record<string, string>> = {
+  'tropical-rainforest': {
+    'tropical-monsoon': '熱帶雨林每個月都多雨；熱帶季風有明顯乾季。',
+    'tropical-savanna': '熱帶莽原有好幾個月幾乎不下雨，雨林沒有乾季。',
+  },
+  'tropical-monsoon': {
+    'tropical-savanna': '兩者都有乾濕季；熱帶季風雨季雨量大得多，年雨量通常超過 1500 mm。',
+    'tropical-rainforest': '熱帶雨林沒有乾季；熱帶季風乾季月份雨量很少。',
+  },
+  'tropical-savanna': {
+    'tropical-monsoon': '莽原雨季雨量中等、年雨量較少；熱帶季風雨季雨量非常大。',
+    steppe: '草原年雨量更少，而且不一定全年高溫。',
+  },
+  desert: {
+    steppe: '沙漠年雨量少於 250 mm；草原稍多，約 250～500 mm。',
+    'ice-cap': '冰原雨量也很少，但每個月都低於 0°C；沙漠夏季炎熱。',
+  },
+  steppe: {
+    desert: '草原比沙漠稍濕，年雨量約 250～500 mm。',
+    continental: '溫帶大陸性雨量較多（約 500 mm 以上），每月都有降水。',
+  },
+  'subtropical-monsoon': {
+    'temperate-monsoon': '副熱帶季風冬季溫和、不低於 0°C；溫帶季風冬季寒冷。',
+    mediterranean: '副熱帶季風夏季多雨；地中海型夏季乾燥、冬季下雨。',
+  },
+  'humid-subtropical': {
+    mediterranean: '夏雨型暖溫帶夏季雨多；地中海型夏乾冬雨。',
+    'marine-west-coast': '溫帶海洋性夏季涼爽（最熱月低於 22°C），雨量平均。',
+  },
+  'temperate-monsoon': {
+    continental: '溫帶季風降水集中在夏季、冬季很乾；溫帶大陸性各月都有降水。',
+    'subtropical-monsoon': '溫帶季風冬季低於 0°C；副熱帶季風冬季溫和。',
+  },
+  mediterranean: {
+    'humid-subtropical': '把最熱月和最多雨月對照：地中海型剛好相反（夏乾冬雨）。',
+    'marine-west-coast': '溫帶海洋性夏季也有雨，地中海型夏季幾乎不下雨。',
+  },
+  'marine-west-coast': {
+    continental: '溫帶海洋性冬季不低於 0°C、年溫差小；溫帶大陸性冬季嚴寒。',
+    mediterranean: '溫帶海洋性全年有雨；地中海型夏季乾燥。',
+  },
+  continental: {
+    'temperate-monsoon': '溫帶大陸性各月都有降水；溫帶季風冬季幾乎不下雨。',
+    'marine-west-coast': '溫帶大陸性冬季遠低於 0°C，年溫差大。',
+  },
+  tundra: {
+    'ice-cap': '苔原夏季有幾個月高於 0°C；冰原每個月都低於 0°C。',
+    continental: '溫帶大陸性最熱月在 10°C 以上；苔原最熱月不到 10°C。',
+  },
+  'ice-cap': {
+    tundra: '冰原十二個月都低於 0°C；苔原夏季會略高於 0°C。',
+  },
+};
+
 type Raw = [string, Hemisphere, Difficulty[], number[], number[]];
 
 // 合成教學資料：形狀依各類型典型特徵設計，數值非真實測站。
@@ -241,11 +390,6 @@ const DATA: Record<string, Raw[]> = {
   ],
 };
 
-function factsOf(t: number[], p: number[]): string {
-  const s = summarize(t, p);
-  return `此圖最熱月 ${fmt1(Math.max(...t))}°C、最冷月 ${fmt1(Math.min(...t))}°C、年降水量約 ${fmt0(s.totalPrecip)} mm`;
-}
-
 function rainyMonths(p: number[]): number[] {
   const mean = p.reduce((a, b) => a + b, 0) / 12;
   if (Math.max(...p) < mean * 1.4) return []; // 全年分布平均，不標雨季
@@ -279,6 +423,8 @@ const taxonomy: Taxonomy = {
     overlapTypeIds: s.overlap ?? [],
     keyFeature: s.keyFeature,
     koppenCodes: s.koppen,
+    ...(CRITERIA[s.id] ? { criteria: CRITERIA[s.id] } : {}),
+    ...(COMPARE[s.id] ? { compareNotes: COMPARE[s.id] } : {}),
     curriculumRefs: [],
   })),
 };
@@ -294,9 +440,15 @@ for (const spec of identifiable) {
     const southNote = hemi === 'south' ? '最熱月出現在 12～2 月前後，表示這是南半球的資料，季節與北半球相反。' : '';
     const explId = `${id}-explanation`;
     const reasons: Record<string, string> = {};
+    const checks: NonNullable<Explanation['distractorChecks']> = {};
     for (const other of identifiable) {
       if (other.id === spec.id || (spec.overlap ?? []).includes(other.id)) continue;
-      reasons[other.id] = `「${other.label}」的特徵是${other.keyFeature}。${factsOf(temps, precip)}，不符合這個特徵。`;
+      const c = evaluateType(CRITERIA[other.id], { temperatureC: temps, precipitationMm: precip, hemisphere: hemi });
+      // 兩項都符合代表此圖也可能是該類型 → 不當作錯誤選項（驗證會再把關）
+      if (c.temperature.pass && c.precipitation.pass) continue;
+      checks[other.id] = c;
+      const failed = [!c.temperature.pass ? '氣溫' : null, !c.precipitation.pass ? '降水' : null].filter(Boolean).join('和');
+      reasons[other.id] = `「${other.label}」的${failed}條件不符。`;
     }
     datasets.push({
       id,
@@ -325,6 +477,7 @@ for (const spec of identifiable) {
         spec.compareHint,
       ],
       distractorReasons: reasons,
+      distractorChecks: checks,
       highlightMonths: {
         temperature: [s.maxTempMonth, s.minTempMonth],
         precipitation: rainyMonths(precip),

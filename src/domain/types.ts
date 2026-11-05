@@ -1,4 +1,6 @@
 // 領域型別：不依賴任何 UI 框架。對應規格 §9 資料契約。
+import type { DistractorCheck, TypeCriteria } from './criteria';
+export type { DistractorCheck, TypeCriteria } from './criteria';
 
 export type ReviewStatus = 'draft' | 'reviewed' | 'published' | 'retired';
 export type QuestionKind = 'chart-to-type' | 'type-to-chart';
@@ -34,6 +36,10 @@ export interface ClimateType {
   keyFeature: string;
   /** 可接受的柯本代碼（前綴比對，如 "Cs" 涵蓋 Csa/Csb），作為資料交叉檢查 */
   koppenCodes: string[];
+  /** 結構化判讀條件（#2）：可命題類型必填 */
+  criteria?: TypeCriteria;
+  /** 和容易混淆類型的分辨方法（#3 總複習用） */
+  compareNotes?: Record<string, string>;
   curriculumRefs: string[];
 }
 
@@ -87,8 +93,10 @@ export interface Explanation {
   precipitationEvidence: string;
   conclusion: string;
   hints: [string, string, string];
-  /** climateTypeId → 此圖為何不符該類型 */
+  /** climateTypeId → 此圖為何不符該類型（總結句） */
   distractorReasons: Record<string, string>;
+  /** climateTypeId → 逐項判斷（#2）：氣溫條件與降水條件是否符合 */
+  distractorChecks?: Record<string, DistractorCheck>;
   /** 月份為 1–12 */
   highlightMonths: { temperature: number[]; precipitation: number[] };
 }
@@ -152,6 +160,8 @@ export interface ExplanationSnapshot {
   highlightMonths: { temperature: number[]; precipitation: number[] };
   /** optionId → 為何不符 */
   optionReasons: Record<string, string>;
+  /** optionId → 逐項判斷（#2；舊回合快照可能沒有） */
+  optionChecks?: Record<string, DistractorCheck & { typeLabel: string }>;
 }
 
 export interface ChartScale {

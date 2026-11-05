@@ -1,6 +1,7 @@
 // 內容驗證（規格 §3、§14 C01–C03）。
 
 import { koppen, matchesKoppen } from './koppen';
+import { evaluateType } from './criteria';
 import type { ContentMode, ContentPackage, ReviewStatus } from './types';
 
 export interface ValidationIssue {
@@ -53,6 +54,7 @@ export function validateContentPackage(pkg: ContentPackage): ValidationResult {
     if (!groupIds.has(t.groupId)) err('type-group', t.id, `分組 ${t.groupId} 不存在`);
     if (!t.keyFeature.trim()) err('type-key-feature', t.id, '缺少判讀重點 keyFeature');
     if (!t.graphIdentifiable && !t.notIdentifiableReason) err('type-not-identifiable-reason', t.id, '不可命題的類型必須寫明原因');
+    if (t.graphIdentifiable && !t.criteria) err('type-criteria', t.id, '可命題類型必須有氣溫與降水判讀條件 criteria');
     if (t.graphIdentifiable && (!Array.isArray(t.koppenCodes) || t.koppenCodes.length === 0)) {
       err('type-koppen', t.id, '可命題類型必須列出可接受的柯本代碼 koppenCodes');
     }
@@ -129,6 +131,26 @@ export function validateContentPackage(pkg: ContentPackage): ValidationResult {
     }
     if ((d.status === 'reviewed' || d.status === 'published') && !d.review) {
       err('dataset-review', d.id, '已審核或已發布的資料必須有審核紀錄');
+    }
+    if (exp && isEligibleStatus(d.status, mode) && type.criteria) {
+      // #2 逐項判讀：資料必須符合自己類型的條件；每個錯誤選項至少一項不符
+      const chart = { temperatureC: d.temperatureC, precipitationMm: d.precipitationMm, hemisphere: d.hemisphere };
+      const self = evaluateType(type.criteria, chart);
+      if (!self.temperature.pass) err('criteria-self', d.id, `不符合自己類型的氣溫條件：${self.temperature.text}`);
+      if (!self.precipitation.pass) err('criteria-self', d.id, `不符合自己類型的降水條件：${self.precipitation.text}`);
+      for (const key of Object.keys(exp.distractorReasons)) {
+        const other = typeById.get(key);
+        if (!other?.criteria) continue;
+        const c = evaluateType(other.criteria, chart);
+        if (c.temperature.pass && c.precipitation.pass) {
+          err('criteria-ambiguous', d.id, `此圖也符合「${other.label}」的氣溫與降水條件，作為錯誤選項會造成兩解`);
+        }
+        const stored = exp.distractorChecks?.[key];
+        if (!stored) err('explanation-missing-check', d.id, `缺少與 ${key} 的逐項判斷`);
+        else if (stored.temperature.pass !== c.temperature.pass || stored.precipitation.pass !== c.precipitation.pass) {
+          err('explanation-stale-check', d.id, `與 ${key} 的逐項判斷和目前資料不一致，請重新產生解析`);
+        }
+      }
     }
     if (exp && isEligibleStatus(d.status, mode)) {
       // 每個混淆類型都必須有「為何不符」的解析

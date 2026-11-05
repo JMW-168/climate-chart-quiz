@@ -103,7 +103,12 @@ export function buildChartToType(
   const options = shuffle([type, ...distractors], rng).map((t) => ({ id: `opt-${t.id}`, typeId: t.id, label: t.label }));
   const correctOptionId = `opt-${type.id}`;
   const optionReasons: Record<string, string> = {};
-  for (const t of distractors) optionReasons[`opt-${t.id}`] = exp.distractorReasons[t.id];
+  const optionChecks: NonNullable<ChartToTypeQuestion['explanation']['optionChecks']> = {};
+  for (const t of distractors) {
+    optionReasons[`opt-${t.id}`] = exp.distractorReasons[t.id];
+    const c = exp.distractorChecks?.[t.id];
+    if (c) optionChecks[`opt-${t.id}`] = { ...structuredClone(c), typeLabel: t.label };
+  }
 
   return {
     id: qid,
@@ -130,6 +135,7 @@ export function buildChartToType(
         precipitation: exp.highlightMonths.precipitation.slice(),
       },
       optionReasons,
+      optionChecks,
     },
   };
 }
@@ -172,9 +178,13 @@ export function buildTypeToChart(
   const all = shuffle([target, ...distractors], rng);
   const options = all.map((d, i) => ({ id: `opt-${d.id}`, letter: 'ABCD'[i], typeId: d.typeId, chart: chartOf(d) }));
   const optionReasons: Record<string, string> = {};
+  const optionChecks: NonNullable<TypeToChartQuestion['explanation']['optionChecks']> = {};
   for (const d of distractors) {
     const dt = index.typeById.get(d.typeId)!;
     optionReasons[`opt-${d.id}`] = `這張是「${dt.label}」的圖：${index.explanationOf(d).distractorReasons[type.id]}`;
+    const c = index.explanationOf(d).distractorChecks?.[type.id];
+    // Q2：檢查目標類型的條件放在這張錯誤圖上哪一項不成立；typeLabel 記錄這張圖實際的類型
+    if (c) optionChecks[`opt-${d.id}`] = { ...structuredClone(c), typeLabel: dt.label };
   }
 
   return {
@@ -201,6 +211,7 @@ export function buildTypeToChart(
         precipitation: exp.highlightMonths.precipitation.slice(),
       },
       optionReasons,
+      optionChecks,
     },
   };
 }

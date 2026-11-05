@@ -93,6 +93,7 @@ try {
   await page.getByText('5 題', { exact: true }).click();
   await page.locator('button[type=submit]').click();
   await page.waitForURL(/practice\/(?!setup)/);
+  await page.locator('.chart-card').first().waitFor();
   check((await page.locator('.chart-card').count()) === 4, '四圖題顯示 4 張圖');
   await page.getByRole('button', { name: '放大圖 A' }).click();
   await page.getByRole('button', { name: '返回選項' }).waitFor();
