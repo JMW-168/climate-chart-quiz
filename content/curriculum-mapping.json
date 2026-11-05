@@ -59,6 +59,14 @@
       "reviewedAt": null
     },
     {
+      "typeId": "humid-subtropical",
+      "references": [],
+      "coverage": "pending",
+      "reason": "依翰林公開資源列出；教材冊別、頁碼與用語待核對。",
+      "reviewer": null,
+      "reviewedAt": null
+    },
+    {
       "typeId": "temperate-monsoon",
       "references": [],
       "coverage": "pending",

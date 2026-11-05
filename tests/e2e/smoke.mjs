@@ -59,8 +59,8 @@ try {
   await page.goto(`${BASE}learn`);
   await page.locator('.review-card').first().waitFor();
   const cards = await page.locator('.review-card').count();
-  check(cards === 12, `總複習列出全部 12 個類型（${cards}）`);
-  check((await page.locator('.review-card svg').count()) === 12, '12 個類型都有代表圖');
+  check(cards === 13, `總複習列出全部 13 個類型（${cards}）`);
+  check((await page.locator('.review-card svg').count()) === 13, '13 個類型都有代表圖');
   await page.getByRole('radio', { name: '寒帶' }).check({ force: true });
   check((await page.locator('.review-card').count()) === 2, '分組篩選：寒帶 2 類');
   await page.screenshot({ path: `${SHOTS}/review-390.png`, fullPage: true });

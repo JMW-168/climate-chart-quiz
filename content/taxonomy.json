@@ -335,7 +335,8 @@
       "graphIdentifiable": true,
       "confusableTypeIds": [
         "marine-west-coast",
-        "temperate-monsoon"
+        "temperate-monsoon",
+        "humid-subtropical"
       ],
       "overlapTypeIds": [],
       "keyFeature": "夏乾冬雨，冬季溫和",
@@ -372,7 +373,63 @@
       },
       "compareNotes": {
         "marine-west-coast": "溫帶海洋性夏季也有雨；地中海型夏季幾乎不下雨。",
-        "temperate-monsoon": "溫帶季風夏雨冬乾，和地中海型的冬雨夏乾剛好相反。"
+        "temperate-monsoon": "溫帶季風夏雨冬乾，和地中海型的冬雨夏乾剛好相反。",
+        "humid-subtropical": "夏雨型暖溫帶夏季雨多；地中海型夏季幾乎不下雨。"
+      },
+      "curriculumRefs": []
+    },
+    {
+      "id": "humid-subtropical",
+      "label": "夏雨型暖溫帶氣候",
+      "aliases": [],
+      "frameworkId": "hanlin-public-v1",
+      "groupId": "temperate",
+      "status": "draft",
+      "graphIdentifiable": true,
+      "confusableTypeIds": [
+        "mediterranean",
+        "temperate-monsoon",
+        "marine-west-coast"
+      ],
+      "overlapTypeIds": [],
+      "keyFeature": "夏季炎熱多雨、冬季溫和，全年有雨",
+      "koppenCodes": [
+        "Cfa",
+        "Cwa"
+      ],
+      "criteria": {
+        "temperature": {
+          "text": "冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）",
+          "rules": [
+            {
+              "kind": "tMin",
+              "gte": 0,
+              "lt": 18
+            },
+            {
+              "kind": "tMax",
+              "gte": 22
+            }
+          ]
+        },
+        "precipitation": {
+          "text": "全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上",
+          "rules": [
+            {
+              "kind": "pTotal",
+              "gte": 800
+            },
+            {
+              "kind": "summerShare",
+              "gte": 0.55
+            }
+          ]
+        }
+      },
+      "compareNotes": {
+        "mediterranean": "地中海型冬雨夏乾；夏雨型暖溫帶夏季雨量較多。",
+        "temperate-monsoon": "溫帶季風冬季低於 0°C、冬季很乾；夏雨型暖溫帶冬季溫和、全年有雨。",
+        "marine-west-coast": "溫帶海洋性夏季涼爽（最熱月低於 22°C）、雨量平均。"
       },
       "curriculumRefs": []
     },

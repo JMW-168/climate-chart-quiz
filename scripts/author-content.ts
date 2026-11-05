@@ -172,6 +172,30 @@ const TYPES: TypeSpec[] = [
     compare: {
       'marine-west-coast': '溫帶海洋性夏季也有雨；地中海型夏季幾乎不下雨。',
       'temperate-monsoon': '溫帶季風夏雨冬乾，和地中海型的冬雨夏乾剛好相反。',
+      'humid-subtropical': '夏雨型暖溫帶夏季雨多；地中海型夏季幾乎不下雨。',
+    },
+  },
+  {
+    id: 'humid-subtropical', label: '夏雨型暖溫帶氣候', groupId: 'temperate', koppen: ['Cfa', 'Cwa'],
+    keyFeature: '夏季炎熱多雨、冬季溫和，全年有雨',
+    tempFeature: '夏季炎熱（最熱月 22°C 以上），冬季溫和、最冷月仍在 0°C 以上。',
+    precipFeature: '全年都有降水，夏半年的雨量較多。',
+    conclusion: '夏季炎熱多雨、冬季溫和，全年有雨，判斷為夏雨型暖溫帶氣候。',
+    compareHint: '綜合比較：冬季不冷、夏季炎熱時，看雨量較多的季節是夏季還是冬季。',
+    criteria: {
+      temperature: {
+        text: '冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）',
+        rules: [{ kind: 'tMin', gte: 0, lt: 18 }, { kind: 'tMax', gte: 22 }],
+      },
+      precipitation: {
+        text: '全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上',
+        rules: [{ kind: 'pTotal', gte: 800 }, { kind: 'summerShare', gte: 0.55 }],
+      },
+    },
+    compare: {
+      mediterranean: '地中海型冬雨夏乾；夏雨型暖溫帶夏季雨量較多。',
+      'temperate-monsoon': '溫帶季風冬季低於 0°C、冬季很乾；夏雨型暖溫帶冬季溫和、全年有雨。',
+      'marine-west-coast': '溫帶海洋性夏季涼爽（最熱月低於 22°C）、雨量平均。',
     },
   },
   {
@@ -280,6 +304,8 @@ interface Station {
   t: number[];
   p: number[];
   koppenException?: string;
+  /** 指定難度（例如只分布在南半球的類型，仍需要入門題） */
+  difficulty?: Difficulty[];
 }
 interface SourceFile {
   dataset: string;
@@ -378,7 +404,7 @@ for (const st of src.stations) {
     typeId: spec.id,
     temperatureC: temps,
     precipitationMm: precip,
-    difficulty: difficultyOf(i, hemi),
+    difficulty: st.difficulty ?? difficultyOf(i, hemi),
     hemisphere: hemi,
     status: 'draft',
     origin: 'observed-normal',

@@ -16,6 +16,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -81,6 +82,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 58%、夏半年最乾的月份 125 mm、年雨量約 2113 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 26.8°C、最熱月 28.6°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 2113 mm、夏半年雨量占全年 42%"
         }
       },
       "temperate-monsoon": {
@@ -162,6 +173,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -227,6 +239,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 58%、夏半年最乾的月份 120 mm、年雨量約 3308 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 26.1°C、最熱月 27.4°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 3308 mm、夏半年雨量占全年 42%"
         }
       },
       "temperate-monsoon": {
@@ -310,6 +332,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -375,6 +398,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 47%、夏半年最乾的月份 116 mm、年雨量約 2397 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 27.2°C、最熱月 28.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 2397 mm、夏半年雨量占全年 53%"
         }
       },
       "temperate-monsoon": {
@@ -458,6 +491,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -523,6 +557,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 33%、夏半年最乾的月份 135 mm、年雨量約 2272 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 27.6°C、最熱月 29.6°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 2272 mm、夏半年雨量占全年 67%"
         }
       },
       "temperate-monsoon": {
@@ -606,6 +650,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -671,6 +716,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 53%、夏半年最乾的月份 84 mm、年雨量約 1993 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 26.1°C、最熱月 28.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 1993 mm、夏半年雨量占全年 47%"
         }
       },
       "temperate-monsoon": {
@@ -753,6 +808,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -818,6 +874,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 50%、夏半年最乾的月份 25 mm、年雨量約 2526 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 26.2°C、最熱月 28.8°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 2526 mm、夏半年雨量占全年 50%"
         }
       },
       "temperate-monsoon": {
@@ -901,6 +967,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -966,6 +1033,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 26%、夏半年最乾的月份 93 mm、年雨量約 1702 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 27.3°C、最熱月 30.7°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 1702 mm、夏半年雨量占全年 74%"
         }
       },
       "temperate-monsoon": {
@@ -1051,6 +1128,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -1116,6 +1194,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 15%、夏半年最乾的月份 73 mm、年雨量約 1421 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 25.2°C、最熱月 30.7°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 1421 mm、夏半年雨量占全年 85%"
         }
       },
       "temperate-monsoon": {
@@ -1201,6 +1289,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -1266,6 +1355,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 8%（南半球夏半年為 10～3 月）、夏半年最乾的月份 69 mm、年雨量約 1833 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 25.2°C、最熱月 29.6°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 1833 mm、夏半年雨量占全年 92%（南半球夏半年為 10～3 月）"
         }
       },
       "temperate-monsoon": {
@@ -1349,6 +1448,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -1414,6 +1514,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 53%、夏半年最乾的月份 0 mm、年雨量約 17 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": true,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 13.1°C、最熱月 37.6°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 17 mm、夏半年雨量占全年 47%"
         }
       },
       "temperate-monsoon": {
@@ -1492,6 +1602,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -1557,6 +1668,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 87%、夏半年最乾的月份 0 mm、年雨量約 50 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 19.1°C、最熱月 35.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 50 mm、夏半年雨量占全年 13%"
         }
       },
       "temperate-monsoon": {
@@ -1635,6 +1756,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -1700,6 +1822,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 1%、夏半年最乾的月份 0 mm、年雨量約 165 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 20.7°C、最熱月 35.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 165 mm、夏半年雨量占全年 99%"
         }
       },
       "temperate-monsoon": {
@@ -1782,6 +1914,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -1858,6 +1991,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 30%、夏半年最乾的月份 6 mm、年雨量約 85 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -5.2°C、最熱月 25.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 85 mm、夏半年雨量占全年 70%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": true,
@@ -1925,6 +2068,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -2001,6 +2145,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 33%、夏半年最乾的月份 1 mm、年雨量約 15 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -6.7°C、最熱月 33.1°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 15 mm、夏半年雨量占全年 67%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": true,
@@ -2068,6 +2222,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -2144,6 +2299,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 15%、夏半年最乾的月份 4 mm、年雨量約 133 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -13.9°C、最熱月 23.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 133 mm、夏半年雨量占全年 85%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": true,
@@ -2212,6 +2377,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -2277,6 +2443,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 56%、夏半年最乾的月份 47 mm、年雨量約 730 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 5.3°C、最熱月 17.1°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 730 mm、夏半年雨量占全年 44%"
         }
       },
       "temperate-monsoon": {
@@ -2355,6 +2531,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -2420,6 +2597,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 52%、夏半年最乾的月份 41 mm、年雨量約 798 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 4.1°C、最熱月 17.4°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 798 mm、夏半年雨量占全年 48%"
         }
       },
       "temperate-monsoon": {
@@ -2498,6 +2685,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -2563,6 +2751,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 50%（南半球夏半年為 10～3 月）、夏半年最乾的月份 187 mm、年雨量約 2731 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 7.5°C、最熱月 16.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 2731 mm、夏半年雨量占全年 50%（南半球夏半年為 10～3 月）"
         }
       },
       "temperate-monsoon": {
@@ -2641,6 +2839,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -2706,6 +2905,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 41%、夏半年最乾的月份 42 mm、年雨量約 618 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -3.2°C、最熱月 21.3°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 618 mm、夏半年雨量占全年 59%"
         }
       },
       "temperate-monsoon": {
@@ -2787,6 +2996,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -2852,6 +3062,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 42%、夏半年最乾的月份 35 mm、年雨量約 635 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -4.1°C、最熱月 18.1°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 635 mm、夏半年雨量占全年 58%"
         }
       },
       "temperate-monsoon": {
@@ -2934,6 +3154,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -2999,6 +3220,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 28%、夏半年最乾的月份 74 mm、年雨量約 802 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -8.8°C、最熱月 23.5°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 802 mm、夏半年雨量占全年 72%"
         }
       },
       "temperate-monsoon": {
@@ -3082,6 +3313,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的降水條件不符。",
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -3147,6 +3379,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要每月都有降水（10 mm 以上），雨量沒有集中在夏季（夏半年少於 75%）；此圖最少雨月 0 mm、夏半年雨量占全年 21%"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": true,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 12.9°C、最熱月 25.3°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 522 mm、夏半年雨量占全年 21%"
         }
       },
       "temperate-monsoon": {
@@ -3230,6 +3472,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "marine-west-coast": "「溫帶海洋性氣候」的降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -3295,6 +3538,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要每月都有降水（10 mm 以上），雨量沒有集中在夏季（夏半年少於 75%）；此圖最少雨月 0 mm、夏半年雨量占全年 12%"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 9.9°C、最熱月 18.2°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 475 mm、夏半年雨量占全年 12%"
         }
       },
       "temperate-monsoon": {
@@ -3378,6 +3631,7 @@
       "tropical-desert": "「熱帶沙漠氣候」的氣溫和降水條件不符。",
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -3443,6 +3697,16 @@
         "precipitation": {
           "pass": true,
           "text": "需要每月都有降水（10 mm 以上），雨量沒有集中在夏季（夏半年少於 75%）；此圖最少雨月 19 mm、夏半年雨量占全年 31%（南半球夏半年為 10～3 月）"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": true,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 12.0°C、最熱月 23.4°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 529 mm、夏半年雨量占全年 31%（南半球夏半年為 10～3 月）"
         }
       },
       "temperate-monsoon": {
@@ -3511,6 +3775,476 @@
     }
   },
   {
+    "id": "wmo-humid-subtropical-brisbane-aero-explanation",
+    "temperatureEvidence": "最熱月是 1 月（25.3°C），最冷月是 7 月（15.2°C），年溫差 10.1°C。夏季炎熱（最熱月 22°C 以上），冬季溫和、最冷月仍在 0°C 以上。",
+    "precipitationEvidence": "年降水量約 983 mm；最多是 2 月（147 mm），最少是 7 月（31 mm）。全年都有降水，夏半年的雨量較多。",
+    "conclusion": "最熱月出現在 12～2 月前後，表示這是南半球的資料，季節與北半球相反。夏季炎熱多雨、冬季溫和，全年有雨，判斷為夏雨型暖溫帶氣候。",
+    "hints": [
+      "先看氣溫：找出最熱月和最冷月，最冷月有沒有低於 0°C？兩者相差多少度？",
+      "再看雨量：哪幾個月的長條最高、哪幾個月最矮？全年雨量是多、普通還是很少？",
+      "綜合比較：冬季不冷、夏季炎熱時，看雨量較多的季節是夏季還是冬季。"
+    ],
+    "distractorReasons": {
+      "tropical-rainforest": "「熱帶雨林氣候」的氣溫和降水條件不符。",
+      "tropical-savanna": "「熱帶莽原氣候」的氣溫和降水條件不符。",
+      "tropical-monsoon": "「熱帶季風氣候」的氣溫和降水條件不符。",
+      "tropical-desert": "「熱帶沙漠氣候」的降水條件不符。",
+      "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
+      "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
+      "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
+      "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
+      "subarctic": "「副極地氣候」的氣溫條件不符。",
+      "polar": "「極地氣候」的氣溫條件不符。",
+      "highland": "「高地氣候」的氣溫條件不符。"
+    },
+    "distractorChecks": {
+      "tropical-rainforest": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 15.2°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年多雨沒有乾季（每月 60 mm 以上）；此圖最少雨月 31 mm"
+        }
+      },
+      "tropical-savanna": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 15.2°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要乾季長（至少 4 個月少於 60 mm），年雨量 500 mm 以上；此圖有 3 個月雨量少於 60 mm、年雨量約 983 mm"
+        }
+      },
+      "tropical-monsoon": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 15.2°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要乾季短（1～3 個月少於 60 mm），年雨量 1500 mm 以上；此圖有 3 個月雨量少於 60 mm、年雨量約 983 mm"
+        }
+      },
+      "tropical-desert": {
+        "temperature": {
+          "pass": true,
+          "text": "需要全年炎熱，年均溫 18°C 以上；此圖年均溫 20.6°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年乾燥少雨，年雨量少於 250 mm；此圖年雨量約 983 mm"
+        }
+      },
+      "marine-west-coast": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬暖夏涼：最冷月 0°C 以上、最熱月低於 22°C，年溫差 6°C 以上；此圖最冷月 15.2°C、最熱月 25.3°C、年溫差 10.1°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且平均：每月 30 mm 以上，最多雨月不到最少雨月的 3 倍；此圖最少雨月 31 mm、最多雨月是最少雨月的 4.7 倍"
+        }
+      },
+      "continental": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季寒冷（最冷月低於 0°C）、夏季溫暖（最熱月 18°C 以上）；此圖最冷月 15.2°C、最熱月 25.3°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要每月都有降水（10 mm 以上），雨量沒有集中在夏季（夏半年少於 75%）；此圖最少雨月 31 mm、夏半年雨量占全年 68%（南半球夏半年為 10～3 月）"
+        }
+      },
+      "mediterranean": {
+        "temperature": {
+          "pass": true,
+          "text": "需要冬季溫和，最冷月 0°C 以上；此圖最冷月 15.2°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 32%（南半球夏半年為 10～3 月）、夏半年最乾的月份 72 mm、年雨量約 983 mm"
+        }
+      },
+      "temperate-monsoon": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季寒冷（最冷月低於 0°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 15.2°C、最熱月 25.3°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要夏雨冬乾：夏半年雨量占 75% 以上，年雨量 400 mm 以上；此圖夏半年雨量占全年 68%（南半球夏半年為 10～3 月）、年雨量約 983 mm"
+        }
+      },
+      "temperate-desert": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬冷夏熱：年均溫低於 18°C，最熱月 20°C 以上；此圖年均溫 20.6°C、最熱月 25.3°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年乾燥少雨，年雨量少於 250 mm；此圖年雨量約 983 mm"
+        }
+      },
+      "subarctic": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季嚴寒（最冷月低於 −10°C），夏季短而涼（最熱月 10～18°C）；此圖最冷月 15.2°C、最熱月 25.3°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "降水量不多，不是主要判斷依據"
+        }
+      },
+      "polar": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年低溫，最熱月低於 10°C；此圖最熱月 25.3°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "雨量很少，不是主要判斷依據"
+        }
+      },
+      "highland": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年涼爽、溫差很小：最熱月低於 20°C，年溫差 6°C 以內；此圖最熱月 25.3°C、年溫差 10.1°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "雨量依所在地區不同，不是主要判斷依據"
+        }
+      }
+    },
+    "highlightMonths": {
+      "temperature": [
+        1,
+        7
+      ],
+      "precipitation": [
+        1,
+        2,
+        3,
+        12
+      ]
+    }
+  },
+  {
+    "id": "wmo-humid-subtropical-buenos-aires-observatorio-explanation",
+    "temperatureEvidence": "最熱月是 1 月（24.9°C），最冷月是 7 月（11.0°C），年溫差 13.9°C。夏季炎熱（最熱月 22°C 以上），冬季溫和、最冷月仍在 0°C 以上。",
+    "precipitationEvidence": "年降水量約 1258 mm；最多是 1 月（134 mm），最少是 6 月（62 mm）。全年都有降水，夏半年的雨量較多。",
+    "conclusion": "最熱月出現在 12～2 月前後，表示這是南半球的資料，季節與北半球相反。夏季炎熱多雨、冬季溫和，全年有雨，判斷為夏雨型暖溫帶氣候。",
+    "hints": [
+      "先看氣溫：找出最熱月和最冷月，最冷月有沒有低於 0°C？兩者相差多少度？",
+      "再看雨量：哪幾個月的長條最高、哪幾個月最矮？全年雨量是多、普通還是很少？",
+      "綜合比較：冬季不冷、夏季炎熱時，看雨量較多的季節是夏季還是冬季。"
+    ],
+    "distractorReasons": {
+      "tropical-rainforest": "「熱帶雨林氣候」的氣溫條件不符。",
+      "tropical-savanna": "「熱帶莽原氣候」的氣溫和降水條件不符。",
+      "tropical-monsoon": "「熱帶季風氣候」的氣溫和降水條件不符。",
+      "tropical-desert": "「熱帶沙漠氣候」的降水條件不符。",
+      "marine-west-coast": "「溫帶海洋性氣候」的氣溫條件不符。",
+      "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
+      "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
+      "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
+      "subarctic": "「副極地氣候」的氣溫條件不符。",
+      "polar": "「極地氣候」的氣溫條件不符。",
+      "highland": "「高地氣候」的氣溫條件不符。"
+    },
+    "distractorChecks": {
+      "tropical-rainforest": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 11.0°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年多雨沒有乾季（每月 60 mm 以上）；此圖最少雨月 62 mm"
+        }
+      },
+      "tropical-savanna": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 11.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要乾季長（至少 4 個月少於 60 mm），年雨量 500 mm 以上；此圖沒有雨量少於 60 mm 的月份、年雨量約 1258 mm"
+        }
+      },
+      "tropical-monsoon": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 11.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要乾季短（1～3 個月少於 60 mm），年雨量 1500 mm 以上；此圖沒有雨量少於 60 mm 的月份、年雨量約 1258 mm"
+        }
+      },
+      "tropical-desert": {
+        "temperature": {
+          "pass": true,
+          "text": "需要全年炎熱，年均溫 18°C 以上；此圖年均溫 18.1°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年乾燥少雨，年雨量少於 250 mm；此圖年雨量約 1258 mm"
+        }
+      },
+      "marine-west-coast": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬暖夏涼：最冷月 0°C 以上、最熱月低於 22°C，年溫差 6°C 以上；此圖最冷月 11.0°C、最熱月 24.9°C、年溫差 13.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且平均：每月 30 mm 以上，最多雨月不到最少雨月的 3 倍；此圖最少雨月 62 mm、最多雨月是最少雨月的 2.2 倍"
+        }
+      },
+      "continental": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季寒冷（最冷月低於 0°C）、夏季溫暖（最熱月 18°C 以上）；此圖最冷月 11.0°C、最熱月 24.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要每月都有降水（10 mm 以上），雨量沒有集中在夏季（夏半年少於 75%）；此圖最少雨月 62 mm、夏半年雨量占全年 59%（南半球夏半年為 10～3 月）"
+        }
+      },
+      "mediterranean": {
+        "temperature": {
+          "pass": true,
+          "text": "需要冬季溫和，最冷月 0°C 以上；此圖最冷月 11.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 41%（南半球夏半年為 10～3 月）、夏半年最乾的月份 118 mm、年雨量約 1258 mm"
+        }
+      },
+      "temperate-monsoon": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季寒冷（最冷月低於 0°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 11.0°C、最熱月 24.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要夏雨冬乾：夏半年雨量占 75% 以上，年雨量 400 mm 以上；此圖夏半年雨量占全年 59%（南半球夏半年為 10～3 月）、年雨量約 1258 mm"
+        }
+      },
+      "temperate-desert": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬冷夏熱：年均溫低於 18°C，最熱月 20°C 以上；此圖年均溫 18.1°C、最熱月 24.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年乾燥少雨，年雨量少於 250 mm；此圖年雨量約 1258 mm"
+        }
+      },
+      "subarctic": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季嚴寒（最冷月低於 −10°C），夏季短而涼（最熱月 10～18°C）；此圖最冷月 11.0°C、最熱月 24.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "降水量不多，不是主要判斷依據"
+        }
+      },
+      "polar": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年低溫，最熱月低於 10°C；此圖最熱月 24.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "雨量很少，不是主要判斷依據"
+        }
+      },
+      "highland": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年涼爽、溫差很小：最熱月低於 20°C，年溫差 6°C 以內；此圖最熱月 24.9°C、年溫差 13.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "雨量依所在地區不同，不是主要判斷依據"
+        }
+      }
+    },
+    "highlightMonths": {
+      "temperature": [
+        1,
+        7
+      ],
+      "precipitation": []
+    }
+  },
+  {
+    "id": "wmo-humid-subtropical-east-london-explanation",
+    "temperatureEvidence": "最熱月是 2 月（22.5°C），最冷月是 7 月（15.9°C），年溫差 6.6°C。夏季炎熱（最熱月 22°C 以上），冬季溫和、最冷月仍在 0°C 以上。",
+    "precipitationEvidence": "年降水量約 822 mm；最多是 11 月（98 mm），最少是 6 月（32 mm）。全年都有降水，夏半年的雨量較多。",
+    "conclusion": "最熱月出現在 12～2 月前後，表示這是南半球的資料，季節與北半球相反。夏季炎熱多雨、冬季溫和，全年有雨，判斷為夏雨型暖溫帶氣候。",
+    "hints": [
+      "先看氣溫：找出最熱月和最冷月，最冷月有沒有低於 0°C？兩者相差多少度？",
+      "再看雨量：哪幾個月的長條最高、哪幾個月最矮？全年雨量是多、普通還是很少？",
+      "綜合比較：冬季不冷、夏季炎熱時，看雨量較多的季節是夏季還是冬季。"
+    ],
+    "distractorReasons": {
+      "tropical-rainforest": "「熱帶雨林氣候」的氣溫和降水條件不符。",
+      "tropical-savanna": "「熱帶莽原氣候」的氣溫條件不符。",
+      "tropical-monsoon": "「熱帶季風氣候」的氣溫和降水條件不符。",
+      "tropical-desert": "「熱帶沙漠氣候」的降水條件不符。",
+      "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
+      "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
+      "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
+      "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
+      "subarctic": "「副極地氣候」的氣溫條件不符。",
+      "polar": "「極地氣候」的氣溫條件不符。",
+      "highland": "「高地氣候」的氣溫條件不符。"
+    },
+    "distractorChecks": {
+      "tropical-rainforest": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 15.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年多雨沒有乾季（每月 60 mm 以上）；此圖最少雨月 32 mm"
+        }
+      },
+      "tropical-savanna": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 15.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要乾季長（至少 4 個月少於 60 mm），年雨量 500 mm 以上；此圖有 5 個月雨量少於 60 mm、年雨量約 822 mm"
+        }
+      },
+      "tropical-monsoon": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年高溫，最冷月 18°C 以上；此圖最冷月 15.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要乾季短（1～3 個月少於 60 mm），年雨量 1500 mm 以上；此圖有 5 個月雨量少於 60 mm、年雨量約 822 mm"
+        }
+      },
+      "tropical-desert": {
+        "temperature": {
+          "pass": true,
+          "text": "需要全年炎熱，年均溫 18°C 以上；此圖年均溫 19.0°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年乾燥少雨，年雨量少於 250 mm；此圖年雨量約 822 mm"
+        }
+      },
+      "marine-west-coast": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬暖夏涼：最冷月 0°C 以上、最熱月低於 22°C，年溫差 6°C 以上；此圖最冷月 15.9°C、最熱月 22.5°C、年溫差 6.6°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且平均：每月 30 mm 以上，最多雨月不到最少雨月的 3 倍；此圖最少雨月 32 mm、最多雨月是最少雨月的 3.1 倍"
+        }
+      },
+      "continental": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季寒冷（最冷月低於 0°C）、夏季溫暖（最熱月 18°C 以上）；此圖最冷月 15.9°C、最熱月 22.5°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要每月都有降水（10 mm 以上），雨量沒有集中在夏季（夏半年少於 75%）；此圖最少雨月 32 mm、夏半年雨量占全年 62%（南半球夏半年為 10～3 月）"
+        }
+      },
+      "mediterranean": {
+        "temperature": {
+          "pass": true,
+          "text": "需要冬季溫和，最冷月 0°C 以上；此圖最冷月 15.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 38%（南半球夏半年為 10～3 月）、夏半年最乾的月份 72 mm、年雨量約 822 mm"
+        }
+      },
+      "temperate-monsoon": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季寒冷（最冷月低於 0°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 15.9°C、最熱月 22.5°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要夏雨冬乾：夏半年雨量占 75% 以上，年雨量 400 mm 以上；此圖夏半年雨量占全年 62%（南半球夏半年為 10～3 月）、年雨量約 822 mm"
+        }
+      },
+      "temperate-desert": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬冷夏熱：年均溫低於 18°C，最熱月 20°C 以上；此圖年均溫 19.0°C、最熱月 22.5°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年乾燥少雨，年雨量少於 250 mm；此圖年雨量約 822 mm"
+        }
+      },
+      "subarctic": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季嚴寒（最冷月低於 −10°C），夏季短而涼（最熱月 10～18°C）；此圖最冷月 15.9°C、最熱月 22.5°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "降水量不多，不是主要判斷依據"
+        }
+      },
+      "polar": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年低溫，最熱月低於 10°C；此圖最熱月 22.5°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "雨量很少，不是主要判斷依據"
+        }
+      },
+      "highland": {
+        "temperature": {
+          "pass": false,
+          "text": "需要全年涼爽、溫差很小：最熱月低於 20°C，年溫差 6°C 以內；此圖最熱月 22.5°C、年溫差 6.6°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "雨量依所在地區不同，不是主要判斷依據"
+        }
+      }
+    },
+    "highlightMonths": {
+      "temperature": [
+        2,
+        7
+      ],
+      "precipitation": [
+        3,
+        11
+      ]
+    }
+  },
+  {
     "id": "wmo-temperate-monsoon-shenyang-explanation",
     "temperatureEvidence": "最熱月是 7 月（24.9°C），最冷月是 1 月（-11.4°C），年溫差 36.3°C。夏季炎熱、冬季寒冷（最冷月低於 0°C），年溫差大。",
     "precipitationEvidence": "年降水量約 687 mm；最多是 8 月（167 mm），最少是 1 月（6 mm）。雨量集中在夏季，冬季的長條很矮，冬季乾燥。",
@@ -3528,6 +4262,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -3604,6 +4339,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 16%、夏半年最乾的月份 35 mm、年雨量約 687 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -11.4°C、最熱月 24.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 687 mm、夏半年雨量占全年 84%"
+        }
+      },
       "temperate-desert": {
         "temperature": {
           "pass": true,
@@ -3675,6 +4420,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -3751,6 +4497,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 12%、夏半年最乾的月份 22 mm、年雨量約 593 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -14.3°C、最熱月 23.7°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 593 mm、夏半年雨量占全年 88%"
+        }
+      },
       "temperate-desert": {
         "temperature": {
           "pass": true,
@@ -3822,6 +4578,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -3898,6 +4655,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 12%、夏半年最乾的月份 19 mm、年雨量約 539 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -17.3°C、最熱月 23.7°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 539 mm、夏半年雨量占全年 88%"
+        }
+      },
       "temperate-desert": {
         "temperature": {
           "pass": true,
@@ -3969,6 +4736,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -4045,6 +4813,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 31%、夏半年最乾的月份 9 mm、年雨量約 296 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -22.4°C、最熱月 17.2°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 296 mm、夏半年雨量占全年 69%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4117,6 +4895,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -4193,6 +4972,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 40%、夏半年最乾的月份 25 mm、年雨量約 491 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -12.6°C、最熱月 14.7°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 491 mm、夏半年雨量占全年 60%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4264,6 +5053,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "polar": "「極地氣候」的氣溫條件不符。",
@@ -4340,6 +5130,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 14%、夏半年最乾的月份 22 mm、年雨量約 468 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -24.4°C、最熱月 17.8°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 468 mm、夏半年雨量占全年 86%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4411,6 +5211,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -4487,6 +5288,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 31%、夏半年最乾的月份 5 mm、年雨量約 137 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -24.4°C、最熱月 5.4°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 137 mm、夏半年雨量占全年 69%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4554,6 +5365,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -4630,6 +5442,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 31%、夏半年最乾的月份 8 mm、年雨量約 164 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -32.1°C、最熱月 4.8°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 164 mm、夏半年雨量占全年 69%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4699,6 +5521,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的氣溫和降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -4775,6 +5598,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 62%、夏半年最乾的月份 4 mm、年雨量約 210 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 -22.2°C、最熱月 4.4°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 210 mm、夏半年雨量占全年 38%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4844,6 +5677,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -4920,6 +5754,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 14%、夏半年最乾的月份 34 mm、年雨量約 981 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 9.0°C、最熱月 14.9°C"
+        },
+        "precipitation": {
+          "pass": true,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 981 mm、夏半年雨量占全年 86%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -4992,6 +5836,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫和降水條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -5068,6 +5913,16 @@
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 50%、夏半年最乾的月份 132 mm、年雨量約 1839 mm"
         }
       },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 15.1°C、最熱月 17.4°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 1839 mm、夏半年雨量占全年 50%"
+        }
+      },
       "temperate-monsoon": {
         "temperature": {
           "pass": false,
@@ -5138,6 +5993,7 @@
       "marine-west-coast": "「溫帶海洋性氣候」的氣溫和降水條件不符。",
       "continental": "「溫帶大陸性氣候」的氣溫和降水條件不符。",
       "mediterranean": "「地中海型氣候」的降水條件不符。",
+      "humid-subtropical": "「夏雨型暖溫帶氣候」的氣溫和降水條件不符。",
       "temperate-monsoon": "「溫帶季風氣候」的氣溫條件不符。",
       "temperate-desert": "「溫帶沙漠氣候」的氣溫和降水條件不符。",
       "subarctic": "「副極地氣候」的氣溫條件不符。",
@@ -5212,6 +6068,16 @@
         "precipitation": {
           "pass": false,
           "text": "需要冬雨夏乾：冬半年雨量占 60% 以上，夏季最乾月少於 30 mm，年雨量 300 mm 以上；此圖冬半年雨量占全年 14%、夏半年最乾的月份 17 mm、年雨量約 655 mm"
+        }
+      },
+      "humid-subtropical": {
+        "temperature": {
+          "pass": false,
+          "text": "需要冬季溫和（最冷月 0～18°C）、夏季炎熱（最熱月 22°C 以上）；此圖最冷月 15.1°C、最熱月 19.9°C"
+        },
+        "precipitation": {
+          "pass": false,
+          "text": "需要全年有雨且夏季較多：年雨量 800 mm 以上，夏半年雨量占 55% 以上；此圖年雨量約 655 mm、夏半年雨量占全年 86%"
         }
       },
       "temperate-monsoon": {

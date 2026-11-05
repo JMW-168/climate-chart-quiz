@@ -879,6 +879,125 @@
       ]
     },
     {
+      "typeId": "humid-subtropical",
+      "station": "Australia / Brisbane Aero",
+      "wigosId": "0-36-9-94578",
+      "lat": -27.392,
+      "lon": 153.129,
+      "elev": 5,
+      "t": [
+        25.3,
+        25.1,
+        23.8,
+        21.2,
+        18.4,
+        16,
+        15.2,
+        15.9,
+        18.5,
+        20.6,
+        22.6,
+        24.2
+      ],
+      "p": [
+        125.8,
+        147.1,
+        116.1,
+        67,
+        87.4,
+        62.9,
+        31.2,
+        34.6,
+        31.7,
+        71.7,
+        87.4,
+        120.2
+      ],
+      "difficulty": [
+        "beginner",
+        "standard"
+      ]
+    },
+    {
+      "typeId": "humid-subtropical",
+      "station": "Argentina / Buenos Aires Observatorio",
+      "wigosId": "0-20000-0-87585",
+      "lat": -34.59,
+      "lon": -58.484,
+      "elev": 25,
+      "t": [
+        24.9,
+        23.8,
+        22,
+        18.2,
+        14.8,
+        12,
+        11,
+        13,
+        14.9,
+        17.9,
+        20.9,
+        23.6
+      ],
+      "p": [
+        134.4,
+        129.3,
+        120,
+        130.3,
+        93.5,
+        61.5,
+        74.4,
+        70.3,
+        80.6,
+        122.9,
+        117.6,
+        122.8
+      ],
+      "difficulty": [
+        "standard",
+        "advanced"
+      ]
+    },
+    {
+      "typeId": "humid-subtropical",
+      "station": "South Africa / East London",
+      "wigosId": "0-20000-0-68858",
+      "lat": -33.036,
+      "lon": 27.816,
+      "elev": 134,
+      "t": [
+        22.1,
+        22.5,
+        21.5,
+        19.6,
+        18,
+        16.3,
+        15.9,
+        16.3,
+        17,
+        18.2,
+        19.4,
+        21
+      ],
+      "p": [
+        89,
+        72,
+        93,
+        89,
+        39,
+        32,
+        42,
+        55,
+        56,
+        81,
+        98,
+        76
+      ],
+      "difficulty": [
+        "advanced"
+      ]
+    },
+    {
       "typeId": "temperate-monsoon",
       "station": "China / Shenyang",
       "wigosId": "0-20000-0-54342",
