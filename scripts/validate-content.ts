@@ -3,10 +3,22 @@
 import { validateContentPackage } from '../src/domain/validation';
 import { generateSession } from '../src/domain/generator';
 import { loadSourceContent } from './lib/load-content';
+import { koppen, matchesKoppen } from '../src/domain/koppen';
 
 const production = process.argv.includes('--production');
 const { pkg } = loadSourceContent(production ? 'production' : undefined);
 const result = validateContentPackage(pkg);
+
+// 柯本比對總表（#1）
+console.log('柯本交叉檢查：');
+for (const d of pkg.datasets) {
+  const t = pkg.taxonomy.types.find((x) => x.id === d.typeId);
+  if (!t) continue;
+  const code = koppen(d.temperatureC, d.precipitationMm, d.hemisphere);
+  const ok = matchesKoppen(code, t.koppenCodes ?? []);
+  console.log(`  ${ok ? '✓' : d.koppenException ? '△' : '✗'} ${d.id.padEnd(34)} ${code.padEnd(4)} 標示 ${t.label}（${(t.koppenCodes ?? []).join('/')}）`);
+}
+console.log('');
 
 for (const e of result.errors) console.error(`✗ [${e.code}] ${e.id}：${e.message}`);
 const warnCounts = new Map<string, number>();
