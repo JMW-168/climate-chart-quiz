@@ -399,6 +399,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey));
         </div>
         <p class="small" style="margin: 0 0 6px">{{ overlay.item.note }}</p>
         <p class="small muted note">示意位置（年平均），名稱待依課本核對。</p>
+        <RouterLink v-if="overlay.kind !== 'current'" class="btn small" to="/causes">看氣壓帶、風帶怎麼隨季節移動</RouterLink>
       </template>
       <template v-else-if="info">
         <div class="info-head">

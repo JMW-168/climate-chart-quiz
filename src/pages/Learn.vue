@@ -19,7 +19,7 @@ const highlights = computed(() =>
 
 <template>
   <h1>怎麼讀氣候圖</h1>
-  <p class="small"><RouterLink to="/review">總複習：所有氣候類型與特徵</RouterLink>｜<RouterLink to="/map">世界氣候分布圖</RouterLink></p>
+  <p class="small"><RouterLink to="/review">總複習：所有氣候類型與特徵</RouterLink>｜<RouterLink to="/map">世界氣候分布圖</RouterLink>｜<RouterLink to="/causes">成因：風帶季移</RouterLink></p>
 
   <section class="sheet">
     <ClimateChart :temperature-c="t" :precipitation-mm="p" :scale="DEFAULT_SCALE" label="讀圖示範" :highlights="highlights" />

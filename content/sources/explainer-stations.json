@@ -1,0 +1,14 @@
+{
+  "dataset": "WMO Climatological Standard Normals 1991–2020",
+  "publisher": "NOAA National Centers for Environmental Information (NCEI)",
+  "accession": "NCEI Accession 0253808",
+  "url": "https://www.ncei.noaa.gov/archive/accession/0253808",
+  "note": "成因學習頁（風帶季移）使用的說明用測站，不加入題庫。數值取自 min24 合併檔，逐字轉錄。",
+  "retrievedAt": "2026-11-05",
+  "stations": [
+    { "id": "hong-kong", "station": "Hong Kong, China / Hong Kong Observatory", "nameZh": "香港（天文台）", "wigosId": "0-20000-0-45005", "lat": 22.302, "lon": 114.174, "elev": 31.7,
+      "t": [16.5, 17.1, 19.5, 23, 26.3, 28.3, 28.9, 28.7, 27.9, 25.7, 22.2, 18.2], "p": [33.2, 38.9, 75.3, 153, 290.6, 491.5, 385.8, 453.2, 321.4, 120.3, 39.3, 28.8] },
+    { "id": "shanghai", "station": "China / Shanghai Baoshan", "nameZh": "中國 上海（寶山）", "wigosId": "0-20000-0-58362", "lat": 31.42, "lon": 121.45, "elev": 9,
+      "t": [4.9, 6.5, 10.3, 15.7, 20.9, 24.4, 28.8, 28.5, 24.7, 19.7, 13.9, 7.5], "p": [69.8, 64, 86.5, 77.1, 90.2, 196.7, 146.9, 210.1, 116.5, 71.4, 57.5, 49.3] }
+  ]
+}

@@ -80,6 +80,15 @@ try {
   check((await page.locator('.current.warm').count()) >= 5, '開啟暖流圖層');
   await page.locator('.legend-item', { hasText: '暖流' }).click();
 
+  console.log('風帶季移');
+  await page.goto(`${BASE}causes`);
+  await page.locator('.belt-map').waitFor();
+  await page.getByRole('button', { name: /1 月/ }).click();
+  check((await page.locator('.now').innerText()).includes('1 月'), '風帶季移：切換到 1 月');
+  await page.locator('.quiz .option').first().click();
+  check((await page.locator('.quiz .feedback').count()) === 1, '風帶季移：小測驗即時回饋');
+  await page.screenshot({ path: `${SHOTS}/causes-390.png`, fullPage: true });
+
   console.log('資料來源頁');
   await page.goto(`${BASE}sources`);
   const srcText = await page.locator('main').innerText();
@@ -202,7 +211,7 @@ try {
   console.log('320px 版面');
   const small = await browser.newContext({ viewport: { width: 320, height: 640 } });
   const sp = await small.newPage();
-  for (const path of ['', 'learn', 'review', 'map', 'practice/setup', 'mistakes', 'settings', 'data', 'sources']) {
+  for (const path of ['', 'learn', 'review', 'map', 'causes', 'practice/setup', 'mistakes', 'settings', 'data', 'sources']) {
     await sp.goto(BASE + path);
     await sp.locator('main').waitFor();
     await sp.waitForTimeout(400);

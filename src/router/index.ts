@@ -8,6 +8,7 @@ export const router = createRouter({
     { path: '/', name: 'home', component: Home, meta: { title: '首頁' } },
     { path: '/learn', name: 'learn', component: () => import('../pages/Learn.vue'), meta: { title: '讀圖說明' } },
     { path: '/review', name: 'review', component: () => import('../pages/Review.vue'), meta: { title: '總複習' } },
+    { path: '/causes', name: 'causes', component: () => import('../pages/BeltShift.vue'), meta: { title: '成因：風帶季移' } },
     { path: '/map', name: 'map', component: () => import('../pages/WorldMap.vue'), meta: { title: '世界氣候分布' } },
     { path: '/practice/setup', name: 'setup', component: () => import('../pages/Setup.vue'), meta: { title: '練習設定' } },
     { path: '/practice/:sessionId', name: 'practice', component: () => import('../pages/Practice.vue'), meta: { title: '練習' } },

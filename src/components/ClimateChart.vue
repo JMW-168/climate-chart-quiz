@@ -14,8 +14,10 @@ const props = withDefaults(
     compact?: boolean;
     highlights?: { temperature: number[]; precipitation: number[] } | null;
     showTable?: boolean;
+    /** 自訂氣溫標記文字（月份 → 文字），預設為最高／最低 */
+    markLabels?: Record<number, string> | null;
   }>(),
-  { compact: false, highlights: null, showTable: true },
+  { compact: false, highlights: null, showTable: true, markLabels: null },
 );
 
 const W = 360;
@@ -81,7 +83,7 @@ const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.tem
       </g>
       <g v-if="highlights" class="hi-labels">
         <template v-for="m in highlights.temperature" :key="`hl${m}`">
-          <text :x="xOf(m - 1)" :y="yT(temperatureC[m - 1]) - 9" text-anchor="middle">{{ m === maxMonth ? '最高' : '最低' }}</text>
+          <text :x="xOf(m - 1)" :y="yT(temperatureC[m - 1]) - 9" text-anchor="middle">{{ markLabels?.[m] ?? (m === maxMonth ? '最高' : '最低') }}</text>
         </template>
       </g>
 

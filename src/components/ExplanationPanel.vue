@@ -80,6 +80,8 @@ const causeLocation = computed<StationLocation | undefined>(() => {
   return q.chart.location;
 });
 const cause = computed(() => props.question.explanation.cause);
+/** 和風帶季移有關的成因，附上學習頁連結 */
+const beltRelated = computed(() => /副熱帶高壓|季風|南移|北移|赤道低壓/.test(cause.value?.text ?? ''));
 </script>
 
 <template>
@@ -94,6 +96,7 @@ const cause = computed(() => props.question.explanation.cause);
       <h3>主要原因</h3>
       <p>{{ cause.text }}</p>
       <p class="small muted">成因為延伸內容，待依課本核對。</p>
+      <RouterLink v-if="beltRelated" class="btn small" to="/causes">看「風帶季移」說明</RouterLink>
     </div>
 
     <div v-if="places.length" class="where">
@@ -146,6 +149,7 @@ const cause = computed(() => props.question.explanation.cause);
         :title="`${causeLocation.nameZh}與相關的風帶、氣壓帶或洋流`"
       />
       <p class="small muted" style="margin-top: 6px">成因為延伸內容，待依課本核對。</p>
+      <RouterLink v-if="beltRelated" class="btn small" to="/causes">看「風帶季移」說明</RouterLink>
     </div>
   </section>
 </template>
