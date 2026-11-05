@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // 氣候圖（規格 §5）：橫軸 1–12 月；左軸氣溫°C 紅色折線＋圓點；右軸降水 mm 藍色長條。
 // 直線連接月均溫，不做平滑；尺度由外部傳入，四圖題共用同一尺度。
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import type { ChartScale } from '../domain/types';
 import { fmt0, fmt1 } from '../domain/stats';
 
@@ -36,29 +36,6 @@ const yP = (p: number) => M.top + ph * (1 - p / props.scale.precipMax);
 
 const linePoints = computed(() => props.temperatureC.map((t, i) => `${xOf(i).toFixed(1)},${yT(t).toFixed(1)}`).join(' '));
 
-const active = ref<number | null>(null);
-const readout = computed(() => {
-  if (active.value === null) return props.compact ? '' : '點選圖上的月份，或用鍵盤左右鍵查看每月數值';
-  const i = active.value;
-  return props.compact
-    ? `${i + 1}月 ${fmt1(props.temperatureC[i])}°C／${fmt0(props.precipitationMm[i])} mm`
-    : `${i + 1} 月：氣溫 ${fmt1(props.temperatureC[i])}°C，降水 ${fmt0(props.precipitationMm[i])} mm`;
-});
-
-function onKey(e: KeyboardEvent) {
-  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-    e.preventDefault();
-    const d = e.key === 'ArrowRight' ? 1 : -1;
-    active.value = active.value === null ? (d > 0 ? 0 : 11) : (active.value + d + 12) % 12;
-  } else if (e.key === 'Home') {
-    active.value = 0;
-  } else if (e.key === 'End') {
-    active.value = 11;
-  } else if (e.key === 'Escape') {
-    active.value = null;
-  }
-}
-
 const hiTemp = computed(() => new Set(props.highlights?.temperature ?? []));
 const hiRain = computed(() => new Set(props.highlights?.precipitation ?? []));
 const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.temperatureC)) + 1);
@@ -68,11 +45,8 @@ const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.tem
   <figure class="climate-chart" :class="{ compact }">
     <svg
       :viewBox="`0 0 ${W} ${H}`"
-      role="group"
-      :aria-label="`${label}：氣候圖，左軸氣溫、右軸降水量。使用左右鍵逐月查看數值。`"
-      tabindex="0"
-      @keydown="onKey"
-      @blur="active = null"
+      role="img"
+      :aria-label="`${label}：氣候圖，左軸氣溫、右軸降水量${showTable ? '，下方可展開每月資料表' : ''}。`"
     >
       <!-- 方格與刻度 -->
       <g class="grid">
@@ -85,11 +59,11 @@ const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.tem
         <rect
           v-for="(p, i) in precipitationMm"
           :key="`b${i}`"
-          :x="xOf(i) - bw * 0.32"
+          :x="M.left + bw * i"
           :y="yP(p)"
-          :width="bw * 0.64"
+          :width="bw"
           :height="Math.max(0, H - M.bottom - yP(p))"
-          :class="{ hi: hiRain.has(i + 1), act: active === i }"
+          :class="{ hi: hiRain.has(i + 1) }"
         />
       </g>
 
@@ -101,7 +75,7 @@ const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.tem
           :key="`d${i}`"
           :cx="xOf(i)"
           :cy="yT(t)"
-          :r="hiTemp.has(i + 1) || active === i ? 5 : 3.2"
+          :r="hiTemp.has(i + 1) ? 5 : 3.2"
           :class="{ hi: hiTemp.has(i + 1) }"
         />
       </g>
@@ -109,20 +83,6 @@ const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.tem
         <template v-for="m in highlights.temperature" :key="`hl${m}`">
           <text :x="xOf(m - 1)" :y="yT(temperatureC[m - 1]) - 9" text-anchor="middle">{{ m === maxMonth ? '最高' : '最低' }}</text>
         </template>
-      </g>
-
-      <!-- 點選區 -->
-      <g class="hit">
-        <rect
-          v-for="i in 12"
-          :key="`h${i}`"
-          :x="M.left + bw * (i - 1)"
-          :y="M.top"
-          :width="bw"
-          :height="ph"
-          :class="{ act: active === i - 1 }"
-          @click="active = active === i - 1 ? null : i - 1"
-        />
       </g>
 
       <!-- 軸 -->
@@ -141,12 +101,11 @@ const maxMonth = computed(() => props.temperatureC.indexOf(Math.max(...props.tem
       </g>
     </svg>
 
-    <figcaption>
-      <span v-if="!compact" class="legend">
+    <figcaption v-if="!compact">
+      <span class="legend">
         <span class="key temp" aria-hidden="true"></span>氣溫（°C，左軸）
         <span class="key rain" aria-hidden="true"></span>降水量（mm，右軸）
       </span>
-      <span class="readout" aria-live="polite">{{ readout }}</span>
     </figcaption>
 
     <details v-if="showTable" class="table-toggle">
@@ -178,21 +137,16 @@ svg {
   height: auto;
   background: #fbfcfd;
   border-radius: 6px;
-  touch-action: manipulation;
 }
-svg:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .grid line { stroke: var(--grid); stroke-width: 1; }
 .grid line.v { stroke: #eef2f5; }
 .grid line.zero { stroke: #9fb0be; stroke-dasharray: 4 3; }
-.bars rect { fill: var(--rain); opacity: 0.78; }
-.bars rect.hi { opacity: 1; stroke: #173f6d; stroke-width: 1.5; }
-.bars rect.act { opacity: 1; }
+.bars rect { fill: #6f9fd4; stroke: #1f4f87; stroke-width: 0.8; }
+.bars rect.hi { fill: var(--rain); stroke: #173f6d; stroke-width: 1.4; }
 .temp-line { fill: none; stroke: var(--temp); stroke-width: 2.2; stroke-linejoin: round; }
 .dots circle { fill: var(--temp); stroke: #fff; stroke-width: 1.2; }
 .dots circle.hi { stroke: #7a1c15; stroke-width: 2; }
 .hi-labels text { font-size: 10px; font-weight: 700; fill: #7a1c15; paint-order: stroke; stroke: #fff; stroke-width: 3px; }
-.hit rect { fill: transparent; cursor: pointer; }
-.hit rect.act { fill: rgba(29, 53, 87, 0.08); }
 .axis line { stroke: #5d6f7f; stroke-width: 1; }
 .axis line.temp-axis { stroke: var(--temp); stroke-width: 1.5; }
 .axis line.rain-axis { stroke: var(--rain); stroke-width: 1.5; }
@@ -211,13 +165,10 @@ figcaption {
   margin-top: 6px;
   color: var(--ink-soft);
 }
-.compact figcaption { font-size: 0.78rem; margin-top: 2px; }
-.compact .readout { min-height: 1.3em; }
 .legend { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
 .key { display: inline-block; width: 18px; height: 10px; margin-left: 4px; }
 .key.temp { height: 3px; background: var(--temp); border-radius: 2px; }
 .key.rain { background: var(--rain); opacity: 0.8; }
-.readout { color: var(--ink); min-height: 1.4em; }
 .table-wrap { overflow-x: auto; }
 .table-toggle { margin-top: 4px; font-size: 0.92rem; }
 .compact .table-toggle { display: none; }

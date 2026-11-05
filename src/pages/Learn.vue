@@ -34,7 +34,7 @@ const highlights = computed(() =>
       <div class="t"><dt>紅色折線：月均溫，看左軸（°C）</dt><dd>每個點是那個月的平均氣溫。點越高越熱；低於 0°C 的虛線表示結冰的冷。</dd></div>
       <div class="p"><dt>藍色長條：月降水量，看右軸（mm）</dt><dd>長條越高，那個月下的雨（或雪）越多。左右兩條軸的刻度不同，讀數值時要看對邊。</dd></div>
     </dl>
-    <p class="small muted">在圖上點一下某個月份（或用鍵盤左右鍵），就能看到那個月的確切數值；也可以展開資料表。</p>
+    <p class="small muted">想知道某個月的確切數值，可以展開圖下方的「12 個月資料表」。</p>
   </section>
 
   <section class="sheet">
