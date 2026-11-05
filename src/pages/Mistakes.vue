@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import type { MistakeRecord, Session } from '../domain/types';
+import { KIND_LABELS } from '../domain/labels';
 import { getRepo } from '../stores/app';
 import { useSessionStore } from '../stores/session';
 
@@ -60,7 +61,7 @@ async function startReview(confirmed = false) {
         <li v-for="m in pending" :key="m.key">
           <div class="grow">
             <strong>{{ m.targetLabel }}</strong>
-            <span class="small muted">｜{{ m.kind === 'chart-to-type' ? '看圖選氣候' : '看氣候選圖' }}｜錯 {{ m.wrongCount }} 次｜最近 {{ fmtDate(m.lastWrongAt) }}</span>
+            <span class="small muted">｜{{ KIND_LABELS[m.kind] }}｜錯 {{ m.wrongCount }} 次｜最近 {{ fmtDate(m.lastWrongAt) }}</span>
           </div>
           <RouterLink class="btn quiet small" :to="{ path: '/practice/setup', query: { type: m.targetTypeId, exclude: m.datasetId } }">
             練習同類新圖

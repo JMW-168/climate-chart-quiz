@@ -6,7 +6,7 @@ import { demoPackage } from './helpers';
 const base: PracticeSettings = { kind: 'mixed', typeIds: [], difficulty: 'standard', count: 10 };
 
 function optionTypeIds(q: QuestionSnapshot): string[] {
-  return q.options.map((o) => o.typeId);
+  return q.kind === 'cause' ? [] : q.options.map((o) => o.typeId);
 }
 
 describe('Q01 固定 seed 重建回合', () => {
@@ -24,7 +24,7 @@ describe('Q02 答案與干擾', () => {
   const pkg = demoPackage();
   const overlaps = new Map(pkg.taxonomy.types.map((t) => [t.id, t.overlapTypeIds]));
   for (const difficulty of ['beginner', 'standard', 'advanced'] as const) {
-    for (const kind of ['chart-to-type', 'type-to-chart'] as const) {
+    for (const kind of ['chart-to-type', 'type-to-chart', 'chart-to-location'] as const) {
       it(`${difficulty}／${kind}：每題恰四選項、恰一正解、無同義或重疊選項`, () => {
         for (let seed = 1; seed <= 25; seed++) {
           const r = generateSession(pkg, { kind, typeIds: [], difficulty, count: 10 }, seed);
@@ -33,7 +33,7 @@ describe('Q02 答案與干擾', () => {
             expect(new Set(q.options.map((o) => o.id)).size).toBe(4);
             const correct = q.options.filter((o) => o.id === q.correctOptionId);
             expect(correct).toHaveLength(1);
-            expect(correct[0].typeId).toBe(q.targetTypeId);
+            expect(optionTypeIds(q)[q.options.findIndex((o) => o.id === q.correctOptionId)]).toBe(q.targetTypeId);
             const types = optionTypeIds(q);
             expect(new Set(types).size).toBe(4); // 錯誤選項不可與正解同類
             for (const t of types) for (const o of overlaps.get(t) ?? []) expect(types).not.toContain(o);
@@ -43,6 +43,11 @@ describe('Q02 答案與干擾', () => {
             if (q.kind === 'type-to-chart') {
               expect(new Set(q.datasetIds).size).toBe(4);
               expect(q.options.map((o) => o.letter)).toEqual(['A', 'B', 'C', 'D']);
+            }
+            if (q.kind === 'chart-to-location') {
+              expect(q.options.map((o) => o.letter)).toEqual(['A', 'B', 'C', 'D']);
+              expect(q.options.find((o) => o.id === q.correctOptionId)!.datasetId).toBe(q.targetDatasetId);
+              expect(new Set(q.options.map((o) => o.location.nameZh)).size).toBe(4);
             }
             expect(q.showSummary).toBe(difficulty !== 'advanced');
           }
@@ -75,7 +80,7 @@ describe('Q02 答案與干擾', () => {
     expect(r.questions.length).toBeGreaterThan(0);
     for (const q of r.questions) {
       expect(q.targetTypeId).toBe('mediterranean');
-      expect(q.options.filter((o) => o.typeId === 'mediterranean')).toHaveLength(1);
+      expect(optionTypeIds(q).filter((t) => t === 'mediterranean')).toHaveLength(1);
     }
   });
 
@@ -115,6 +120,47 @@ describe('錯題複習重新洗牌', () => {
       expect(r.correctOptionId).toBe(orig.correctOptionId);
       expect(new Set(r.options.map((o) => o.id))).toEqual(new Set(orig.options.map((o) => o.id)));
       expect(r.id).not.toBe(orig.id);
+    }
+  });
+});
+
+describe('#16 成因選擇題', () => {
+  const pkg = demoPackage();
+  it('選項恰四個、正解為測站主因，錯誤選項不含也成立或常同時成立的因子', () => {
+    const factors = new Map(pkg.taxonomy.causeFactors!.map((f) => [f.id, f]));
+    for (let seed = 1; seed <= 15; seed++) {
+      const r = generateSession(pkg, { kind: 'cause', typeIds: [], difficulty: 'standard', count: 20 }, seed);
+      expect(r.questions.length).toBeGreaterThan(5);
+      for (const q of r.questions) {
+        if (q.kind !== 'cause') throw new Error('kind');
+        const d = pkg.datasets.find((x) => x.id === q.targetDatasetId)!;
+        expect(q.options).toHaveLength(4);
+        expect(q.correctOptionId).toBe(`cause-${d.cause!.factorId}`);
+        const banned = new Set([...(d.cause!.alsoTrue ?? []), ...factors.get(d.cause!.factorId)!.coOccurring]);
+        for (const o of q.options) if (o.id !== q.correctOptionId) expect(banned.has(o.factorId)).toBe(false);
+        expect(q.explanation.cause?.text).toBe(d.cause!.text);
+      }
+    }
+  });
+  it('沒有成因內容的資料不會成為成因題', () => {
+    const r = generateSession(pkg, { kind: 'cause', typeIds: ['subarctic'], difficulty: 'standard', count: 10 }, 2);
+    expect(r.questions.every((q) => !q.targetDatasetId.includes('arxan'))).toBe(true);
+  });
+  it('混合題型包含四種題型', () => {
+    const r = generateSession(pkg, { kind: 'mixed', typeIds: [], difficulty: 'standard', count: 20 }, 5);
+    expect(new Set(r.questions.map((q) => q.kind)).size).toBe(4);
+  });
+});
+
+describe('#14 看圖找地點：錯題複習重新洗牌時字母同步', () => {
+  it('解析中的地點字母跟著新位置更新', () => {
+    const pkg = demoPackage();
+    const q = generateSession(pkg, { kind: 'chart-to-location', typeIds: [], difficulty: 'standard', count: 1 }, 8).questions[0];
+    const [r] = buildReviewQuestions([q], 77);
+    if (r.kind !== 'chart-to-location') throw new Error('kind');
+    for (const o of r.options) {
+      if (o.id === r.correctOptionId) expect(r.explanation.correctLabel.startsWith(`地點 ${o.letter}`)).toBe(true);
+      else expect(r.explanation.optionReasons[o.id].startsWith(`地點 ${o.letter}`)).toBe(true);
     }
   });
 });

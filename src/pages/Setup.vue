@@ -91,9 +91,11 @@ async function begin(confirmed = false) {
 }
 
 const kindOptions: { value: KindSetting; label: string }[] = [
-  { value: 'mixed', label: '兩種混合' },
+  { value: 'mixed', label: '全部混合' },
   { value: 'chart-to-type', label: '看圖選氣候' },
   { value: 'type-to-chart', label: '看氣候選圖' },
+  { value: 'chart-to-location', label: '看圖找地點' },
+  { value: 'cause', label: '成因題（延伸）' },
 ];
 const diffOptions: { value: Difficulty; label: string; note: string }[] = [
   { value: 'beginner', label: '入門', note: '典型圖、顯示年均溫與年降水量，選項差異較大' },

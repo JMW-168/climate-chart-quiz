@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router';
 import ClimateChart from '../components/ClimateChart.vue';
 import ExplanationPanel from '../components/ExplanationPanel.vue';
 import { summarizeSession } from '../domain/scoring';
+import { KIND_LABELS } from '../domain/labels';
 import type { Attempt, Session } from '../domain/types';
 import { getRepo } from '../stores/app';
 
@@ -74,12 +75,12 @@ const open = ref<string | null>(null);
         <li v-for="r in rows" :key="r.q.id">
           <button class="row-btn" type="button" :aria-expanded="open === r.q.id" @click="open = open === r.q.id ? null : r.q.id">
             <span class="badge" :class="r.a ? (r.a.correct ? 'ok' : 'bad') : 'none'">{{ r.a ? (r.a.correct ? '✓ 對' : '✗ 錯') : '未答' }}</span>
-            <span class="grow">{{ r.q.kind === 'chart-to-type' ? '看圖選氣候' : '看氣候選圖' }}：{{ r.q.targetLabel }}</span>
+            <span class="grow">{{ KIND_LABELS[r.q.kind] }}：{{ r.q.targetLabel }}</span>
             <span v-if="r.a?.hintCount" class="small muted">提示 {{ r.a.hintCount }}</span>
           </button>
           <div v-if="open === r.q.id && r.a" class="row-detail">
             <ClimateChart
-              v-if="r.q.kind === 'chart-to-type'"
+              v-if="r.q.kind !== 'type-to-chart'"
               :temperature-c="r.q.chart.temperatureC"
               :precipitation-mm="r.q.chart.precipitationMm"
               :scale="r.q.scale"

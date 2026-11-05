@@ -89,6 +89,14 @@ const REPO = 'https://github.com/JMW-168/climate-chart-quiz';
     </ul>
   </section>
 
+  <section class="sheet" aria-labelledby="cause-title">
+    <h2 id="cause-title">成因說明與成因題</h2>
+    <ul>
+      <li>作答後的「為什麼會這樣？」與成因題，是本網站依一般地理常識整理的延伸內容（氣壓帶、風帶、季風、洋流、距海遠近、緯度、海拔），尚未逐一對照課本。</li>
+      <li>每題會排除「在這個地點也成立」的原因，避免出現兩個正確答案；若與課本說法不同，請以課本與老師說明為準。</li>
+    </ul>
+  </section>
+
   <section class="sheet" aria-labelledby="code-title">
     <h2 id="code-title">程式與錯誤回報</h2>
     <p>

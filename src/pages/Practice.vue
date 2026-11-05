@@ -5,6 +5,8 @@ import ChartChoiceGrid from '../components/ChartChoiceGrid.vue';
 import ClimateChart from '../components/ClimateChart.vue';
 import ClimateSummary from '../components/ClimateSummary.vue';
 import ExplanationPanel from '../components/ExplanationPanel.vue';
+import LocationChoice from '../components/LocationChoice.vue';
+import LocatorMap from '../components/LocatorMap.vue';
 import QuestionOptions from '../components/QuestionOptions.vue';
 import { useSessionStore } from '../stores/session';
 
@@ -98,10 +100,53 @@ const highlights = computed(() => (submitted.value && q.value ? q.value.explanat
     <section class="sheet">
       <h1 ref="heading" tabindex="-1" class="q-title">
         <template v-if="q.kind === 'chart-to-type'">這張氣候圖是哪一種氣候？</template>
+        <template v-else-if="q.kind === 'chart-to-location'">這張氣候圖最可能是哪一個地點？</template>
+        <template v-else-if="q.kind === 'cause'">{{ q.chart.location?.nameZh }}：{{ q.stem }}</template>
         <template v-else>哪一張是「{{ q.targetLabel }}」的氣候圖？</template>
       </h1>
 
-      <template v-if="q.kind === 'chart-to-type'">
+      <template v-if="q.kind === 'cause'">
+        <p class="small muted cause-note">成因題（延伸內容，待依課本核對）：這是「{{ q.targetLabel }}」的氣候圖，地點標在下方小地圖。</p>
+        <div class="cause-layout">
+          <ClimateChart
+            :key="q.id"
+            :temperature-c="q.chart.temperatureC"
+            :precipitation-mm="q.chart.precipitationMm"
+            :scale="q.scale"
+            :label="`第 ${s.currentIndex + 1} 題`"
+            :highlights="highlights"
+          />
+          <LocatorMap
+            v-if="q.chart.location"
+            :points="[{ lat: q.chart.location.lat, lon: q.chart.location.lon }]"
+            :overlays="submitted ? q.explanation.cause?.overlays ?? [] : []"
+            :title="`地點：${q.chart.location.nameZh}`"
+          />
+        </div>
+        <div style="margin-top: 16px">
+          <QuestionOptions
+            :name="`q-${q.id}`"
+            :options="q.options"
+            :selected="p.selectedOptionId"
+            :submitted="submitted"
+            :correct-option-id="q.correctOptionId"
+            @select="store.select"
+          />
+        </div>
+      </template>
+      <template v-else-if="q.kind === 'chart-to-location'">
+        <ClimateChart
+          :key="q.id"
+          :temperature-c="q.chart.temperatureC"
+          :precipitation-mm="q.chart.precipitationMm"
+          :scale="q.scale"
+          :label="`第 ${s.currentIndex + 1} 題`"
+          :highlights="highlights"
+        />
+        <ClimateSummary v-if="q.showSummary" :temperature-c="q.chart.temperatureC" :precipitation-mm="q.chart.precipitationMm" />
+        <LocationChoice :key="`loc-${q.id}`" :question="q" :selected="p.selectedOptionId" :submitted="submitted" @select="store.select" />
+      </template>
+      <template v-else-if="q.kind === 'chart-to-type'">
         <ClimateChart
           :key="q.id"
           :temperature-c="q.chart.temperatureC"
@@ -179,6 +224,11 @@ const highlights = computed(() => (submitted.value && q.value ? q.value.explanat
 <style scoped>
 .q-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .q-title { font-size: 1.25rem; outline: none; }
+.cause-note { margin-top: -4px; }
+.cause-layout { display: grid; gap: 12px; }
+@media (min-width: 680px) {
+  .cause-layout { grid-template-columns: 1.2fr 1fr; align-items: center; }
+}
 .hints { margin-top: 12px; }
 .actions { margin-top: 16px; }
 </style>

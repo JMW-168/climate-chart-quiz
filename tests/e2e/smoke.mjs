@@ -94,8 +94,11 @@ try {
   await page.screenshot({ path: `${SHOTS}/question-390.png`, fullPage: true });
   await answerCurrent();
   check((await page.locator('.result-banner').count()) === 1, '提交後顯示解析');
-  check((await page.locator('.where .station-info').count()) >= 1, '提交後顯示測站城市與位置');
-  check((await page.locator('.where svg.locator').count()) === 1, '提交後顯示位置小地圖');
+  // 成因題的地點在題目上方已顯示，其他題型在解析中顯示
+  const isCause = (await page.locator('.cause.main').count()) === 1;
+  const isLoc = (await page.locator('.location-choice').count()) === 1;
+  check(isCause || isLoc || (await page.locator('.where .station-info').count()) >= 1, '提交後顯示測站城市與位置');
+  check((await page.locator(isCause ? '.cause-layout svg.locator' : isLoc ? '.location-choice svg.locator' : '.where svg.locator').count()) === 1, '提交後顯示位置小地圖');
   check((await page.locator('.option.locked, .chart-pick:has(input:disabled)').count()) > 0, '提交後選項鎖定');
   await page.screenshot({ path: `${SHOTS}/explanation-390.png`, fullPage: true });
 
@@ -135,6 +138,39 @@ try {
   await page.screenshot({ path: `${SHOTS}/q2-390.png`, fullPage: true });
   await answerCurrent({ wrong: true });
   await page.screenshot({ path: `${SHOTS}/q2-explained-390.png`, fullPage: true });
+
+  console.log('看圖找地點、成因題');
+  await page.goto(`${BASE}practice/setup`);
+  await page.getByText('看圖找地點', { exact: true }).click();
+  await page.getByText('5 題', { exact: true }).click();
+  await page.locator('button[type=submit]').click();
+  const give1 = page.getByRole('button', { name: '放棄並開始新練習' });
+  if (await give1.isVisible().catch(() => false)) await give1.click();
+  await page.waitForURL(/practice\/(?!setup)/);
+  await page.locator('.location-choice').waitFor();
+  // 直接點小地圖上的地點
+  await page.locator('.location-choice .pt').nth(2).dispatchEvent('click');
+  await page.locator('.location-choice .option.selected').waitFor({ timeout: 3000 }).catch(() => undefined);
+  check((await page.locator('.location-choice .option.selected').count()) === 1, '點小地圖上的地點即選取');
+  await page.getByRole('button', { name: '提交答案' }).click();
+  await page.locator('.result-banner').waitFor();
+  check((await page.locator('.location-choice .option').filter({ hasText: '｜' }).count()) === 4 && (await page.locator('.result-banner').innerText()).includes('地點'), '看圖找地點：作答後選項顯示四個城市');
+  await page.screenshot({ path: `${SHOTS}/location-390.png`, fullPage: true });
+
+  await page.goto(`${BASE}practice/setup`);
+  await page.getByText('成因題（延伸）', { exact: true }).click();
+  await page.getByText('5 題', { exact: true }).click();
+  await page.locator('button[type=submit]').click();
+  const give2 = page.getByRole('button', { name: '放棄並開始新練習' });
+  if (await give2.isVisible().catch(() => false)) await give2.click();
+  await page.waitForURL(/practice\/(?!setup)/);
+  await page.locator('.cause-layout').waitFor();
+  check((await page.locator('.q-title').innerText()).includes('為什麼'), '成因題題幹包含「為什麼」');
+  await page.locator('.option').first().click();
+  await page.getByRole('button', { name: '提交答案' }).click();
+  await page.locator('.cause.main').waitFor();
+  check(true, '成因題解析顯示主要原因');
+  await page.screenshot({ path: `${SHOTS}/cause-390.png`, fullPage: true });
 
   console.log('離線');
   await context.setOffline(true);

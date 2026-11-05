@@ -15,6 +15,10 @@ import type {
   QuestionKind,
   QuestionSnapshot,
   TypeToChartQuestion,
+  ChartToLocationQuestion,
+  CauseQuestion,
+  CauseFactor,
+  ExplanationSnapshot,
 } from './types';
 
 export interface GenerationResult {
@@ -33,6 +37,7 @@ export class ContentIndex {
   readonly typeById: Map<string, ClimateType>;
   readonly explById: Map<string, Explanation>;
   readonly datasets: ClimateDataset[];
+  readonly factorById: Map<string, CauseFactor>;
 
   constructor(readonly pkg: ContentPackage) {
     const mode = pkg.mode;
@@ -41,6 +46,7 @@ export class ContentIndex {
     );
     this.typeById = new Map(this.types.map((t) => [t.id, t]));
     this.explById = new Map(pkg.explanations.map((e) => [e.id, e]));
+    this.factorById = new Map((pkg.taxonomy.causeFactors ?? []).map((f) => [f.id, f]));
     this.datasets = pkg.datasets.filter(
       (d) => isEligibleStatus(d.status, mode) && this.typeById.has(d.typeId) && this.explById.has(d.explanationId),
     );
@@ -57,6 +63,38 @@ export class ContentIndex {
     const tb = this.typeById.get(b);
     return !!(ta?.overlapTypeIds.includes(b) || tb?.overlapTypeIds.includes(a));
   }
+}
+
+function explanationOf(
+  target: ClimateDataset,
+  exp: Explanation,
+  correctLabel: string,
+  optionReasons: Record<string, string>,
+  optionChecks: NonNullable<ExplanationSnapshot['optionChecks']>,
+): ExplanationSnapshot {
+  return {
+    correctLabel,
+    temperatureEvidence: exp.temperatureEvidence,
+    precipitationEvidence: exp.precipitationEvidence,
+    conclusion: exp.conclusion,
+    hints: [...exp.hints] as [string, string, string],
+    highlightMonths: {
+      temperature: exp.highlightMonths.temperature.slice(),
+      precipitation: exp.highlightMonths.precipitation.slice(),
+    },
+    optionReasons,
+    optionChecks,
+    ...(target.cause ? { cause: { text: target.cause.text, overlays: target.cause.overlays.slice() } } : {}),
+  };
+}
+
+/** 兩點的大圓距離（公里） */
+function distanceKm(a: { lat: number; lon: number }, b: { lat: number; lon: number }): number {
+  const r = Math.PI / 180;
+  const h =
+    Math.sin(((b.lat - a.lat) * r) / 2) ** 2 +
+    Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(((b.lon - a.lon) * r) / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(h));
 }
 
 function chartOf(d: ClimateDataset): ChartSnapshot {
@@ -125,19 +163,7 @@ export function buildChartToType(
     scale: computeScale([target]),
     chart: chartOf(target),
     options,
-    explanation: {
-      correctLabel: type.label,
-      temperatureEvidence: exp.temperatureEvidence,
-      precipitationEvidence: exp.precipitationEvidence,
-      conclusion: exp.conclusion,
-      hints: [...exp.hints] as [string, string, string],
-      highlightMonths: {
-        temperature: exp.highlightMonths.temperature.slice(),
-        precipitation: exp.highlightMonths.precipitation.slice(),
-      },
-      optionReasons,
-      optionChecks,
-    },
+    explanation: explanationOf(target, exp, type.label, optionReasons, optionChecks),
   };
 }
 
@@ -201,28 +227,144 @@ export function buildTypeToChart(
     showSummary: difficulty !== 'advanced',
     scale: computeScale(all),
     options,
-    explanation: {
-      correctLabel: type.label,
-      temperatureEvidence: exp.temperatureEvidence,
-      precipitationEvidence: exp.precipitationEvidence,
-      conclusion: exp.conclusion,
-      hints: [...exp.hints] as [string, string, string],
-      highlightMonths: {
-        temperature: exp.highlightMonths.temperature.slice(),
-        precipitation: exp.highlightMonths.precipitation.slice(),
-      },
-      optionReasons,
-      optionChecks,
-    },
+    explanation: explanationOf(target, exp, type.label, optionReasons, optionChecks),
   };
 }
 
-/** 回合內每題的題型：混合時兩種各半後洗牌 */
+/** 看圖找地點（#14）：地圖上 A～D 四個測站，選出這張氣候圖的位置 */
+export function buildChartToLocation(
+  index: ContentIndex,
+  target: ClimateDataset,
+  rng: Rng,
+  qid: string,
+  difficulty: Difficulty,
+): ChartToLocationQuestion | { problem: string } {
+  if (!target.location) return { problem: `資料 ${target.id} 沒有測站位置` };
+  const type = index.typeById.get(target.typeId)!;
+  const exp = index.explanationOf(target);
+  const order = orderedDistractorTypes(index, type, rng).filter((t) => !!exp.distractorChecks?.[t.id]);
+  const chosen: ClimateDataset[] = [];
+  for (const t of order) {
+    if (chosen.length >= 3) break;
+    const pool = shuffle(
+      index.datasets.filter((d) => d.typeId === t.id && d.location),
+      rng,
+    );
+    // 地點彼此至少相距 1500 公里，避免在小地圖上重疊
+    const pick = pool.find((d) => [target, ...chosen].every((x) => distanceKm(x.location!, d.location!) > 1500));
+    if (pick) chosen.push(pick);
+  }
+  if (chosen.length < 3) return { problem: `資料 ${target.id} 找不到 3 個合適的錯誤地點` };
+
+  const all = shuffle([target, ...chosen], rng);
+  const options = all.map((d, i) => ({
+    id: `loc-${d.id}`,
+    letter: 'ABCD'[i],
+    typeId: d.typeId,
+    datasetId: d.id,
+    location: { ...d.location! },
+  }));
+  const optionReasons: Record<string, string> = {};
+  const optionChecks: NonNullable<ExplanationSnapshot['optionChecks']> = {};
+  for (const d of chosen) {
+    const dt = index.typeById.get(d.typeId)!;
+    const c = exp.distractorChecks![dt.id];
+    const letter = options.find((o) => o.datasetId === d.id)!.letter;
+    optionReasons[`loc-${d.id}`] = `地點 ${letter}（${d.location!.nameZh}）是「${dt.label}」：${exp.distractorReasons[dt.id]}`;
+    optionChecks[`loc-${d.id}`] = { ...structuredClone(c), typeLabel: dt.label };
+  }
+  return {
+    id: qid,
+    kind: 'chart-to-location',
+    targetTypeId: type.id,
+    targetLabel: type.label,
+    targetDatasetId: target.id,
+    datasetIds: [target.id],
+    correctOptionId: `loc-${target.id}`,
+    contentVersion: index.pkg.contentVersion,
+    difficulty,
+    showSummary: difficulty !== 'advanced',
+    scale: computeScale([target]),
+    chart: chartOf(target),
+    options,
+    explanation: explanationOf(target, exp, `地點 ${options.find((o) => o.datasetId === target.id)!.letter}（${target.location.nameZh}）`, optionReasons, optionChecks),
+  };
+}
+
+/** 成因選擇題（#16）：已知氣候圖與地點，選出主要成因 */
+export function buildCause(
+  index: ContentIndex,
+  target: ClimateDataset,
+  rng: Rng,
+  qid: string,
+  difficulty: Difficulty,
+): CauseQuestion | { problem: string } {
+  const cause = target.cause;
+  if (!cause || !target.location) return { problem: `資料 ${target.id} 沒有成因內容` };
+  const main = index.factorById.get(cause.factorId);
+  if (!main) return { problem: `資料 ${target.id} 的成因因子不存在` };
+  const type = index.typeById.get(target.typeId)!;
+  const exp = index.explanationOf(target);
+  const excluded = new Set([main.id, ...(cause.alsoTrue ?? []), ...main.coOccurring]);
+  const distractors = shuffle(
+    [...index.factorById.values()].filter((f) => !excluded.has(f.id)),
+    rng,
+  ).slice(0, 3);
+  if (distractors.length < 3) return { problem: `資料 ${target.id} 的錯誤成因不足 3 個` };
+  const options = shuffle([main, ...distractors], rng).map((f) => ({ id: `cause-${f.id}`, factorId: f.id, label: f.label }));
+  const optionReasons: Record<string, string> = {};
+  for (const f of distractors) {
+    optionReasons[`cause-${f.id}`] = `「${f.label}」通常造成「${f.effect}」，不是這裡的主要原因；這裡的主因是「${main.label}」。`;
+  }
+  return {
+    id: qid,
+    kind: 'cause',
+    targetTypeId: type.id,
+    targetLabel: type.label,
+    targetDatasetId: target.id,
+    datasetIds: [target.id],
+    correctOptionId: `cause-${main.id}`,
+    contentVersion: index.pkg.contentVersion,
+    difficulty,
+    showSummary: difficulty !== 'advanced',
+    scale: computeScale([target]),
+    chart: chartOf(target),
+    stem: cause.stem,
+    options,
+    explanation: explanationOf(target, exp, main.label, optionReasons, {}),
+  };
+}
+
+const MIXED_KINDS: QuestionKind[] = ['chart-to-type', 'type-to-chart', 'chart-to-location', 'cause'];
+
+/** 回合內每題的題型：混合時四種輪流後洗牌 */
 function planKinds(settings: PracticeSettings, n: number, rng: Rng): QuestionKind[] {
   if (settings.kind !== 'mixed') return Array(n).fill(settings.kind);
   const kinds: QuestionKind[] = [];
-  for (let i = 0; i < n; i++) kinds.push(i % 2 === 0 ? 'chart-to-type' : 'type-to-chart');
+  for (let i = 0; i < n; i++) kinds.push(MIXED_KINDS[i % MIXED_KINDS.length]);
   return shuffle(kinds, rng);
+}
+
+function buildOne(
+  kind: QuestionKind,
+  index: ContentIndex,
+  d: ClimateDataset,
+  rng: Rng,
+  qid: string,
+  settings: PracticeSettings,
+  seen: Set<string>,
+  isTargetCandidate: (d: ClimateDataset) => boolean,
+): QuestionSnapshot | { problem: string } {
+  switch (kind) {
+    case 'chart-to-type':
+      return buildChartToType(index, d, rng, qid, settings.difficulty);
+    case 'type-to-chart':
+      return buildTypeToChart(index, d, rng, qid, settings.difficulty, seen, isTargetCandidate);
+    case 'chart-to-location':
+      return buildChartToLocation(index, d, rng, qid, settings.difficulty);
+    case 'cause':
+      return buildCause(index, d, rng, qid, settings.difficulty);
+  }
 }
 
 export function generateSession(pkg: ContentPackage, settings: PracticeSettings, seed: number): GenerationResult {
@@ -260,12 +402,14 @@ export function generateSession(pkg: ContentPackage, settings: PracticeSettings,
       const d = pool.shift()!;
       if (seen.has(d.id)) continue;
       const qid = `q${questions.length + 1}-${d.id}`;
-      const r =
-        kind === 'chart-to-type'
-          ? buildChartToType(index, d, rng, qid, settings.difficulty)
-          : buildTypeToChart(index, d, rng, qid, settings.difficulty, seen, isTargetCandidate);
-      if ('problem' in r) problems.push({ id: d.id, message: r.problem });
-      else built = r;
+      let r = buildOne(kind, index, d, rng, qid, settings, seen, isTargetCandidate);
+      // 混合題型時，資料缺少成因或位置就改出看圖選氣候；指定題型則略過此資料
+      if ('problem' in r && settings.kind === 'mixed' && (kind === 'cause' || kind === 'chart-to-location')) {
+        r = buildChartToType(index, d, rng, qid, settings.difficulty);
+      }
+      if ('problem' in r) {
+        if (kind !== 'cause' && kind !== 'chart-to-location') problems.push({ id: d.id, message: r.problem });
+      } else built = r;
     }
     // 用完的類型移出輪替；游標停在原位即指向下一個類型
     if (!pool.length) rotation = rotation.filter((id) => id !== typeId);
@@ -285,11 +429,29 @@ export function generateSession(pkg: ContentPackage, settings: PracticeSettings,
 
 /** 錯題複習：沿用快照資料，重新洗牌選項位置 */
 export function reshuffleQuestion(q: QuestionSnapshot, rng: Rng, newId: string): QuestionSnapshot {
-  if (q.kind === 'chart-to-type') {
-    return { ...q, id: newId, options: shuffle(q.options, rng) };
+  switch (q.kind) {
+    case 'chart-to-type':
+      return { ...q, id: newId, options: shuffle(q.options, rng) };
+    case 'cause':
+      return { ...q, id: newId, options: shuffle(q.options, rng) };
+    case 'type-to-chart':
+      return { ...q, id: newId, options: shuffle(q.options, rng).map((o, i) => ({ ...o, letter: 'ABCD'[i] })) };
+    case 'chart-to-location': {
+      const options = shuffle(q.options, rng).map((o, i) => ({ ...o, letter: 'ABCD'[i] }));
+      // 解析文字中的地點字母要跟著更新
+      const letterOf = new Map(options.map((o) => [o.id, o.letter]));
+      const optionReasons = Object.fromEntries(
+        Object.entries(q.explanation.optionReasons).map(([id, t]) => [id, t.replace(/^地點 [A-D]/, `地點 ${letterOf.get(id) ?? ''}`)]),
+      );
+      const correct = options.find((o) => o.id === q.correctOptionId)!;
+      return {
+        ...q,
+        id: newId,
+        options,
+        explanation: { ...q.explanation, optionReasons, correctLabel: `地點 ${correct.letter}（${correct.location.nameZh}）` },
+      };
+    }
   }
-  const options = shuffle(q.options, rng).map((o, i) => ({ ...o, letter: 'ABCD'[i] }));
-  return { ...q, id: newId, options };
 }
 
 export function buildReviewQuestions(snapshots: QuestionSnapshot[], seed: number): QuestionSnapshot[] {
