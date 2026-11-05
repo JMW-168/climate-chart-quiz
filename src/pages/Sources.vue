@@ -52,6 +52,7 @@ const REPO = 'https://github.com/JMW-168/climate-chart-quiz';
         網格檔取自 <a href="https://github.com/cwru-sdle/kgcpy" target="_blank" rel="noopener">kgcpy</a> 套件（BSD-3-Clause 授權），本網站降採樣為 0.25° 並對應到本站的氣候名稱。
       </li>
       <li>海岸線：<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 1:110m 陸地資料（公有領域），經 world-atlas 套件（ISC 授權）取得。</li>
+      <li>風帶、氣壓帶與洋流：依公開地理常識自行描繪的年平均位置示意，不是觀測資料；名稱待依課本核對。</li>
       <li>柯本類別對應到課本名稱是簡化示意，邊界不精確；草原（半乾燥）地區另外標示，請以課本地圖為準。</li>
     </ul>
   </section>

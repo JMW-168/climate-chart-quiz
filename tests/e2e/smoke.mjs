@@ -74,8 +74,11 @@ try {
   await page.mouse.click(mbox.x + ((10 + 180) * 4 / 1440) * mbox.width, mbox.y + ((84 - 23) * 4 / 576) * mbox.height);
   check((await page.locator('.info-head').innerText()).includes('熱帶沙漠'), '地圖點撒哈拉顯示熱帶沙漠氣候');
   await page.getByRole('button', { name: '只看寒帶' }).click();
-  check((await page.locator('.legend-item:not(.off)').count()) === 2, '只看寒帶後只勾選 2 類');
+  check((await page.locator('.legend-group .legend-item:not(.off)').count()) === 2, '只看寒帶後只勾選 2 類');
   await page.getByRole('button', { name: '全選' }).click();
+  await page.locator('.legend-item', { hasText: '暖流' }).click();
+  check((await page.locator('.current.warm').count()) >= 5, '開啟暖流圖層');
+  await page.locator('.legend-item', { hasText: '暖流' }).click();
 
   console.log('資料來源頁');
   await page.goto(`${BASE}sources`);
