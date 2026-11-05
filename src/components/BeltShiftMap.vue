@@ -65,6 +65,10 @@ const STATES: Record<'jan' | 'jul', SeasonState> = {
 };
 
 const st = computed(() => STATES[props.season]);
+// 緯線：每 10 度一條，另畫北回歸線
+const latLines = [0, 10, 20, 30, 40, 50, 60];
+const latLabel = (lat: number) => (lat === 0 ? '0°（赤道）' : `北緯 ${lat}°`);
+const tropic = 23.44;
 const y = (lat: number) => toXY(lat, 0).y;
 const cities = [
   { id: 'cadiz', name: '加的斯', lat: 36.5, lon: -6.3, dx: 12, anchor: 'start' },
@@ -98,13 +102,19 @@ function windLine(w: SeasonState['winds'][number]) {
     <rect :x="x0" :y="y0" :width="vw" :height="vh" class="sea" />
     <path :d="LAND_PATH" class="land" />
 
+    <!-- 緯線與緯度標示 -->
+    <g class="grid">
+      <line v-for="lat in latLines" :key="lat" :x1="x0" :x2="x0 + vw" :y1="y(lat)" :y2="y(lat)" :class="{ eq: lat === 0 }" />
+      <line :x1="x0" :x2="x0 + vw" :y1="y(tropic)" :y2="y(tropic)" class="tropic" />
+    </g>
+
     <!-- 氣壓帶：隨季節南北移動 -->
     <g class="band low" :style="{ transform: `translateY(${y(st.subpolar)}px)` }">
       <rect :x="x0" y="-12" :width="vw" height="24" />
       <text :x="x0 + vw - 6" y="5" text-anchor="end">副極地低壓帶</text>
     </g>
     <g class="band west" :style="{ transform: `translateY(${y(st.westerly)}px)` }">
-      <text :x="x0 + 6" y="5">盛行西風帶 →</text>
+      <text :x="x0 + 74" y="5">盛行西風帶 →</text>
     </g>
     <g class="band high" :style="{ transform: `translateY(${y(st.stHigh)}px)` }">
       <rect :x="x0" y="-14" :width="vw" height="28" />
@@ -127,6 +137,12 @@ function windLine(w: SeasonState['winds'][number]) {
       <text :y="c.ry + 14" text-anchor="middle" class="name">{{ c.name }}</text>
     </g>
 
+    <!-- 緯度文字放在最上層，避免被氣壓帶蓋住 -->
+    <g class="lat-labels">
+      <text v-for="lat in latLines" :key="lat" :x="x0 + 4" :y="lat === 0 ? y(lat) - 4 : y(lat) - 3">{{ latLabel(lat) }}</text>
+      <text :x="x0 + vw * 0.42" :y="y(tropic) - 3" class="tropic-label">北回歸線（23.5°）</text>
+    </g>
+
     <!-- 代表地點的風 -->
     <g v-for="w in st.winds" :key="w.id" :class="['wind', w.wet ? 'wet' : 'dry']">
       <line v-bind="windLine(w)" :marker-end="`url(#${uid}-${w.wet ? 'wet' : 'dry'})`" />
@@ -142,6 +158,11 @@ function windLine(w: SeasonState['winds'][number]) {
 .belt-map { display: block; width: 100%; height: auto; background: #e7f0f6; border-radius: 6px; }
 .sea { fill: #e7f0f6; }
 .land { fill: #f4efe2; stroke: #8a97a3; stroke-width: 1; }
+.grid line { stroke: #7d8c99; stroke-width: 0.8; stroke-dasharray: 3 4; }
+.grid line.eq { stroke: #33424f; stroke-width: 1.2; stroke-dasharray: none; }
+.grid line.tropic { stroke: #33424f; stroke-width: 1; stroke-dasharray: 8 5; }
+.lat-labels text { font-size: 11px; font-weight: 700; fill: #33424f; paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.lat-labels .tropic-label { font-weight: 600; fill: #4b5d6d; }
 .band, .cell { transition: transform 1.2s ease-in-out, opacity 0.8s; }
 .band rect { fill-opacity: 0.2; }
 .band.high rect { fill: #c8372d; }
