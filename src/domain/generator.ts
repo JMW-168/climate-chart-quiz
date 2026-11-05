@@ -65,6 +65,7 @@ function chartOf(d: ClimateDataset): ChartSnapshot {
     temperatureC: d.temperatureC.slice(),
     precipitationMm: d.precipitationMm.slice(),
     hemisphere: d.hemisphere,
+    ...(d.location ? { location: { ...d.location } } : {}),
   };
 }
 

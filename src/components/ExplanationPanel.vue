@@ -3,6 +3,8 @@
 import { computed } from 'vue';
 import type { QuestionSnapshot } from '../domain/types';
 import CheckList from './CheckList.vue';
+import LocatorMap from './LocatorMap.vue';
+import StationInfo from './StationInfo.vue';
 
 const props = defineProps<{ question: QuestionSnapshot; selectedOptionId: string; correct: boolean }>();
 
@@ -28,6 +30,16 @@ const others = computed(() =>
     })),
 );
 const isQ1 = computed(() => props.question.kind === 'chart-to-type');
+/** 作答後顯示的測站位置；舊回合快照沒有位置時為空 */
+const places = computed(() => {
+  const q = props.question;
+  if (q.kind === 'chart-to-type') {
+    return q.chart.location ? [{ key: 'chart', prefix: '', loc: q.chart.location, letter: '', correct: true }] : [];
+  }
+  return q.options
+    .filter((o) => o.chart.location)
+    .map((o) => ({ key: o.id, prefix: `圖 ${o.letter}：`, loc: o.chart.location!, letter: o.letter, correct: o.id === q.correctOptionId }));
+});
 const target = computed(() => props.question.targetLabel);
 const selectedCheck = computed(() => props.question.explanation.optionChecks?.[props.selectedOptionId]);
 /** Q1：錯誤選項的類型名稱；Q2：要找的類型名稱 */
@@ -42,6 +54,19 @@ const checkTarget = (optionId: string) =>
       <span>{{ correct ? '答對了' : '答錯了' }}：正確答案是 {{ correctName }}</span>
     </div>
     <h2 id="exp-title" class="visually-hidden">答案解析</h2>
+    <div v-if="places.length" class="where">
+      <h3>這{{ isQ1 ? '張' : '幾張' }}圖在哪裡</h3>
+      <ul>
+        <li v-for="p in places" :key="p.key" :class="{ correct: p.correct && !isQ1 }">
+          <StationInfo :location="p.loc" :prefix="p.prefix" />
+          <span v-if="!isQ1 && p.correct" class="tag">正確答案</span>
+        </li>
+      </ul>
+      <LocatorMap
+        :title="`測站位置：${places.map((p) => p.loc.nameZh).join('、')}`"
+        :points="places.map((p) => ({ lat: p.loc.lat, lon: p.loc.lon, label: p.letter || undefined, highlight: !isQ1 && p.correct }))"
+      />
+    </div>
     <dl class="evidence">
       <div class="t"><dt>氣溫證據</dt><dd>{{ question.explanation.temperatureEvidence }}</dd></div>
       <div class="p"><dt>降水證據</dt><dd>{{ question.explanation.precipitationEvidence }}</dd></div>
@@ -70,5 +95,11 @@ const checkTarget = (optionId: string) =>
 .why-wrong h3 { font-size: 0.98rem; color: var(--bad); margin-bottom: 4px; }
 .why-wrong p { margin: 0; }
 .other { margin: 8px 0 14px; }
+.where { margin: 0 0 14px; }
+.where h3 { font-size: 0.98rem; margin-bottom: 4px; }
+.where ul { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 4px; }
+.where li { font-size: 0.95rem; }
+.where li.correct strong { color: var(--ok); }
+.where .tag { margin-left: 6px; font-size: 0.8rem; font-weight: 700; color: var(--ok); }
 .other h4 { margin: 0 0 2px; font-size: 0.98rem; }
 </style>

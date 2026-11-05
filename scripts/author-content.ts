@@ -297,6 +297,8 @@ const TYPES: TypeSpec[] = [
 interface Station {
   typeId: string;
   station: string;
+  /** 中文顯示名稱（作答後與地圖顯示） */
+  nameZh: string;
   wigosId: string;
   lat: number;
   lon: number;
@@ -415,6 +417,7 @@ for (const st of src.stations) {
       license: 'NOAA NCEI 公開發布（' + src.accession + '）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處',
     },
     review: null,
+    location: { name: st.station, nameZh: st.nameZh, lat: st.lat, lon: st.lon, elev: st.elev, ...(st.wigosId ? { wigosId: st.wigosId } : {}) },
     explanationId: explId,
     ...(st.koppenException ? { koppenException: st.koppenException } : {}),
   });

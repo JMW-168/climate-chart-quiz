@@ -56,6 +56,7 @@ const hl = (id: string) => (props.showHighlights && id === props.question.correc
         :highlights="hl(o.id)"
         :show-table="false"
       />
+      <p v-if="submitted && o.chart.location" class="city small">{{ o.chart.location.nameZh }}</p>
       <ClimateSummary v-if="question.showSummary" compact :temperature-c="o.chart.temperatureC" :precipitation-mm="o.chart.precipitationMm" />
       <label class="btn chart-pick" :class="{ primary: selected === o.id }">
         <input
@@ -100,5 +101,6 @@ const hl = (id: string) => (props.showHighlights && id === props.question.correc
 .is-correct .chart-pick { border-color: var(--ok); color: var(--ok); background: var(--sheet); opacity: 1; }
 .is-wrong .chart-pick { border-color: var(--bad); color: var(--bad); background: var(--sheet); opacity: 1; }
 .chart-pick { width: 100%; margin-top: auto; }
+.city { margin: 0; padding-left: 4px; font-weight: 700; color: var(--navy); }
 .chart-pick:has(input:disabled) { opacity: 0.7; cursor: default; }
 </style>

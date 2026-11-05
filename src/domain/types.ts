@@ -67,6 +67,17 @@ export interface DatasetReview {
   notes: string;
 }
 
+export interface StationLocation {
+  /** 原始資料的測站名稱（英文） */
+  name: string;
+  /** 中文顯示名稱 */
+  nameZh: string;
+  lat: number;
+  lon: number;
+  elev: number;
+  wigosId?: string;
+}
+
 export interface ClimateDataset {
   id: string;
   revision: number;
@@ -82,6 +93,8 @@ export interface ClimateDataset {
   source: DatasetSource;
   review: DatasetReview | null;
   explanationId: string;
+  /** 測站位置（地圖與資料說明用；題目畫面不顯示） */
+  location?: StationLocation;
   /** 柯本代碼與所標類型不一致時，必須寫明保留理由 */
   koppenException?: string;
   regionIds?: string[];
@@ -146,6 +159,8 @@ export interface ContentPackage {
 
 export interface ChartSnapshot {
   datasetId: string;
+  /** 作答後才顯示；舊回合快照可能沒有 */
+  location?: StationLocation;
   temperatureC: number[];
   precipitationMm: number[];
   hemisphere: Hemisphere;

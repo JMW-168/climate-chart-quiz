@@ -56,7 +56,8 @@ try {
   }
 
   console.log('讀圖總複習');
-  await page.goto(`${BASE}learn`);
+  await page.getByRole('link', { name: '複習', exact: true }).click();
+  await page.waitForURL(/review$/);
   await page.locator('.review-card').first().waitFor();
   const cards = await page.locator('.review-card').count();
   check(cards === 13, `總複習列出全部 13 個類型（${cards}）`);
@@ -64,6 +65,17 @@ try {
   await page.getByRole('radio', { name: '寒帶' }).check({ force: true });
   check((await page.locator('.review-card').count()) === 2, '分組篩選：寒帶 2 類');
   await page.screenshot({ path: `${SHOTS}/review-390.png`, fullPage: true });
+
+  console.log('世界氣候地圖');
+  await page.getByRole('link', { name: '地圖', exact: true }).click();
+  await page.waitForURL(/map$/);
+  await page.waitForTimeout(1500);
+  const mbox = await page.locator('svg.overlay').boundingBox();
+  await page.mouse.click(mbox.x + ((10 + 180) * 4 / 1440) * mbox.width, mbox.y + ((84 - 23) * 4 / 576) * mbox.height);
+  check((await page.locator('.info-head').innerText()).includes('熱帶沙漠'), '地圖點撒哈拉顯示熱帶沙漠氣候');
+  await page.getByRole('button', { name: '只看寒帶' }).click();
+  check((await page.locator('.legend-item:not(.off)').count()) === 2, '只看寒帶後只勾選 2 類');
+  await page.getByRole('button', { name: '全選' }).click();
 
   console.log('資料來源頁');
   await page.goto(`${BASE}sources`);
@@ -79,6 +91,8 @@ try {
   await page.screenshot({ path: `${SHOTS}/question-390.png`, fullPage: true });
   await answerCurrent();
   check((await page.locator('.result-banner').count()) === 1, '提交後顯示解析');
+  check((await page.locator('.where .station-info').count()) >= 1, '提交後顯示測站城市與位置');
+  check((await page.locator('.where svg.locator').count()) === 1, '提交後顯示位置小地圖');
   check((await page.locator('.option.locked, .chart-pick:has(input:disabled)').count()) > 0, '提交後選項鎖定');
   await page.screenshot({ path: `${SHOTS}/explanation-390.png`, fullPage: true });
 
@@ -149,7 +163,7 @@ try {
   console.log('320px 版面');
   const small = await browser.newContext({ viewport: { width: 320, height: 640 } });
   const sp = await small.newPage();
-  for (const path of ['', 'learn', 'practice/setup', 'mistakes', 'settings', 'data', 'sources']) {
+  for (const path of ['', 'learn', 'review', 'map', 'practice/setup', 'mistakes', 'settings', 'data', 'sources']) {
     await sp.goto(BASE + path);
     await sp.locator('main').waitFor();
     await sp.waitForTimeout(400);

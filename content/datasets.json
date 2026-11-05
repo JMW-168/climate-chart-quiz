@@ -45,6 +45,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Singapore / Changi Airport",
+      "nameZh": "新加坡（樟宜）",
+      "lat": 1.368,
+      "lon": 103.982,
+      "elev": 14,
+      "wigosId": "0-20000-0-48698"
+    },
     "explanationId": "wmo-tropical-rainforest-changi-airport-explanation"
   },
   {
@@ -93,6 +101,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Brazil / Belém",
+      "nameZh": "巴西 貝倫",
+      "lat": -1.436,
+      "lon": -48.437,
+      "elev": 7.1,
+      "wigosId": "0-20000-0-82191"
+    },
     "explanationId": "wmo-tropical-rainforest-belem-explanation"
   },
   {
@@ -141,6 +157,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Sri Lanka / Colombo",
+      "nameZh": "斯里蘭卡 可倫坡",
+      "lat": 6.9,
+      "lon": 79.867,
+      "elev": 7,
+      "wigosId": "0-20000-0-43466"
+    },
     "explanationId": "wmo-tropical-rainforest-colombo-explanation"
   },
   {
@@ -189,6 +213,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Thailand / Phuket",
+      "nameZh": "泰國 普吉",
+      "lat": 7.883,
+      "lon": 98.4,
+      "elev": 1.8,
+      "wigosId": "0-20000-0-48564"
+    },
     "explanationId": "wmo-tropical-monsoon-phuket-explanation"
   },
   {
@@ -237,6 +269,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Sri Lanka / Kurunegala",
+      "nameZh": "斯里蘭卡 庫魯內格勒",
+      "lat": 7.467,
+      "lon": 80.367,
+      "elev": 116,
+      "wigosId": "0-20000-0-43441"
+    },
     "explanationId": "wmo-tropical-monsoon-kurunegala-explanation"
   },
   {
@@ -285,6 +325,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Brazil / Macapá",
+      "nameZh": "巴西 馬卡帕",
+      "lat": -0.045,
+      "lon": -51.11,
+      "elev": 12.8,
+      "wigosId": "0-20000-0-82098"
+    },
     "explanationId": "wmo-tropical-monsoon-macapa-explanation"
   },
   {
@@ -333,6 +381,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Thailand / Bangkok Metropolis",
+      "nameZh": "泰國 曼谷",
+      "lat": 13.726,
+      "lon": 100.56,
+      "elev": 3,
+      "wigosId": "0-20000-0-48455"
+    },
     "explanationId": "wmo-tropical-savanna-bangkok-metropolis-explanation"
   },
   {
@@ -381,6 +437,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Nigeria / Abuja",
+      "nameZh": "奈及利亞 阿布加",
+      "lat": 9,
+      "lon": 7.2,
+      "elev": 342,
+      "wigosId": "0-2000-0-65125"
+    },
     "explanationId": "wmo-tropical-savanna-abuja-explanation"
   },
   {
@@ -428,6 +492,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Australia / Darwin Airport",
+      "nameZh": "澳洲 達爾文",
+      "lat": -12.424,
+      "lon": 130.893,
+      "elev": 30,
+      "wigosId": "0-36-9-94120"
+    },
     "explanationId": "wmo-tropical-savanna-darwin-airport-explanation"
   },
   {
@@ -476,6 +548,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Algeria / Adrar",
+      "nameZh": "阿爾及利亞 阿德拉爾",
+      "lat": 27.837,
+      "lon": -0.194,
+      "elev": 279.2,
+      "wigosId": "0-20000-0-60620"
+    },
     "explanationId": "wmo-tropical-desert-adrar-explanation"
   },
   {
@@ -524,6 +604,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "United Arab Emirates / Abu Dhabi Intl Airport",
+      "nameZh": "阿拉伯聯合大公國 阿布達比",
+      "lat": 24.433,
+      "lon": 54.65,
+      "elev": 27,
+      "wigosId": "0-20000-0-41217"
+    },
     "explanationId": "wmo-tropical-desert-abu-dhabi-intl-airport-explanation"
   },
   {
@@ -572,6 +660,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Niger / Agadez",
+      "nameZh": "尼日 阿加德茲",
+      "lat": 16.967,
+      "lon": 7.983,
+      "elev": 501,
+      "wigosId": "0-20000-0-61024"
+    },
     "explanationId": "wmo-tropical-desert-agadez-explanation"
   },
   {
@@ -620,6 +716,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "China / Kashi (Kashgar)",
+      "nameZh": "中國 喀什",
+      "lat": 39.48,
+      "lon": 75.75,
+      "elev": 1386.7,
+      "wigosId": "0-20000-0-51709"
+    },
     "explanationId": "wmo-temperate-desert-kashi-kashgar-explanation"
   },
   {
@@ -668,6 +772,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "China / Turpan",
+      "nameZh": "中國 吐魯番",
+      "lat": 42.95,
+      "lon": 89.23,
+      "elev": 39.3,
+      "wigosId": "0-20000-0-51573"
+    },
     "explanationId": "wmo-temperate-desert-turpan-explanation"
   },
   {
@@ -716,6 +828,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Mongolia / Dalanzadgad",
+      "nameZh": "蒙古 達蘭札德嘎德",
+      "lat": 43.577,
+      "lon": 104.418,
+      "elev": 1462,
+      "wigosId": "0-20000-0-44373"
+    },
     "explanationId": "wmo-temperate-desert-dalanzadgad-explanation"
   },
   {
@@ -764,6 +884,13 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "United Kingdom / Yeovilton",
+      "nameZh": "英國 約維爾頓（英格蘭西南部）",
+      "lat": 51.006,
+      "lon": -2.643,
+      "elev": 20
+    },
     "explanationId": "wmo-marine-west-coast-yeovilton-explanation"
   },
   {
@@ -812,6 +939,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Belgium / Oostende Airport",
+      "nameZh": "比利時 奧斯坦德",
+      "lat": 51.2,
+      "lon": 2.887,
+      "elev": 3,
+      "wigosId": "0-20000-0-06407"
+    },
     "explanationId": "wmo-marine-west-coast-oostende-airport-explanation"
   },
   {
@@ -859,6 +994,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "New Zealand / Hokitika Aero AWS",
+      "nameZh": "紐西蘭 霍基蒂卡",
+      "lat": -42.713,
+      "lon": 170.984,
+      "elev": 47,
+      "wigosId": "0-20000-0-93615"
+    },
     "explanationId": "wmo-marine-west-coast-hokitika-aero-aws-explanation"
   },
   {
@@ -907,6 +1050,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Ukraine / Kyiv",
+      "nameZh": "烏克蘭 基輔",
+      "lat": 50.392,
+      "lon": 30.536,
+      "elev": 167,
+      "wigosId": "0-20000-0-33345"
+    },
     "explanationId": "wmo-continental-kyiv-explanation"
   },
   {
@@ -955,6 +1106,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Latvia / Daugavpils",
+      "nameZh": "拉脫維亞 陶格夫匹爾斯",
+      "lat": 55.87,
+      "lon": 26.618,
+      "elev": 98,
+      "wigosId": "0-20000-0-26544"
+    },
     "explanationId": "wmo-continental-daugavpils-explanation"
   },
   {
@@ -1003,6 +1162,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "United States / Minneapolis–St Paul AP",
+      "nameZh": "美國 明尼亞波利斯",
+      "lat": 44.883,
+      "lon": -93.229,
+      "elev": 266,
+      "wigosId": "0-20000-0-72658"
+    },
     "explanationId": "wmo-continental-minneapolis-st-paul-ap-explanation"
   },
   {
@@ -1051,6 +1218,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Spain / Cádiz Obs",
+      "nameZh": "西班牙 加的斯",
+      "lat": 36.5,
+      "lon": -6.258,
+      "elev": 2,
+      "wigosId": "0-20000-0-08452"
+    },
     "explanationId": "wmo-mediterranean-cadiz-obs-explanation"
   },
   {
@@ -1099,6 +1274,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "United States / Oakland Metro Intl AP",
+      "nameZh": "美國 奧克蘭（加州）",
+      "lat": 37.721,
+      "lon": -122.221,
+      "elev": 2,
+      "wigosId": "0-20000-0-72493"
+    },
     "explanationId": "wmo-mediterranean-oakland-metro-intl-ap-explanation"
   },
   {
@@ -1146,6 +1329,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Australia / Adelaide West Terrace",
+      "nameZh": "澳洲 阿得雷德",
+      "lat": -34.926,
+      "lon": 138.583,
+      "elev": 29,
+      "wigosId": "0-36-9-94648"
+    },
     "explanationId": "wmo-mediterranean-adelaide-west-terrace-explanation"
   },
   {
@@ -1194,6 +1385,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Australia / Brisbane Aero",
+      "nameZh": "澳洲 布里斯本",
+      "lat": -27.392,
+      "lon": 153.129,
+      "elev": 5,
+      "wigosId": "0-36-9-94578"
+    },
     "explanationId": "wmo-humid-subtropical-brisbane-aero-explanation"
   },
   {
@@ -1242,6 +1441,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Argentina / Buenos Aires Observatorio",
+      "nameZh": "阿根廷 布宜諾斯艾利斯",
+      "lat": -34.59,
+      "lon": -58.484,
+      "elev": 25,
+      "wigosId": "0-20000-0-87585"
+    },
     "explanationId": "wmo-humid-subtropical-buenos-aires-observatorio-explanation"
   },
   {
@@ -1289,6 +1496,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "South Africa / East London",
+      "nameZh": "南非 東倫敦",
+      "lat": -33.036,
+      "lon": 27.816,
+      "elev": 134,
+      "wigosId": "0-20000-0-68858"
+    },
     "explanationId": "wmo-humid-subtropical-east-london-explanation"
   },
   {
@@ -1337,6 +1552,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "China / Shenyang",
+      "nameZh": "中國 瀋陽",
+      "lat": 41.73,
+      "lon": 123.52,
+      "elev": 49,
+      "wigosId": "0-20000-0-54342"
+    },
     "explanationId": "wmo-temperate-monsoon-shenyang-explanation"
   },
   {
@@ -1385,6 +1608,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "China / Changchun",
+      "nameZh": "中國 長春",
+      "lat": 43.9,
+      "lon": 125.22,
+      "elev": 238,
+      "wigosId": "0-20000-0-54161"
+    },
     "explanationId": "wmo-temperate-monsoon-changchun-explanation"
   },
   {
@@ -1433,6 +1664,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "China / Harbin",
+      "nameZh": "中國 哈爾濱",
+      "lat": 45.93,
+      "lon": 126.57,
+      "elev": 117.7,
+      "wigosId": "0-20000-0-50953"
+    },
     "explanationId": "wmo-temperate-monsoon-harbin-explanation"
   },
   {
@@ -1481,6 +1720,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "United States / Fairbanks Intl AP",
+      "nameZh": "美國 費爾班克斯（阿拉斯加）",
+      "lat": 64.804,
+      "lon": -147.876,
+      "elev": 132,
+      "wigosId": "0-20000-0-70261"
+    },
     "explanationId": "wmo-subarctic-fairbanks-intl-ap-explanation",
     "koppenException": "柯本以 10°C 以上月份數（4 個）判為 Dfb；但冬季嚴寒（最冷月 −22.4°C）、夏季短而涼（最熱月 17.2°C），依本題庫判讀條件歸為副極地氣候"
   },
@@ -1530,6 +1777,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Sweden / Pajala",
+      "nameZh": "瑞典 帕亞拉",
+      "lat": 67.204,
+      "lon": 23.39,
+      "elev": 164,
+      "wigosId": "0-20000-0-02095"
+    },
     "explanationId": "wmo-subarctic-pajala-explanation"
   },
   {
@@ -1578,6 +1833,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "China / Arxan",
+      "nameZh": "中國 阿爾山",
+      "lat": 47.17,
+      "lon": 119.93,
+      "elev": 997,
+      "wigosId": "0-20000-0-50727"
+    },
     "explanationId": "wmo-subarctic-arxan-explanation"
   },
   {
@@ -1626,6 +1889,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "United States / Utqiagvik (Barrow)",
+      "nameZh": "美國 烏特恰維克（巴羅，阿拉斯加）",
+      "lat": 71.283,
+      "lon": -156.781,
+      "elev": 9,
+      "wigosId": "0-20000-0-70026"
+    },
     "explanationId": "wmo-polar-utqiagvik-barrow-explanation"
   },
   {
@@ -1674,6 +1945,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Canada / Resolute",
+      "nameZh": "加拿大 雷索盧特",
+      "lat": 74.706,
+      "lon": -94.968,
+      "elev": 45,
+      "wigosId": "0-20000-0-71018"
+    },
     "explanationId": "wmo-polar-resolute-explanation"
   },
   {
@@ -1722,6 +2001,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Greenland / Danmarkshavn",
+      "nameZh": "格陵蘭 丹麥港",
+      "lat": 76.769,
+      "lon": -18.668,
+      "elev": 11,
+      "wigosId": "0-20000-0-04320"
+    },
     "explanationId": "wmo-polar-danmarkshavn-explanation"
   },
   {
@@ -1770,6 +2057,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Mexico / Toluca",
+      "nameZh": "墨西哥 托盧卡",
+      "lat": 19.291,
+      "lon": -99.714,
+      "elev": 2726,
+      "wigosId": "0-20000-0-76675"
+    },
     "explanationId": "wmo-highland-toluca-explanation"
   },
   {
@@ -1818,6 +2113,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Sri Lanka / Nuwara Eliya",
+      "nameZh": "斯里蘭卡 努沃勒埃利耶",
+      "lat": 6.967,
+      "lon": 80.767,
+      "elev": 1894,
+      "wigosId": "0-20000-0-43473"
+    },
     "explanationId": "wmo-highland-nuwara-eliya-explanation"
   },
   {
@@ -1866,6 +2169,14 @@
       "license": "NOAA NCEI 公開發布（NCEI Accession 0253808）；原始數值由各國氣象機構提供；本網站非營利教育使用並註明出處"
     },
     "review": null,
+    "location": {
+      "name": "Mexico / Tacubaya (Mexico City)",
+      "nameZh": "墨西哥 墨西哥城（塔庫巴亞）",
+      "lat": 19.404,
+      "lon": -99.197,
+      "elev": 2309,
+      "wigosId": "0-20000-0-76680"
+    },
     "explanationId": "wmo-highland-tacubaya-mexico-city-explanation",
     "koppenException": "柯本公式因 4 月雨量偏少（16.9 mm）判為 Csb；實際雨季在 6～9 月夏季，全年涼爽且年溫差 4.8°C，屬低緯高地氣候"
   }
