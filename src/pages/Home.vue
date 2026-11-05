@@ -22,10 +22,10 @@ onMounted(async () => {
 const pending = computed(() => mistakes.value.filter((m) => m.pending).length);
 const answered = computed(() => (active.value ? Object.values(active.value.progress).filter((p) => p.submitted).length : 0));
 
-// 首頁示意圖：讀圖說明使用的同一組示範資料
+// 首頁示意圖：與讀圖說明相同（奈及利亞阿布加，WMO 1991–2020 平均值）
 const sample = {
-  t: [24, 25, 27, 29, 30, 29, 27, 27, 27, 27, 26, 24],
-  p: [2, 3, 10, 35, 90, 160, 220, 240, 170, 60, 10, 3],
+  t: [26.9, 29.3, 30.7, 30, 28.1, 26.6, 25.7, 25.2, 25.7, 26.5, 26.9, 26.3],
+  p: [0.8, 5.9, 22.4, 72.8, 156.7, 194.4, 249.8, 308.3, 229.4, 169.5, 9.7, 1.3],
 };
 </script>
 

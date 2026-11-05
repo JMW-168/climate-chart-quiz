@@ -36,13 +36,12 @@ describe('#2 示範題庫逐項判讀', () => {
       expect([d.id, c.temperature.pass, c.precipitation.pass]).toEqual([d.id, true, true]);
     }
   });
-  it('使用者回報的例子：夏雨型暖溫帶圖選溫帶海洋性 → 氣溫不符、降水符合', () => {
-    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['humid-subtropical'], difficulty: 'beginner', count: 1 }, 1);
-    const exp = pkg.explanations.find((e) => e.id === 'demo-humid-subtropical-a-explanation')!;
-    const c = exp.distractorChecks!['marine-west-coast'];
-    expect(c.temperature.pass).toBe(false);
-    expect(c.precipitation.pass).toBe(true);
-    expect(r.questions).toHaveLength(1);
+  it('只有一項不符的例子：瀋陽（溫帶季風）選溫帶大陸性 → 氣溫符合、降水不符', () => {
+    const exp = pkg.explanations.find((e) => e.id === 'wmo-temperate-monsoon-shenyang-explanation')!;
+    const c = exp.distractorChecks!['continental'];
+    expect(c.temperature.pass).toBe(true);
+    expect(c.precipitation.pass).toBe(false);
+    expect(c.precipitation.text).toContain('最少雨月 6 mm');
   });
   it('所有題目的每個錯誤選項都有逐項判斷，且至少一項不符', () => {
     for (const kind of ['chart-to-type', 'type-to-chart'] as const) {
@@ -62,15 +61,15 @@ describe('#2 示範題庫逐項判讀', () => {
   });
   it('錯誤選項兩項都符合 → 驗證失敗（可能兩解）', () => {
     const p2 = demoPackage();
-    const t = p2.taxonomy.types.find((x) => x.id === 'marine-west-coast')!;
-    t.criteria!.temperature.rules = [{ kind: 'any' }];
+    const t = p2.taxonomy.types.find((x) => x.id === 'continental')!;
+    t.criteria!.precipitation.rules = [{ kind: 'any' }];
     const r = validateContentPackage(p2);
-    expect(r.errors.some((e) => e.code === 'criteria-ambiguous' && e.id === 'demo-humid-subtropical-a')).toBe(true);
+    expect(r.errors.some((e) => e.code === 'criteria-ambiguous' && e.id === 'wmo-temperate-monsoon-shenyang')).toBe(true);
   });
   it('資料不符合自己類型的條件 → 驗證失敗', () => {
     const p2 = demoPackage();
-    p2.datasets.find((x) => x.id === 'demo-ice-cap-a')!.temperatureC[6] = 3;
+    p2.datasets.find((x) => x.id === 'wmo-polar-utqiagvik-barrow')!.temperatureC[6] = 12;
     const r = validateContentPackage(p2);
-    expect(r.errors.some((e) => e.code === 'criteria-self' && e.id === 'demo-ice-cap-a')).toBe(true);
+    expect(r.errors.some((e) => e.code === 'criteria-self' && e.id === 'wmo-polar-utqiagvik-barrow')).toBe(true);
   });
 });

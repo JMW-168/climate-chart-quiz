@@ -57,5 +57,12 @@ const inPractice = computed(() => route.name === 'practice');
     </main>
   </div>
 
+  <footer class="site-footer">
+    <p>
+      非營利教育用途，免費、無廣告、不蒐集個人資料。
+      <RouterLink to="/sources">資料來源與授權</RouterLink>
+    </p>
+  </footer>
+
   <div v-if="app.toast" class="toast" role="status" aria-live="polite">{{ app.toast }}</div>
 </template>

@@ -49,8 +49,10 @@ describe('C02 重疊、缺解析或引用不存在', () => {
   });
   it('重疊關係須雙向，且不可同時當干擾', () => {
     const pkg = demoPackage();
-    const sm = pkg.taxonomy.types.find((x) => x.id === 'subtropical-monsoon')!;
-    sm.confusableTypeIds.push('humid-subtropical');
+    const marine = pkg.taxonomy.types.find((x) => x.id === 'marine-west-coast')!;
+    const cont = pkg.taxonomy.types.find((x) => x.id === 'continental')!;
+    marine.overlapTypeIds.push('continental');
+    cont.overlapTypeIds.push('marine-west-coast');
     expect(validateContentPackage(pkg).errors.some((e) => e.code === 'overlap-confusable')).toBe(true);
   });
   it('相關名稱不可當同義詞', () => {
@@ -60,10 +62,10 @@ describe('C02 重疊、缺解析或引用不存在', () => {
   });
   it('組題時缺干擾解析會回報具體資料ID', () => {
     const pkg = demoPackage();
-    const d = pkg.datasets.find((x) => x.typeId === 'tundra' && x.difficulty.includes('beginner'))!;
+    const d = pkg.datasets.find((x) => x.typeId === 'polar' && x.difficulty.includes('beginner'))!;
     const exp = pkg.explanations.find((e) => e.id === d.explanationId)!;
     exp.distractorReasons = {};
-    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['tundra'], difficulty: 'beginner', count: 1 }, 3);
+    const r = generateSession(pkg, { kind: 'chart-to-type', typeIds: ['polar'], difficulty: 'beginner', count: 1 }, 3);
     expect(r.problems.map((p) => p.id)).toContain(d.id);
     expect(r.questions).toHaveLength(0);
   });

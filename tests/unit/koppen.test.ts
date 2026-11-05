@@ -33,23 +33,25 @@ describe('柯本分類計算', () => {
 });
 
 describe('#1 內容驗證的柯本交叉檢查', () => {
-  it('示範資料全部與所標類型一致', () => {
+  it('測站資料全部與所標類型一致（不一致者皆有書面例外）', () => {
     const r = validateContentPackage(demoPackage());
     expect(r.errors.filter((e) => e.code === 'koppen-mismatch')).toEqual([]);
+    expect(r.warnings.filter((w) => w.code === 'koppen-exception').map((w) => w.id).sort()).toEqual([
+      'wmo-highland-tacubaya-mexico-city',
+      'wmo-subarctic-fairbanks-intl-ap',
+    ]);
   });
   it('不一致且無例外說明 → 驗證失敗並回報資料ID', () => {
     const pkg = demoPackage();
-    const d = pkg.datasets.find((x) => x.id === 'demo-steppe-b')!;
-    d.temperatureC = [24, 27, 31, 34, 35, 33, 30, 28, 29, 30, 28, 25];
-    d.precipitationMm = [0, 0, 1, 3, 15, 40, 90, 120, 55, 10, 1, 0];
+    const d = pkg.datasets.find((x) => x.id === 'wmo-tropical-desert-agadez')!;
+    d.precipitationMm = Array(12).fill(100);
     const r = validateContentPackage(pkg);
-    expect(r.errors.find((e) => e.code === 'koppen-mismatch')?.id).toBe('demo-steppe-b');
+    expect(r.errors.find((e) => e.code === 'koppen-mismatch')?.id).toBe('wmo-tropical-desert-agadez');
   });
   it('寫明例外原因 → 降為警告', () => {
     const pkg = demoPackage();
-    const d = pkg.datasets.find((x) => x.id === 'demo-steppe-b')!;
-    d.temperatureC = [24, 27, 31, 34, 35, 33, 30, 28, 29, 30, 28, 25];
-    d.precipitationMm = [0, 0, 1, 3, 15, 40, 90, 120, 55, 10, 1, 0];
+    const d = pkg.datasets.find((x) => x.id === 'wmo-tropical-desert-agadez')!;
+    d.precipitationMm = Array(12).fill(100);
     d.koppenException = '教材將此測站列為草原，審核人確認';
     const r = validateContentPackage(pkg);
     expect(r.errors.some((e) => e.code === 'koppen-mismatch')).toBe(false);

@@ -8,9 +8,10 @@ export type Rule =
   | { kind: 'tMin'; gte?: number; lt?: number }
   | { kind: 'tMax'; gte?: number; lt?: number }
   | { kind: 'tRange'; gte?: number; lt?: number }
+  | { kind: 'tMean'; gte?: number; lt?: number }
   | { kind: 'pTotal'; gte?: number; lt?: number }
   | { kind: 'pMonthMin'; gte?: number; lt?: number }
-  | { kind: 'dryMonths'; below: number; gte: number }
+  | { kind: 'dryMonths'; below: number; gte?: number; lte?: number }
   | { kind: 'summerShare'; gte?: number; lt?: number }
   | { kind: 'winterShare'; gte?: number; lt?: number }
   | { kind: 'summerDriest'; lt: number }
@@ -77,6 +78,10 @@ export function evaluateRule(rule: Rule, d: ChartData): { pass: boolean; observe
       const v = Math.max(...t) - Math.min(...t);
       return { pass: inRange(v, rule), observed: `年溫差 ${fmt1(v)}°C` };
     }
+    case 'tMean': {
+      const v = t.reduce((a, b) => a + b, 0) / 12;
+      return { pass: inRange(v, rule), observed: `年均溫 ${fmt1(v)}°C` };
+    }
     case 'pTotal': {
       const v = p.reduce((a, b) => a + b, 0);
       return { pass: inRange(v, rule), observed: `年雨量約 ${fmt0(v)} mm` };
@@ -87,7 +92,7 @@ export function evaluateRule(rule: Rule, d: ChartData): { pass: boolean; observe
     }
     case 'dryMonths': {
       const n = p.filter((x) => x < rule.below).length;
-      return { pass: n >= rule.gte, observed: n ? `有 ${n} 個月雨量少於 ${rule.below} mm` : `沒有雨量少於 ${rule.below} mm 的月份` };
+      return { pass: (rule.gte === undefined || n >= rule.gte) && (rule.lte === undefined || n <= rule.lte), observed: n ? `有 ${n} 個月雨量少於 ${rule.below} mm` : `沒有雨量少於 ${rule.below} mm 的月份` };
     }
     case 'summerShare': {
       const s = shares(d);

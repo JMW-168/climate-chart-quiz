@@ -1,6 +1,6 @@
 {
-  "contentVersion": "1.0.0-demo.2",
+  "contentVersion": "2.0.0-demo.1",
   "mode": "demo",
-  "frameworkId": "demo-tw-jh-v1",
-  "note": "開發示範內容包：合成教學資料，尚未教材審核。正式題庫請改為 production 並通過 npm run content:validate -- --production。"
+  "frameworkId": "hanlin-public-v1",
+  "note": "示範內容包：月資料為 WMO 1991–2020 真實測站平均值；分類用詞依翰林公開資源暫定，尚未經教師審核。正式題庫請改為 production 並通過 npm run content:validate -- --production。"
 }

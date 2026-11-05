@@ -2,8 +2,8 @@
   <p class="status-strip demo" role="note">
     <span aria-hidden="true">⚠</span>
     <span class="grow">
-      示範題庫：題目使用合成教學資料，尚未經教材審核，不代表 108 課綱完整範圍。
-      <RouterLink to="/data">資料說明</RouterLink>
+      試用題庫：氣候資料為真實測站 1991–2020 平均值，分類用詞參考翰林公開資源暫定，尚未經教師審核。
+      <RouterLink to="/sources">資料來源</RouterLink>
     </span>
   </p>
 </template>

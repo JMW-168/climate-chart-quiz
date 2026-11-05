@@ -16,7 +16,8 @@ const counts = computed(() => {
 </script>
 
 <template>
-  <h1>資料說明</h1>
+  <h1>題庫資料說明</h1>
+  <p class="small">資料出處、授權與非營利聲明請見<RouterLink to="/sources">資料來源與授權</RouterLink>。</p>
   <section class="sheet">
     <dl class="stat-row">
       <div><dt>題庫版本</dt><dd>{{ pkg.contentVersion }}</dd></div>
