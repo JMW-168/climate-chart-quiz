@@ -43,6 +43,19 @@ const REPO = 'https://github.com/JMW-168/climate-chart-quiz';
     <p class="small muted">題目畫面刻意不顯示測站名稱，避免用城市名稱猜答案；完整測站清單見<RouterLink to="/data">題庫資料說明</RouterLink>。</p>
   </section>
 
+  <section class="sheet" aria-labelledby="map-title">
+    <h2 id="map-title">世界氣候分布圖</h2>
+    <ul>
+      <li>
+        氣候分區：Rubel、Brugger、Haslinger 與 Auer（2017）的全球柯本－蓋格氣候分類（1986–2010，約 3 公里網格），
+        <a href="https://doi.org/10.1127/metz/2016/0816" target="_blank" rel="noopener">doi:10.1127/metz/2016/0816</a>；
+        網格檔取自 <a href="https://github.com/cwru-sdle/kgcpy" target="_blank" rel="noopener">kgcpy</a> 套件（BSD-3-Clause 授權），本網站降採樣為 0.25° 並對應到本站的氣候名稱。
+      </li>
+      <li>海岸線：<a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 1:110m 陸地資料（公有領域），經 world-atlas 套件（ISC 授權）取得。</li>
+      <li>柯本類別對應到課本名稱是簡化示意，邊界不精確；草原（半乾燥）地區另外標示，請以課本地圖為準。</li>
+    </ul>
+  </section>
+
   <section class="sheet" aria-labelledby="term-title">
     <h2 id="term-title">氣候類型的名稱與分類</h2>
     <p>
